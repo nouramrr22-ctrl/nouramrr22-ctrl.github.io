@@ -2,25 +2,149 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nour Amr</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gemüse Egypt</title>
   <style>
     body {
-      background-color: #f4f4f4;
+      margin: 0;
       font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 80px;
+      background-color: #ffffff;
+      color: #333;
     }
-    h1 {
+
+    header {
+      background-color: #264963;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .slideshow-container {
+      max-width: 100%;
+      position: relative;
+      margin: auto;
+    }
+
+    .slides {
+      display: none;
+      width: 100%;
+      height: auto;
+    }
+
+    .content {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h1, h2 {
       color: #264963;
     }
-    p {
-      color: #444;
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .product-card {
+      border: 1px solid #ddd;
+      padding: 15px;
+      text-align: center;
+      border-radius: 5px;
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    footer {
+      background-color: #f4f4f4;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
-  <h1>Welcome to Nour Amr's Website</h1>
-  <p>This website is hosted on GitHub Pages and built by me.</p>
+
+<header>
+  <h1>Gemüse Egypt</h1>
+  <p>Fresh fruits and vegetables from Egypt to Germany</p>
+</header>
+
+<div class="slideshow-container">
+  <img class="slides" src="https://via.placeholder.com/1200x500?text=Sweet+Potatoes" alt="Sweet Potatoes">
+  <img class="slides" src="https://via.placeholder.com/1200x500?text=Onions" alt="Onions">
+  <img class="slides" src="https://via.placeholder.com/1200x500?text=Spring+Onions" alt="Spring Onions">
+  <img class="slides" src="https://via.placeholder.com/1200x500?text=Green+Beans" alt="Green Beans">
+  <img class="slides" src="https://via.placeholder.com/1200x500?text=Grapes" alt="Grapes">
+  <img class="slides" src="https://via.placeholder.com/1200x500?text=Frozen+Strawberries" alt="Frozen Strawberries">
+</div>
+
+<div class="content">
+  <h2>About Us</h2>
+  <p>Gemüse Egypt is your reliable Egyptian partner for fresh and frozen fruits and vegetables. With strict quality control, expert logistics, and certified farms, we ensure fast delivery and premium products to wholesale buyers and importers in Germany and Europe.</p>
+
+  <h2>Our Products</h2>
+  <div class="product-grid">
+    <div class="product-card">
+      <img src="https://via.placeholder.com/300x200?text=Sweet+Potatoes" alt="Sweet Potatoes">
+      <p>Sweet Potatoes</p>
+    </div>
+    <div class="product-card">
+      <img src="https://via.placeholder.com/300x200?text=Onions" alt="Onions">
+      <p>Onions</p>
+    </div>
+    <div class="product-card">
+      <img src="https://via.placeholder.com/300x200?text=Spring+Onions" alt="Spring Onions">
+      <p>Spring Onions</p>
+    </div>
+    <div class="product-card">
+      <img src="https://via.placeholder.com/300x200?text=Green+Beans" alt="Green Beans">
+      <p>Green Beans</p>
+    </div>
+    <div class="product-card">
+      <img src="https://via.placeholder.com/300x200?text=Grapes" alt="Grapes">
+      <p>Grapes</p>
+    </div>
+    <div class="product-card">
+      <img src="https://via.placeholder.com/300x200?text=Frozen+Strawberries" alt="Frozen Strawberries">
+      <p>Frozen Strawberries</p>
+    </div>
+  </div>
+
+  <h2>Certifications & Quality</h2>
+  <p>GlobalG.A.P Certified · SGS Inspected · Export-Grade Packaging · Refrigerated Logistics · On-Time Delivery</p>
+
+  <h2>Contact Us</h2>
+  <p><strong>Email:</strong> info@gemuseegypt.com</p>
+  <p><strong>Phone / WhatsApp:</strong> +20 115 689 3412</p>
+  <p><strong>Location:</strong> Egypt — Exporting to Germany & Europe</p>
+</div>
+
+<footer>
+  &copy; 2025 Gemüse Egypt. All rights reserved.
+</footer>
+
+<script>
+  let slideIndex = 0;
+  showSlides();
+  function showSlides() {
+    let slides = document.getElementsByClassName("slides");
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1; }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 3000); // Change image every 3 seconds
+  }
+</script>
+
 </body>
 </html>
