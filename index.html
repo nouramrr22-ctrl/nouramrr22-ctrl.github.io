@@ -7,16 +7,39 @@
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #ffffff;
-      color: #333;
+      color: #111;
     }
 
     header {
-      background-color: #264963;
-      color: #fff;
-      padding: 20px;
+      padding: 30px 20px 10px;
       text-align: center;
+      border-bottom: 1px solid #eee;
+    }
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo img {
+      width: 80px;
+      height: auto;
+    }
+
+    .logo h1 {
+      margin: 5px 0 0;
+      color: #c10000; /* red */
+      font-size: 28px;
+      letter-spacing: 1px;
+    }
+
+    .logo p {
+      margin: 0;
+      font-weight: bold;
+      color: #111; /* black */
     }
 
     .slideshow-container {
@@ -37,8 +60,9 @@
       margin: auto;
     }
 
-    h1, h2 {
-      color: #264963;
+    h2 {
+      color: #c10000; /* red */
+      margin-top: 40px;
     }
 
     .product-grid {
@@ -53,6 +77,11 @@
       padding: 15px;
       text-align: center;
       border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .product-card:hover {
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
     .product-card img {
@@ -63,27 +92,32 @@
     }
 
     footer {
-      background-color: #f4f4f4;
+      background-color: #f9f9f9;
       text-align: center;
       padding: 20px;
       font-size: 14px;
+      color: #333;
+      border-top: 1px solid #eee;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Gemüse Egypt</h1>
-  <p>Fresh fruits and vegetables from Egypt to Germany</p>
+  <div class="logo">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Onion.png" alt="Logo">
+    <h1>GEMÜSE EGYPT</h1>
+    <p>Fresh fruits and vegetables from Egypt to Germany</p>
+  </div>
 </header>
 
 <div class="slideshow-container">
-  <img class="slides" src="https://via.placeholder.com/1200x500?text=Sweet+Potatoes" alt="Sweet Potatoes">
-  <img class="slides" src="https://via.placeholder.com/1200x500?text=Onions" alt="Onions">
-  <img class="slides" src="https://via.placeholder.com/1200x500?text=Spring+Onions" alt="Spring Onions">
-  <img class="slides" src="https://via.placeholder.com/1200x500?text=Green+Beans" alt="Green Beans">
-  <img class="slides" src="https://via.placeholder.com/1200x500?text=Grapes" alt="Grapes">
-  <img class="slides" src="https://via.placeholder.com/1200x500?text=Frozen+Strawberries" alt="Frozen Strawberries">
+  <img class="slides" src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Sweet_potatoes.jpg" alt="Sweet Potatoes">
+  <img class="slides" src="https://upload.wikimedia.org/wikipedia/commons/4/41/Onions_on_White.JPG" alt="Onions">
+  <img class="slides" src="https://upload.wikimedia.org/wikipedia/commons/3/38/Spring_onions.jpg" alt="Spring Onions">
+  <img class="slides" src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Green_beans.jpg" alt="Green Beans">
+  <img class="slides" src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Table_grapes_on_white.jpg" alt="Grapes">
+  <img class="slides" src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Frozen_strawberries.jpg" alt="Frozen Strawberries">
 </div>
 
 <div class="content">
@@ -93,27 +127,27 @@
   <h2>Our Products</h2>
   <div class="product-grid">
     <div class="product-card">
-      <img src="https://via.placeholder.com/300x200?text=Sweet+Potatoes" alt="Sweet Potatoes">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Sweet_potatoes.jpg" alt="Sweet Potatoes">
       <p>Sweet Potatoes</p>
     </div>
     <div class="product-card">
-      <img src="https://via.placeholder.com/300x200?text=Onions" alt="Onions">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Onions_on_White.JPG" alt="Onions">
       <p>Onions</p>
     </div>
     <div class="product-card">
-      <img src="https://via.placeholder.com/300x200?text=Spring+Onions" alt="Spring Onions">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Spring_onions.jpg" alt="Spring Onions">
       <p>Spring Onions</p>
     </div>
     <div class="product-card">
-      <img src="https://via.placeholder.com/300x200?text=Green+Beans" alt="Green Beans">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Green_beans.jpg" alt="Green Beans">
       <p>Green Beans</p>
     </div>
     <div class="product-card">
-      <img src="https://via.placeholder.com/300x200?text=Grapes" alt="Grapes">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Table_grapes_on_white.jpg" alt="Grapes">
       <p>Grapes</p>
     </div>
     <div class="product-card">
-      <img src="https://via.placeholder.com/300x200?text=Frozen+Strawberries" alt="Frozen Strawberries">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Frozen_strawberries.jpg" alt="Frozen Strawberries">
       <p>Frozen Strawberries</p>
     </div>
   </div>
@@ -135,14 +169,14 @@
   let slideIndex = 0;
   showSlides();
   function showSlides() {
-    let slides = document.getElementsByClassName("slides");
+    const slides = document.getElementsByClassName("slides");
     for (let i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
     }
     slideIndex++;
     if (slideIndex > slides.length) { slideIndex = 1; }
     slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 3000); // Change image every 3 seconds
+    setTimeout(showSlides, 3000); // change every 3 sec
   }
 </script>
 
