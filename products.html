@@ -1,0 +1,23 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Products | Gemüse Egypt</title>
+<link rel="stylesheet" href="css/styles.css"></head><body>
+<nav class="nav container">
+  <a class="brand" href="index.html">Gemüse Egypt</a>
+  <ul class="menu">
+    <li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li>
+    <li><a href="products.html">Products</a></li><li><a href="quality.html">Quality Standards</a></li>
+    <li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact Us</a></li>
+  </ul>
+</nav>
+<main class="container">
+  <h1>Products</h1>
+  <ul>
+    <li>Sweet Potatoes</li><li>Onions</li><li>Green Beans</li>
+  </ul>
+</main>
+<script>
+const here = location.pathname.split('/').pop()||'index.html';
+document.querySelectorAll('.menu a').forEach(a=>{if(a.getAttribute('href')===here)a.classList.add('active')});
+</script>
+</body></html>
