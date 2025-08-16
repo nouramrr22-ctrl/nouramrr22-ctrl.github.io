@@ -24,7 +24,7 @@ body, h1, p, ul, li, a {
 }
 
 .brand img {
-  height: 120px;   /* 👈 make logo big */
+  height: 200px;   /* 👈 made much bigger */
   width: auto;
 }
 
@@ -43,6 +43,6 @@ body, h1, p, ul, li, a {
 .menu a:hover,
 .menu a.active {
   color: #fff;
-  background: #e60000; /* 👈 red highlight like your logo */
+  background: #e60000; /* 👈 red highlight */
   border-radius: 4px;
 }
