@@ -9,7 +9,12 @@
 <body>
 
 <nav class="nav container">
-  <a class="brand" href="index.html">Gemüse Egypt</a>
+  <!-- Logo + brand (click goes Home) -->
+  <a class="brand" href="index.html">
+    <img src="logo.jpg.jpeg" alt="Gemüse Egypt logo" style="height:40px;vertical-align:middle;margin-right:10px;">
+    <span>Gemüse Egypt</span>
+  </a>
+
   <ul class="menu">
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About us</a></li>
@@ -26,6 +31,7 @@
 </main>
 
 <script>
+  // highlight current tab in red
   const here = location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.menu a').forEach(a=>{
     if(a.getAttribute('href')===here) a.classList.add('active');
