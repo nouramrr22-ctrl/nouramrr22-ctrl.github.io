@@ -1,82 +1,48 @@
-/* ================================
-   General Styles
-================================ */
-body {
-  font-family: Arial, sans-serif;
+/* General reset */
+body, h1, p, ul, li, a {
   margin: 0;
   padding: 0;
-  background: #ffffff;
-  color: #333;
+  text-decoration: none;
+  list-style: none;
+  font-family: Arial, sans-serif;
 }
 
-/* ================================
-   Navigation Bar
-================================ */
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Navbar */
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #222;
-  padding: 15px 30px;
+  padding: 15px 0;
+  border-bottom: 1px solid #ddd;
 }
 
-.nav .brand {
-  color: #fff;
-  font-size: 20px;
-  font-weight: bold;
-  text-decoration: none;
+.brand img {
+  height: 120px;   /* 👈 make logo big */
+  width: auto;
 }
 
-.nav .menu {
-  list-style: none;
+.menu {
   display: flex;
   gap: 20px;
-  margin: 0;
-  padding: 0;
 }
 
-.nav .menu a {
-  color: #ddd;
-  text-decoration: none;
-  font-size: 16px;
+.menu a {
+  color: #333;
+  font-weight: bold;
+  padding: 8px 12px;
+  transition: 0.3s;
 }
 
-.nav .menu a.active,
-.nav .menu a:hover {
-  color: #ff0000; /* Highlight active menu in red */
-}
-
-/* ================================
-   Page Content
-================================ */
-main {
-  padding: 40px;
-  text-align: center;
-}
-
-h1, h2, h3 {
-  color: #222;
-}
-
-p {
-  line-height: 1.6;
-  font-size: 16px;
-}
-
-/* ================================
-   Footer
-================================ */
-footer {
-  background: #222;
+.menu a:hover,
+.menu a.active {
   color: #fff;
-  text-align: center;
-  padding: 15px;
-  margin-top: 30px;
-}
-/* ================================
-   Logo Size
-================================ */
-.nav .brand img {
-  height: 50px;   /* adjust height */
-  width: auto;    /* keep proportions */
+  background: #e60000; /* 👈 red highlight like your logo */
+  border-radius: 4px;
 }
