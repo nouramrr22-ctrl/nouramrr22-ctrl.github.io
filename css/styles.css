@@ -9,7 +9,7 @@ body, h1, p, ul, li, a {
 
 /* Container */
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -19,24 +19,25 @@ body, h1, p, ul, li, a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 0;
+  padding: 20px 0;
   border-bottom: 1px solid #ddd;
 }
 
 .brand img {
-  height: 200px;   /* 👈 made much bigger */
+  height: 280px;   /* 👈 much bigger now */
   width: auto;
 }
 
 .menu {
   display: flex;
-  gap: 20px;
+  gap: 25px;
 }
 
 .menu a {
   color: #333;
   font-weight: bold;
-  padding: 8px 12px;
+  font-size: 20px;   /* 👈 made menu text larger to match big logo */
+  padding: 10px 15px;
   transition: 0.3s;
 }
 
@@ -44,5 +45,5 @@ body, h1, p, ul, li, a {
 .menu a.active {
   color: #fff;
   background: #e60000; /* 👈 red highlight */
-  border-radius: 4px;
+  border-radius: 6px;
 }
