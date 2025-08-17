@@ -8,21 +8,23 @@
 </head>
 <body>
 
-<nav class="nav container">
-  <!-- Adjusted logo size (slightly smaller than before) -->
+<!-- Header: BIG logo on first row, menu on second row (one line) -->
+<header class="site-header">
   <a href="index.html" class="brand">
-    <img src="logo.jpg.jpeg" alt="Gemüse Egypt Logo" style="height:280px; width:auto;">
+    <img src="logo.jpg.jpeg?v=4" alt="Gemüse Egypt Logo">
   </a>
 
-  <ul class="menu">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About us</a></li>
-    <li><a href="products.html">Products</a></li>
-    <li><a href="quality.html">Quality Standards</a></li>
-    <li><a href="gallery.html">Gallery</a></li>
-    <li><a href="contact.html">Contact Us</a></li>
-  </ul>
-</nav>
+  <nav class="nav">
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About us</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="quality.html">Quality Standards</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+</header>
 
 <main class="container">
   <h1>Fresh Egyptian Produce for Germany</h1>
@@ -30,6 +32,7 @@
 </main>
 
 <script>
+  // red underline on the current page
   const here = location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.menu a').forEach(a=>{
     if(a.getAttribute('href')===here) a.classList.add('active');
@@ -37,4 +40,3 @@
 </script>
 </body>
 </html>
-
