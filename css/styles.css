@@ -28,7 +28,7 @@ body, h1, p, ul, li, a {
 
 /* Bigger logo size */
 .brand img{
-  height:200px;   /* logo is now larger */
+  height:230px;   /* slightly larger than before */
   width:auto;
   display:block;
 }
@@ -56,4 +56,19 @@ body, h1, p, ul, li, a {
 .menu a.active {
   color:#fff;
   background:#e60000;
-  border-radius:
+  border-radius:6px;
+}
+
+/* Main */
+main { padding:40px 0; text-align:center; }
+
+/* Helper styles */
+.path-tester { margin-top:32px; text-align:left; }
+.path-tester ul { list-style:disc; margin-left:20px; }
+.path-tester .note { font-size:12px; color:#666; }
+
+/* Responsive: stack on small screens */
+@media (max-width:768px){
+  .nav {flex-direction:column; gap:12px;}
+  .menu {flex-wrap:wrap; justify-content:center;}
+}
