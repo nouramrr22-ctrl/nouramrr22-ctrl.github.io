@@ -28,7 +28,7 @@ body, h1, p, ul, li, a {
 
 /* Bigger logo size */
 .brand img{
-  height:230px;   /* slightly larger than before */
+  height:250px;   /* maximum recommended size */
   width:auto;
   display:block;
 }
