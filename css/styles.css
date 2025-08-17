@@ -1,15 +1,66 @@
-/* Reset & base */
-body, h1, p, ul, li, a { margin:0; padding:0; text-decoration:none; list-style:none; font-family: Arial, sans-serif; }
-.container { max-width: 1400px; margin: 0 auto; padding: 0 15px; }
+/* Base */
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:Arial,Helvetica,sans-serif;color:#111;background:#fff}
+.container{max-width:1200px;margin:0 auto;padding:0 16px}
 
-/* Navbar */
-.nav { display:flex; justify-content:space-between; align-items:center; padding: 20px 0; border-bottom:1px solid #ddd; }
-.brand { display:inline-flex; align-items:center; }
+/* Header layout: logo row + menu row */
+.site-header{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:10px;
+  padding:12px 0 8px;
+  border-bottom:1px solid #e5e5e5;
+}
 
-/* Menu */
-.menu { display:flex; gap:25px; }
-.menu a { color:#333; font-weight:bold; font-size:20px; padding:10px 15px; transition:.2s; }
-.menu a:hover, .menu a.active { color:#fff; background:#e60000; border-radius:6px; }
+/* BIG logo */
+.brand img{
+  height:240px;     /* adjust bigger/smaller if you want */
+  width:auto;
+  display:block;
+}
 
-/* Main */
-main { padding:40px 0; text-align:center; }
+/* Menu (single line, centered) */
+.nav{width:100%}
+.menu{
+  display:flex;
+  flex-wrap:nowrap;          /* keep everything on one line */
+  justify-content:center;    /* center all items */
+  gap:24px;
+  list-style:none;
+  margin:0;
+  padding:6px 0 12px;
+  overflow-x:auto;           /* if screen is too small, allow sideways scroll instead of wrapping */
+  scrollbar-width:none;      /* hide scrollbar on Firefox */
+}
+.menu::-webkit-scrollbar{display:none} /* hide scrollbar on Chrome/Safari */
+
+.menu a{
+  position:relative;
+  text-decoration:none;
+  color:#111;
+  font-weight:700;
+  padding:6px 2px;
+  line-height:1;
+  white-space:nowrap;        /* force each label (e.g., "About us") to stay on one line */
+  display:inline-block;
+}
+
+/* Red underline (no red box) */
+.menu a.active,
+.menu a:hover{color:#d40000}
+.menu a.active::after,
+.menu a:hover::after{
+  content:"";
+  position:absolute;
+  left:0; right:0; bottom:-6px;
+  height:3px; background:#d40000; border-radius:2px;
+}
+
+/* Main content */
+main{padding:32px 0;text-align:center}
+
+/* Optional: slightly reduce logo on very small phones */
+@media (max-width:480px){
+  .brand img{height:200px}
+}
