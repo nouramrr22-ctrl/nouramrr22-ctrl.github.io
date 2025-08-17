@@ -1,12 +1,42 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Contact Us | Gemüse Egypt</title>
-<link rel="stylesheet" href="css/styles.css"></head><body>
-<nav class="nav container"> … same navbar … </nav>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact Us | Gemüse Egypt</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<nav class="nav container">
+  <a href="index.html" class="brand">
+    <img src="logo.jbg.png" alt="Gemüse Egypt Logo">
+  </a>
+  <ul class="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About us</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="quality.html">Quality Standards</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+  </ul>
+</nav>
+
 <main class="container">
   <h1>Contact Us</h1>
-  <p>Email: info@yourdomain.com<br>Phone: +20 …</p>
+  <p>Reach us for business inquiries:</p>
+  <ul style="margin-top:16px; text-align:left; display:inline-block">
+    <li><strong>Email:</strong> info@gemuse-egypt.com</li>
+    <li><strong>Phone:</strong> +20 XXX XXX XXXX</li>
+    <li><strong>Location:</strong> Cairo, Egypt</li>
+  </ul>
 </main>
-<script>const here=location.pathname.split('/').pop()||'index.html';
-document.querySelectorAll('.menu a').forEach(a=>{if(a.getAttribute('href')===here)a.classList.add('active')});</script>
-</body></html>
+
+<script>
+  const here = location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.menu a').forEach(a=>{
+    if(a.getAttribute('href')===here) a.classList.add('active');
+  });
+</script>
+</body>
+</html>
