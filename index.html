@@ -8,13 +8,11 @@
 </head>
 <body>
 
+<!-- Header -->
 <nav class="nav container">
-  <a href="index.html" class="brand" aria-label="Gemüse Egypt Home">
-    <!-- The actual image source will be set by JS after it finds a valid path -->
-    <img id="site-logo" src="" alt="Gemüse Egypt Logo">
-    <span id="logo-error" class="logo-error" hidden>Logo not found – check file name/path.</span>
+  <a href="index.html" class="brand">
+    <img src="logo.jbg.png" alt="Gemüse Egypt Logo">
   </a>
-
   <ul class="menu">
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About us</a></li>
@@ -25,50 +23,31 @@
   </ul>
 </nav>
 
+<!-- Slideshow -->
+<div class="slideshow-container">
+  <div class="slide fade">
+    <img src="img/slide1.jpg" alt="Fresh Sweet Potatoes">
+  </div>
+  <div class="slide fade">
+    <img src="img/slide2.jpg" alt="Premium Onions">
+  </div>
+  <div class="slide fade">
+    <img src="img/slide3.jpg" alt="Green Beans Export">
+  </div>
+</div>
+
+<!-- Main -->
 <main class="container">
   <h1>Fresh Egyptian Produce for Germany</h1>
-  <p>Short value proposition here.</p>
+  <p>Supplying the highest quality fruits and vegetables, directly from Egypt’s farms to wholesalers in Germany.</p>
 </main>
 
+<script src="js/script.js"></script>
 <script>
-  // Try these candidate paths in order until one loads successfully.
-  const logoCandidates = [
-    "img/logo.jbg.png",
-    "img/logo.png",
-    "logo.jbg.png",
-    "logo.png",
-    "images/logo.png",
-    "assets/img/logo.png",
-    "assets/images/logo.png"
-  ];
-
-  (function loadLogo(){
-    const imgEl = document.getElementById("site-logo");
-    const errorEl = document.getElementById("logo-error");
-
-    let index = 0;
-    function tryNext(){
-      if(index >= logoCandidates.length){
-        // Nothing worked: show a tiny notice (so you know to fix the path).
-        errorEl.hidden = false;
-        imgEl.remove(); // keep header tidy if nothing loads
-        return;
-      }
-      const candidate = logoCandidates[index++];
-      const probe = new Image();
-      probe.onload = () => { imgEl.src = candidate; };
-      probe.onerror = tryNext;
-      probe.src = candidate + "?v=" + Date.now(); // bust cache while testing
-    }
-    tryNext();
-  })();
-
-  // Active menu highlight
   const here = location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.menu a').forEach(a=>{
     if(a.getAttribute('href')===here) a.classList.add('active');
   });
 </script>
-
 </body>
 </html>
