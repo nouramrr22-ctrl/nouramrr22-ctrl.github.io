@@ -1,39 +1,49 @@
-/* Base */
-*{box-sizing:border-box}
-html,body{margin:0;padding:0;font-family:Arial,Helvetica,sans-serif;color:#111;background:#fff}
-.container{max-width:1200px;margin:0 auto;padding:0 16px}
+/* ===========================
+   Gemüse Egypt – Global Styles
+   =========================== */
 
-/* Header layout: logo row + menu row */
+/* 1) Base */
+*{box-sizing:border-box}
+html, body{
+  margin:0;
+  padding:0;
+  font-family:Arial, Helvetica, sans-serif;
+  color:#111;
+  background:#fff;
+}
+img{max-width:100%; height:auto; display:block}
+.container{max-width:1200px; margin:0 auto; padding:0 16px}
+
+/* 2) Header layout: logo left + menu right */
 .site-header{
   display:flex;
-  flex-direction:column;
+  justify-content:space-between;  /* logo left, menu right */
   align-items:center;
-  gap:10px;
-  padding:12px 0 8px;
+  padding:12px 16px;
   border-bottom:1px solid #e5e5e5;
+  background:#fff;
+  position:sticky;
+  top:0;
+  z-index:1000;
 }
 
-/* BIG logo */
+/* Logo normal size */
 .brand img{
-  height:240px;     /* adjust bigger/smaller if you want */
+  height:80px;   /* adjust size here */
   width:auto;
-  display:block;
 }
 
-/* Menu (single line, centered) */
-.nav{width:100%}
+/* 3) Navigation menu */
+.nav{flex:1; text-align:right}
 .menu{
   display:flex;
-  flex-wrap:nowrap;          /* keep everything on one line */
-  justify-content:center;    /* center all items */
+  justify-content:flex-end;
   gap:24px;
   list-style:none;
   margin:0;
-  padding:6px 0 12px;
-  overflow-x:auto;           /* if screen is too small, allow sideways scroll instead of wrapping */
-  scrollbar-width:none;      /* hide scrollbar on Firefox */
+  padding:0;
 }
-.menu::-webkit-scrollbar{display:none} /* hide scrollbar on Chrome/Safari */
+.menu li{display:inline-block}
 
 .menu a{
   position:relative;
@@ -42,11 +52,11 @@ html,body{margin:0;padding:0;font-family:Arial,Helvetica,sans-serif;color:#111;b
   font-weight:700;
   padding:6px 2px;
   line-height:1;
-  white-space:nowrap;        /* force each label (e.g., "About us") to stay on one line */
-  display:inline-block;
+  white-space:nowrap;
+  transition:color .2s ease;
 }
 
-/* Red underline (no red box) */
+/* Red underline effect */
 .menu a.active,
 .menu a:hover{color:#d40000}
 .menu a.active::after,
@@ -54,13 +64,17 @@ html,body{margin:0;padding:0;font-family:Arial,Helvetica,sans-serif;color:#111;b
   content:"";
   position:absolute;
   left:0; right:0; bottom:-6px;
-  height:3px; background:#d40000; border-radius:2px;
+  height:3px;
+  background:#d40000;
+  border-radius:2px;
 }
 
-/* Main content */
-main{padding:32px 0;text-align:center}
+/* 4) Main content */
+main{padding:32px 0; text-align:center}
 
-/* Optional: slightly reduce logo on very small phones */
-@media (max-width:480px){
-  .brand img{height:200px}
+/* 5) Responsive tweaks */
+@media (max-width:768px){
+  .site-header{flex-direction:column; align-items:center}
+  .nav{text-align:center; margin-top:12px}
+  .menu{justify-content:center; flex-wrap:wrap}
 }
