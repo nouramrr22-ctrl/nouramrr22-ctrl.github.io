@@ -1,80 +1,15 @@
-/* ===========================
-   Gemüse Egypt – Global Styles
-   =========================== */
+/* Reset & base */
+body, h1, p, ul, li, a { margin:0; padding:0; text-decoration:none; list-style:none; font-family: Arial, sans-serif; }
+.container { max-width: 1400px; margin: 0 auto; padding: 0 15px; }
 
-/* 1) Base */
-*{box-sizing:border-box}
-html, body{
-  margin:0;
-  padding:0;
-  font-family:Arial, Helvetica, sans-serif;
-  color:#111;
-  background:#fff;
-}
-img{max-width:100%; height:auto; display:block}
-.container{max-width:1200px; margin:0 auto; padding:0 16px}
+/* Navbar */
+.nav { display:flex; justify-content:space-between; align-items:center; padding: 20px 0; border-bottom:1px solid #ddd; }
+.brand { display:inline-flex; align-items:center; }
 
-/* 2) Header layout: logo left + menu right */
-.site-header{
-  display:flex;
-  justify-content:space-between;  /* logo left, menu right */
-  align-items:center;
-  padding:12px 16px;
-  border-bottom:1px solid #e5e5e5;
-  background:#fff;
-  position:sticky;
-  top:0;
-  z-index:1000;
-}
+/* Menu */
+.menu { display:flex; gap:25px; }
+.menu a { color:#333; font-weight:bold; font-size:20px; padding:10px 15px; transition:.2s; }
+.menu a:hover, .menu a.active { color:#fff; background:#e60000; border-radius:6px; }
 
-/* Logo normal size */
-.brand img{
-  height:80px;   /* adjust size here */
-  width:auto;
-}
-
-/* 3) Navigation menu */
-.nav{flex:1; text-align:right}
-.menu{
-  display:flex;
-  justify-content:flex-end;
-  gap:24px;
-  list-style:none;
-  margin:0;
-  padding:0;
-}
-.menu li{display:inline-block}
-
-.menu a{
-  position:relative;
-  text-decoration:none;
-  color:#111;
-  font-weight:700;
-  padding:6px 2px;
-  line-height:1;
-  white-space:nowrap;
-  transition:color .2s ease;
-}
-
-/* Red underline effect */
-.menu a.active,
-.menu a:hover{color:#d40000}
-.menu a.active::after,
-.menu a:hover::after{
-  content:"";
-  position:absolute;
-  left:0; right:0; bottom:-6px;
-  height:3px;
-  background:#d40000;
-  border-radius:2px;
-}
-
-/* 4) Main content */
-main{padding:32px 0; text-align:center}
-
-/* 5) Responsive tweaks */
-@media (max-width:768px){
-  .site-header{flex-direction:column; align-items:center}
-  .nav{text-align:center; margin-top:12px}
-  .menu{justify-content:center; flex-wrap:wrap}
-}
+/* Main */
+main { padding:40px 0; text-align:center; }
