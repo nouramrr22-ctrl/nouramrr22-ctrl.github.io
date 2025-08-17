@@ -15,7 +15,7 @@ body, h1, p, ul, li, a {
 /* Navbar: logo left + menu right */
 .nav {
   display:flex;
-  justify-content:space-between;
+  justify-content:space-between;  /* keep overall structure */
   align-items:center;
   padding: 15px 0;
   border-bottom:1px solid #ddd;
@@ -26,24 +26,19 @@ body, h1, p, ul, li, a {
   align-items:center;
 }
 
-/* Bigger logo size */
+/* Logo size (as requested) */
 .brand img{
-  height:250px;   /* maximum recommended size */
+  height:250px;
   width:auto;
   display:block;
-}
-
-/* Logo missing message */
-.logo-error{
-  font-size:12px;
-  color:#c10000;
-  margin-left:8px;
 }
 
 /* Menu */
 .menu {
   display:flex;
   gap:25px;
+  /* Shift the whole menu slightly left without changing structure */
+  margin-right:80px;             /* << move navbar left */
 }
 .menu a {
   color:#333;
@@ -62,13 +57,18 @@ body, h1, p, ul, li, a {
 /* Main */
 main { padding:40px 0; text-align:center; }
 
-/* Helper styles */
+/* Helper (only appears if you used the earlier path tester) */
+.logo-error{ font-size:12px; color:#c10000; margin-left:8px; }
 .path-tester { margin-top:32px; text-align:left; }
 .path-tester ul { list-style:disc; margin-left:20px; }
 .path-tester .note { font-size:12px; color:#666; }
 
-/* Responsive: stack on small screens */
+/* Responsive: keep mobile behavior the same */
 @media (max-width:768px){
   .nav {flex-direction:column; gap:12px;}
-  .menu {flex-wrap:wrap; justify-content:center;}
+  .menu {
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-right:0;             /* cancel the left shift on small screens */
+  }
 }
