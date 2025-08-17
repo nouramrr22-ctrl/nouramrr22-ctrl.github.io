@@ -1,37 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gemüse Egypt - Fresh from Egypt to the World</title>
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Home | Gemüse Egypt</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="site-header">
-    <div class="brand">
-      <a href="index.html">
-        <img src="assets/img/logo.png" alt="Gemüse Egypt Logo">
-      </a>
-    </div>
-    <nav class="nav">
-      <ul class="menu">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About us</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="quality.html">Quality Standards</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-    </nav>
-  </header>
+<nav class="nav container">
+  <!-- Adjusted logo size (slightly smaller than before) -->
+  <a href="index.html" class="brand">
+    <img src="logo.jpg.jpeg" alt="Gemüse Egypt Logo" style="height:280px; width:auto;">
+  </a>
 
-  <!-- Main Content -->
-  <main>
-    <h1>Fresh Egyptian Produce for Germany</h1>
-    <p>Supplying the highest quality fruits and vegetables, directly from Egypt’s farms to wholesalers in Germany.</p>
-  </main>
+  <ul class="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About us</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="quality.html">Quality Standards</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+  </ul>
+</nav>
 
+<main class="container">
+  <h1>Fresh Egyptian Produce for Germany</h1>
+  <p>Short value proposition here.</p>
+</main>
+
+<script>
+  const here = location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.menu a').forEach(a=>{
+    if(a.getAttribute('href')===here) a.classList.add('active');
+  });
+</script>
 </body>
 </html>
