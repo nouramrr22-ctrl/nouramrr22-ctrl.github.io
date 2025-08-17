@@ -12,10 +12,12 @@ body, h1, p, ul, li, a {
   padding: 0 15px;
 }
 
-/* Navbar: logo left + menu right */
+/* =========================
+   Header: logo + navigation
+   ========================= */
 .nav {
   display:flex;
-  justify-content:space-between;  /* keep overall structure */
+  justify-content:space-between;   /* keep overall structure */
   align-items:center;
   padding: 15px 0;
   border-bottom:1px solid #ddd;
@@ -26,19 +28,18 @@ body, h1, p, ul, li, a {
   align-items:center;
 }
 
-/* Logo size (as requested) */
+/* Big logo (as requested) */
 .brand img{
-  height:250px;
+  height:250px;     /* adjust if you ever want 220/240/260 */
   width:auto;
   display:block;
 }
 
-/* Menu */
+/* Navigation */
 .menu {
   display:flex;
   gap:25px;
-  /* Shift the whole menu slightly left without changing structure */
-  margin-right:80px;             /* << move navbar left */
+  margin-right:80px;               /* slight left shift of navbar (keeps layout) */
 }
 .menu a {
   color:#333;
@@ -54,21 +55,47 @@ body, h1, p, ul, li, a {
   border-radius:6px;
 }
 
-/* Main */
-main { padding:40px 0; text-align:center; }
+/* ===========
+   Main layout
+   =========== */
+main { 
+  padding:40px 0; 
+  text-align:center; 
+}
 
-/* Helper (only appears if you used the earlier path tester) */
-.logo-error{ font-size:12px; color:#c10000; margin-left:8px; }
-.path-tester { margin-top:32px; text-align:left; }
-.path-tester ul { list-style:disc; margin-left:20px; }
-.path-tester .note { font-size:12px; color:#666; }
+/* ==============
+   Slideshow area
+   ============== */
+.slideshow-container {
+  max-width: 1400px;   /* matches container width */
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.slide { display: none; }
+.slide img {
+  width: 100%;
+  height: 500px;       /* banner height; adjust as needed */
+  object-fit: cover;
+  display: block;
+}
 
-/* Responsive: keep mobile behavior the same */
+/* Fade animation */
+.fade { animation: fade 1.2s ease-in-out; }
+@keyframes fade { from {opacity: .4} to {opacity: 1} }
+
+/* ===============
+   Responsive tweaks
+   =============== */
+@media (max-width:1024px){
+  .slide img{ height:420px; }
+}
 @media (max-width:768px){
-  .nav {flex-direction:column; gap:12px;}
-  .menu {
-    flex-wrap:wrap;
-    justify-content:center;
-    margin-right:0;             /* cancel the left shift on small screens */
-  }
+  .nav { flex-direction:column; gap:12px; }
+  .menu { flex-wrap:wrap; justify-content:center; margin-right:0; }
+  .brand img{ height:200px; }   /* keep header balanced on small screens */
+  .slide img{ height:320px; }
+}
+@media (max-width:480px){
+  .slide img{ height:240px; }
 }
