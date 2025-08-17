@@ -10,17 +10,9 @@
 
 <nav class="nav container">
   <a href="index.html" class="brand" aria-label="Gemüse Egypt Home">
-    <!-- Tries several paths so your logo shows even if the folder differs -->
-    <picture>
-      <!-- If your file is in /img and named logo.jbg.png -->
-      <source srcset="img/logo.jbg.png" type="image/png">
-      <!-- If your file is in /img and named logo.png -->
-      <source srcset="img/logo.png" type="image/png">
-      <!-- If your file is next to index.html and named logo.jbg.png -->
-      <source srcset="logo.jbg.png" type="image/png">
-      <!-- If your file is next to index.html and named logo.png -->
-      <img src="logo.png" alt="Gemüse Egypt Logo">
-    </picture>
+    <!-- The actual image source will be set by JS after it finds a valid path -->
+    <img id="site-logo" src="" alt="Gemüse Egypt Logo">
+    <span id="logo-error" class="logo-error" hidden>Logo not found – check file name/path.</span>
   </a>
 
   <ul class="menu">
@@ -39,10 +31,44 @@
 </main>
 
 <script>
+  // Try these candidate paths in order until one loads successfully.
+  const logoCandidates = [
+    "img/logo.jbg.png",
+    "img/logo.png",
+    "logo.jbg.png",
+    "logo.png",
+    "images/logo.png",
+    "assets/img/logo.png",
+    "assets/images/logo.png"
+  ];
+
+  (function loadLogo(){
+    const imgEl = document.getElementById("site-logo");
+    const errorEl = document.getElementById("logo-error");
+
+    let index = 0;
+    function tryNext(){
+      if(index >= logoCandidates.length){
+        // Nothing worked: show a tiny notice (so you know to fix the path).
+        errorEl.hidden = false;
+        imgEl.remove(); // keep header tidy if nothing loads
+        return;
+      }
+      const candidate = logoCandidates[index++];
+      const probe = new Image();
+      probe.onload = () => { imgEl.src = candidate; };
+      probe.onerror = tryNext;
+      probe.src = candidate + "?v=" + Date.now(); // bust cache while testing
+    }
+    tryNext();
+  })();
+
+  // Active menu highlight
   const here = location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.menu a').forEach(a=>{
     if(a.getAttribute('href')===here) a.classList.add('active');
   });
 </script>
+
 </body>
 </html>
