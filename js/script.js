@@ -1,52 +1,97 @@
-// Gemüse Egypt - Simple Slideshow
-// Shows one .slide at a time, auto-advances every 4s,
-// pauses on hover, and pauses when the tab is hidden.
+// Gemüse Egypt - Slideshow with autoplay, arrows, dots.
+// How to change images: edit FILENAMES below to match files in /img.
+// If some are .png, write 'slide1.png', etc.
 
 document.addEventListener("DOMContentLoaded", () => {
+  // ==== 1) Configure your images here (file names only) ====
+  const FILENAMES = [
+    "slide1.jpg",
+    "slide2.jpg",
+    "slide3.jpg",
+    "slide4.jpg",
+    "slide5.jpg",
+    "slide6.jpg"
+  ];
+
+  // Optional: alt texts (same order as images)
+  const ALTS = [
+    "Fresh Red Onions",
+    "Juicy Oranges",
+    "Premium Spring Onions",
+    "Bright Yellow Lemons",
+    "High Quality Sweet Potatoes",
+    "Fresh Green Beans Export"
+  ];
+
+  // ==== 2) Build slides & dots from the arrays ====
+  const container = document.querySelector(".slideshow-container");
+  const dotsContainer = document.querySelector(".dots-container");
+
+  if (!container || !dotsContainer || !FILENAMES.length) return;
+
+  FILENAMES.forEach((name, i) => {
+    const slide = document.createElement("div");
+    slide.className = "slide fade";
+    const img = document.createElement("img");
+    img.src = `img/${name}`;
+    img.alt = ALTS[i] || `Slide ${i+1}`;
+    slide.appendChild(img);
+    container.insertBefore(slide, container.querySelector(".hero-overlay")); // insert before overlay so overlay stays on top
+  });
+
+  FILENAMES.forEach((_, i) => {
+    const dot = document.createElement("span");
+    dot.className = "dot";
+    dotsContainer.appendChild(dot);
+  });
+
   const slides = Array.from(document.querySelectorAll(".slide"));
-  if (!slides.length) return;
+  const dots = Array.from(document.querySelectorAll(".dot"));
+  const prev = document.querySelector(".prev");
+  const next = document.querySelector(".next");
 
   let index = 0;
-  const DURATION = 4000; // ms
+  const DURATION = 4000;
+  let timer;
 
   function show(i) {
-    slides.forEach((s, idx) => {
-      s.style.display = idx === i ? "block" : "none";
-    });
+    slides.forEach((s, idx) => s.style.display = idx === i ? "block" : "none");
+    dots.forEach((d, idx) => d.classList.toggle("active-dot", idx === i));
   }
 
-  function next() {
+  function goNext() {
     index = (index + 1) % slides.length;
     show(index);
   }
 
-  // initial state
-  show(index);
-
-  // autoplay
-  let timer = setInterval(next, DURATION);
-
-  // pause on hover
-  const container = document.querySelector(".slideshow-container");
-  if (container) {
-    container.addEventListener("mouseenter", () => {
-      clearInterval(timer);
-      timer = null;
-    });
-    container.addEventListener("mouseleave", () => {
-      if (!timer) timer = setInterval(next, DURATION);
-    });
+  function goPrev() {
+    index = (index - 1 + slides.length) % slides.length;
+    show(index);
   }
 
-  // pause/resume on tab visibility
+  // autoplay controls
+  function start() { stop(); timer = setInterval(goNext, DURATION); }
+  function stop() { if (timer) clearInterval(timer); timer = null; }
+
+  // init
+  show(index);
+  start();
+
+  // arrows
+  next.addEventListener("click", () => { stop(); goNext(); start(); });
+  prev.addEventListener("click", () => { stop(); goPrev(); start(); });
+
+  // dots
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => { stop(); index = i; show(index); start(); });
+  });
+
+  // pause on hover
+  container.addEventListener("mouseenter", stop);
+  container.addEventListener("mouseleave", start);
+
+  // pause when tab hidden
   document.addEventListener("visibilitychange", () => {
-    if (document.hidden) {
-      if (timer) {
-        clearInterval(timer);
-        timer = null;
-      }
-    } else {
-      if (!timer) timer = setInterval(next, DURATION);
-    }
+    if (document.hidden) stop(); else start();
   });
 });
