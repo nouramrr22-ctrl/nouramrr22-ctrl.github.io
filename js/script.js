@@ -4,19 +4,17 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   const slides = Array.from(document.querySelectorAll(".slide"));
-  if (!slides.length) return; // no slides found; nothing to do
+  if (!slides.length) return;
 
   let index = 0;
   const DURATION = 4000; // ms
 
-  // show slide by index
   function show(i) {
     slides.forEach((s, idx) => {
       s.style.display = idx === i ? "block" : "none";
     });
   }
 
-  // next slide
   function next() {
     index = (index + 1) % slides.length;
     show(index);
@@ -28,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // autoplay
   let timer = setInterval(next, DURATION);
 
-  // pause on hover over slideshow area
+  // pause on hover
   const container = document.querySelector(".slideshow-container");
   if (container) {
     container.addEventListener("mouseenter", () => {
@@ -40,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // pause when tab is hidden, resume when visible
+  // pause/resume on tab visibility
   document.addEventListener("visibilitychange", () => {
     if (document.hidden) {
       if (timer) {
