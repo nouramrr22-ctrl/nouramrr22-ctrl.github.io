@@ -3,16 +3,13 @@
 body, h1, p, ul, li, a {
   margin:0; padding:0;
   text-decoration:none; list-style:none;
-  font-family: Arial, sans-serif;
-  color:#111;
+  font-family: Arial, sans-serif; color:#111;
 }
 .container { max-width: 1400px; margin: 0 auto; padding: 0 15px; }
 
-/* Header: logo + navigation */
-.nav {
-  display:flex; justify-content:space-between; align-items:center;
-  padding: 15px 0; border-bottom:1px solid #ddd; background:#fff;
-}
+/* Header */
+.nav { display:flex; justify-content:space-between; align-items:center;
+  padding:15px 0; border-bottom:1px solid #ddd; background:#fff; }
 .brand { display:inline-flex; align-items:center; }
 .brand img{ height:250px; width:auto; display:block; }
 .menu { display:flex; gap:25px; margin-right:80px; }
@@ -22,26 +19,25 @@ body, h1, p, ul, li, a {
 /* Main */
 main { padding:40px 0; text-align:center; }
 
-/* Slideshow base */
-.slideshow-container {
-  max-width: 1400px; position: relative; margin: 0 auto; overflow: hidden;
-  background:#000;
-}
+/* Slideshow */
+.slideshow-container { max-width:1400px; position:relative; margin:0 auto; overflow:hidden; background:#000; }
 .slide { display:none; }
 .slide img { width:100%; height:500px; object-fit:cover; display:block; }
-.fade { animation: fade 1.0s ease-in-out; }
+.slide:first-child { display:block; } /* show something immediately */
+.fade { animation: fade 1s ease-in-out; }
 @keyframes fade { from {opacity:.4} to {opacity:1} }
 
-/* Overlay */
+/* Centered overlay */
 .hero-overlay{
-  position:absolute; inset:0; display:flex; align-items:flex-start; justify-content:flex-start;
-  pointer-events:none; padding:32px;
+  position:absolute; inset:0;
+  display:flex; align-items:center; justify-content:center;
+  pointer-events:none; text-align:center; padding:20px;
 }
 .hero-text{
-  background:rgba(0,0,0,.45); color:#fff; padding:18px 22px; border-radius:10px;
-  max-width:60ch; pointer-events:auto;
+  background:rgba(0,0,0,.45); color:#fff; padding:24px 28px;
+  border-radius:12px; max-width:70ch; pointer-events:auto;
 }
-.hero-text h2{ font-size:38px; line-height:1.2; margin-bottom:6px; font-weight:800; }
+.hero-text h2{ font-size:42px; line-height:1.15; margin-bottom:8px; font-weight:800; }
 .hero-text p{ font-size:18px; opacity:.95; }
 
 /* WhatsApp button */
@@ -56,23 +52,22 @@ main { padding:40px 0; text-align:center; }
 
 /* Arrows */
 .prev, .next {
-  cursor: pointer; position: absolute; top: 50%; transform: translateY(-50%);
-  padding: 12px; color: #fff; background: rgba(0,0,0,.4);
-  font-weight: bold; font-size: 24px; border:0; border-radius:6px;
-  transition: background .25s ease; user-select: none;
+  cursor:pointer; position:absolute; top:50%; transform:translateY(-50%);
+  padding:12px; color:#fff; background:rgba(0,0,0,.4);
+  font-weight:bold; font-size:24px; border:0; border-radius:6px; user-select:none;
+  transition:background .25s ease;
 }
-.prev { left: 10px; }
-.next { right: 10px; }
-.prev:hover, .next:hover { background: rgba(0,0,0,.8); }
+.prev { left:10px; } .next { right:10px; }
+.prev:hover, .next:hover { background:rgba(0,0,0,.8); }
 
 /* Dots */
-.dots-container { text-align: center; padding: 12px; }
+.dots-container { text-align:center; padding:12px; }
 .dot {
-  cursor: pointer; height: 12px; width: 12px; margin: 0 4px;
-  background-color: #bbb; border-radius: 50%; display: inline-block;
-  transition: background-color 0.3s ease, transform .15s ease;
+  cursor:pointer; height:12px; width:12px; margin:0 4px;
+  background:#bbb; border-radius:50%; display:inline-block;
+  transition:background-color .3s ease, transform .15s ease;
 }
-.active-dot, .dot:hover { background-color: #e60000; transform: scale(1.05); }
+.active-dot, .dot:hover { background:#e60000; transform:scale(1.05); }
 
 /* Responsive */
 @media (max-width:1024px){
@@ -84,7 +79,7 @@ main { padding:40px 0; text-align:center; }
   .menu { flex-wrap:wrap; justify-content:center; margin-right:0; }
   .brand img{ height:200px; }
   .slide img{ height:320px; }
-  .hero-text{ padding:14px 16px; }
+  .hero-text{ padding:16px 18px; }
   .hero-text h2{ font-size:26px; }
   .hero-text p{ font-size:16px; }
 }
