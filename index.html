@@ -4,14 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Home | Gemüse Egypt</title>
+  <meta name="description" content="Gemüse Egypt supplies premium Egyptian fruits and vegetables to German wholesalers—quality, freshness, and reliable logistics.">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="img/favicon.png">
 </head>
 <body>
 
 <!-- Header -->
 <nav class="nav container">
   <a href="index.html" class="brand">
-    <img src="logo.jbg.png" alt="Gemüse Egypt Logo">
+    <img src="logo.png" alt="Gemüse Egypt Logo">
   </a>
   <ul class="menu">
     <li><a href="index.html">Home</a></li>
@@ -34,6 +36,21 @@
   <div class="slide fade">
     <img src="img/slide3.jpg" alt="Green Beans Export">
   </div>
+
+  <!-- Overlay: brand line + WhatsApp CTA -->
+  <div class="hero-overlay">
+    <div class="hero-text">
+      <h2>Gemüse Egypt</h2>
+      <p>Premium Egyptian produce for German wholesalers</p>
+    </div>
+
+    <!-- Bottom-right WhatsApp button -->
+    <a class="whatsapp-cta"
+       href="https://wa.me/201234567890?text=Hello%20Gem%C3%BCse%20Egypt%2C%20I%27m%20interested%20in%20your%20produce."
+       target="_blank" rel="noopener">
+      Contact us on WhatsApp
+    </a>
+  </div>
 </div>
 
 <!-- Main -->
@@ -46,7 +63,10 @@
 <script>
   const here = location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.menu a').forEach(a=>{
-    if(a.getAttribute('href')===here) a.classList.add('active');
+    if(a.getAttribute('href')===here){
+      a.classList.add('active');
+      a.setAttribute('aria-current','page'); // accessibility
+    }
   });
 </script>
 </body>
