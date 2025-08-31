@@ -13,7 +13,7 @@
 <!-- Header -->
 <nav class="nav container">
   <a href="index.html" class="brand">
-    <!-- Using your current repo logo file name -->
+    <!-- Use your current logo file name -->
     <img src="logo.jbg.png" alt="Gemüse Egypt Logo">
   </a>
   <ul class="menu">
@@ -26,15 +26,10 @@
   </ul>
 </nav>
 
-<!-- Slideshow (matches your current file names exactly) -->
+<!-- Slideshow -->
 <div class="slideshow-container">
-  <div class="slide fade"><img src="img/slide1.jpg"      alt="Fresh Red Onions"></div>
-  <div class="slide fade"><img src="img/slide1.jpg.png"  alt="Fresh Red Onions (alt file)"></div>
-  <div class="slide fade"><img src="img/slide2.jpg.png"  alt="Juicy Oranges"></div>
-  <div class="slide fade"><img src="img/slide3.jpg.jpg"  alt="Premium Spring Onions"></div>
-  <div class="slide fade"><img src="img/slide4.jpg.jpg"  alt="Bright Yellow Lemons"></div>
-  <div class="slide fade"><img src="img/slide5.jpg.png"  alt="High Quality Sweet Potatoes"></div>
-  <div class="slide fade"><img src="img/slide6.jpg.jpg"  alt="Fresh Green Beans Export"></div>
+
+  <!-- Slides will be injected by JS based on FILENAMES -->
 
   <!-- Overlay: brand line + WhatsApp CTA -->
   <div class="hero-overlay">
@@ -42,15 +37,20 @@
       <h2>Gemüse Egypt</h2>
       <p>Premium Egyptian produce for German wholesalers</p>
     </div>
-
-    <!-- Bottom-right WhatsApp button -->
     <a class="whatsapp-cta"
        href="https://wa.me/201234567890?text=Hello%20Gem%C3%BCse%20Egypt%2C%20I%27m%20interested%20in%20your%20produce."
        target="_blank" rel="noopener">
       Contact us on WhatsApp
     </a>
   </div>
+
+  <!-- Arrows -->
+  <button class="prev" aria-label="Previous slide">&#10094;</button>
+  <button class="next" aria-label="Next slide">&#10095;</button>
 </div>
+
+<!-- Dots -->
+<div class="dots-container" aria-label="Slideshow pagination"></div>
 
 <!-- Main -->
 <main class="container">
@@ -60,6 +60,7 @@
 
 <script src="js/script.js"></script>
 <script>
+  // highlight active menu item + accessibility
   const here = location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.menu a').forEach(a=>{
     if(a.getAttribute('href')===here){
