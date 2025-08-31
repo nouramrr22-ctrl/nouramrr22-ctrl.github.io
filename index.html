@@ -13,7 +13,6 @@
 <!-- Header -->
 <nav class="nav container">
   <a href="index.html" class="brand">
-    <!-- Use your current logo file name -->
     <img src="logo.jbg.png" alt="Gemüse Egypt Logo">
   </a>
   <ul class="menu">
@@ -28,15 +27,16 @@
 
 <!-- Slideshow -->
 <div class="slideshow-container">
+  <!-- Slides are injected by script.js from the FILENAMES array -->
 
-  <!-- Slides will be injected by JS based on FILENAMES -->
-
-  <!-- Overlay: brand line + WhatsApp CTA -->
+  <!-- Centered overlay -->
   <div class="hero-overlay">
     <div class="hero-text">
       <h2>Gemüse Egypt</h2>
-      <p>Premium Egyptian produce for German wholesalers</p>
+      <p>Egyptian producer and exporter of horticultural crops, committed to international food safety and quality excellence.</p>
     </div>
+
+    <!-- WhatsApp CTA -->
     <a class="whatsapp-cta"
        href="https://wa.me/201234567890?text=Hello%20Gem%C3%BCse%20Egypt%2C%20I%27m%20interested%20in%20your%20produce."
        target="_blank" rel="noopener">
@@ -60,7 +60,7 @@
 
 <script src="js/script.js"></script>
 <script>
-  // highlight active menu item + accessibility
+  // highlight active nav link
   const here = location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.menu a').forEach(a=>{
     if(a.getAttribute('href')===here){
