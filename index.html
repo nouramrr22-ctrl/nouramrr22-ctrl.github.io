@@ -13,7 +13,8 @@
 <!-- Header -->
 <nav class="nav container">
   <a href="index.html" class="brand">
-    <img src="logo.png" alt="Gemüse Egypt Logo">
+    <!-- Using your current repo logo file name -->
+    <img src="logo.jbg.png" alt="Gemüse Egypt Logo">
   </a>
   <ul class="menu">
     <li><a href="index.html">Home</a></li>
@@ -25,17 +26,15 @@
   </ul>
 </nav>
 
-<!-- Slideshow -->
+<!-- Slideshow (matches your current file names exactly) -->
 <div class="slideshow-container">
-  <div class="slide fade">
-    <img src="img/slide1.jpg" alt="Fresh Sweet Potatoes">
-  </div>
-  <div class="slide fade">
-    <img src="img/slide2.jpg" alt="Premium Onions">
-  </div>
-  <div class="slide fade">
-    <img src="img/slide3.jpg" alt="Green Beans Export">
-  </div>
+  <div class="slide fade"><img src="img/slide1.jpg"      alt="Fresh Red Onions"></div>
+  <div class="slide fade"><img src="img/slide1.jpg.png"  alt="Fresh Red Onions (alt file)"></div>
+  <div class="slide fade"><img src="img/slide2.jpg.png"  alt="Juicy Oranges"></div>
+  <div class="slide fade"><img src="img/slide3.jpg.jpg"  alt="Premium Spring Onions"></div>
+  <div class="slide fade"><img src="img/slide4.jpg.jpg"  alt="Bright Yellow Lemons"></div>
+  <div class="slide fade"><img src="img/slide5.jpg.png"  alt="High Quality Sweet Potatoes"></div>
+  <div class="slide fade"><img src="img/slide6.jpg.jpg"  alt="Fresh Green Beans Export"></div>
 
   <!-- Overlay: brand line + WhatsApp CTA -->
   <div class="hero-overlay">
@@ -65,7 +64,7 @@
   document.querySelectorAll('.menu a').forEach(a=>{
     if(a.getAttribute('href')===here){
       a.classList.add('active');
-      a.setAttribute('aria-current','page'); // accessibility
+      a.setAttribute('aria-current','page');
     }
   });
 </script>
