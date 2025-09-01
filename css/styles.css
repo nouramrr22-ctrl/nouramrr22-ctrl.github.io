@@ -40,6 +40,14 @@ main { padding:40px 0; text-align:center; }
 .hero-text h2{ font-size:42px; line-height:1.15; margin-bottom:8px; font-weight:800; }
 .hero-text p{ font-size:18px; opacity:.95; }
 
+/* ✅ NEW: custom colors for overlay text */
+.hero-title {
+  color: #000; /* Black brand name */
+}
+.hero-subtitle {
+  color: #fff; /* White sentence */
+}
+
 /* WhatsApp button */
 .whatsapp-cta{
   position:absolute; right:18px; bottom:18px; background:#25D366; color:#fff;
