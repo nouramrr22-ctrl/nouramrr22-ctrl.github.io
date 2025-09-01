@@ -28,24 +28,27 @@ main { padding:40px 0; text-align:center; }
 @keyframes fade { from {opacity:.4} to {opacity:1} }
 
 /* Centered overlay */
-.hero-overlay{
+.hero-overlay {
   position:absolute; inset:0;
   display:flex; align-items:center; justify-content:center;
   pointer-events:none; text-align:center; padding:20px;
 }
-.hero-text{
-  background:rgba(0,0,0,.45); color:#fff; padding:24px 28px;
-  border-radius:12px; max-width:70ch; pointer-events:auto;
-}
-.hero-text h2{ font-size:42px; line-height:1.15; margin-bottom:8px; font-weight:800; }
-.hero-text p{ font-size:18px; opacity:.95; }
 
-/* ✅ NEW: custom colors for overlay text */
-.hero-title {
-  color: #000; /* Black brand name */
+.hero-text {
+  background:none;         /* 🔥 removed dark box */
+  color:#fff;              /* base text white */
+  padding:24px 28px;
+  max-width:70ch;
+  pointer-events:auto;
 }
-.hero-subtitle {
-  color: #fff; /* White sentence */
+
+.hero-text h2 {
+  font-size:42px; line-height:1.15; margin-bottom:8px;
+  font-weight:800; color:#000;       /* 🔥 brand name black */
+}
+
+.hero-text p {
+  font-size:18px; opacity:.95; color:#fff; /* 🔥 sentence white */
 }
 
 /* WhatsApp button */
@@ -94,7 +97,6 @@ main { padding:40px 0; text-align:center; }
 @media (max-width:480px){
   .slide img{ height:240px; }
   .brand img{ height:160px; }
-  .hero-text{ background:rgba(0,0,0,.55); }
   .hero-text h2{ font-size:22px; }
   .whatsapp-cta{ padding:10px 14px; font-size:14px; right:12px; bottom:12px; }
 }
