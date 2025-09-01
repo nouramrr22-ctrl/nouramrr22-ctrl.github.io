@@ -6,6 +6,7 @@
   <title>Home | Gemüse Egypt</title>
   <meta name="description" content="Gemüse Egypt supplies premium Egyptian fruits and vegetables to German wholesalers—quality, freshness, and reliable logistics.">
   <link rel="stylesheet" href="css/styles.css">
+  <!-- keep or adjust if you have a favicon -->
   <link rel="icon" href="img/favicon.png">
 </head>
 <body>
@@ -13,7 +14,8 @@
 <!-- Header -->
 <nav class="nav container">
   <a href="index.html" class="brand">
-    <img src="logo.jbg.png" alt="Gemüse Egypt Logo">
+    <!-- Use your real logo path; this assumes img/logo.png -->
+    <img src="img/logo.png" alt="Gemüse Egypt Logo">
   </a>
   <ul class="menu">
     <li><a href="index.html">Home</a></li>
@@ -26,50 +28,104 @@
 </nav>
 
 <!-- Slideshow -->
-<div class="slideshow-container">
-  <!-- Slides are injected by script.js from the FILENAMES array -->
+<section class="slideshow-section">
+  <div class="slideshow-container" id="hero-slideshow">
+    <!-- Slides are injected by js/script.js from FILENAMES -->
 
-  <!-- Centered overlay -->
-  <div class="hero-overlay">
-    <div class="hero-text">
-      <h2 class="hero-title">Gemüse Egypt</h2>
-      <p class="hero-subtitle">
-        Egyptian producer and exporter of horticultural crops, committed to international food safety and quality excellence.
-      </p>
+    <!-- Centered overlay -->
+    <div class="hero-overlay" aria-live="polite">
+      <div class="hero-text">
+        <h2>Gemüse Egypt</h2>
+        <p>Egyptian producer and exporter of horticultural crops, committed to international food safety and quality excellence.</p>
+      </div>
+
+      <!-- WhatsApp CTA (use your real number) -->
+      <a class="whatsapp-cta"
+         href="https://wa.me/201234567890?text=Hello%20Gem%C3%BCse%20Egypt%2C%20I%27m%20interested%20in%20your%20produce."
+         target="_blank" rel="noopener">
+        Contact us on WhatsApp
+      </a>
     </div>
 
-    <!-- WhatsApp CTA -->
-    <a class="whatsapp-cta"
-       href="https://wa.me/201234567890?text=Hello%20Gem%C3%BCse%20Egypt%2C%20I%27m%20interested%20in%20your%20produce."
-       target="_blank" rel="noopener">
-      Contact us on WhatsApp
-    </a>
+    <!-- Arrows -->
+    <button class="prev" aria-label="Previous slide" aria-controls="hero-slideshow">&#10094;</button>
+    <button class="next" aria-label="Next slide" aria-controls="hero-slideshow">&#10095;</button>
   </div>
 
-  <!-- Arrows -->
-  <button class="prev" aria-label="Previous slide">&#10094;</button>
-  <button class="next" aria-label="Next slide">&#10095;</button>
-</div>
+  <!-- Dots -->
+  <div class="dots-container" aria-label="Slideshow pagination" role="tablist"></div>
+</section>
 
-<!-- Dots -->
-<div class="dots-container" aria-label="Slideshow pagination"></div>
+<!-- Products (directly under the slideshow) -->
+<section id="products" class="products-section container">
+  <h2 class="products-heading">
+    <span class="chev left">▸</span>
+    OUR PRODUCTS
+    <span class="chev right">◂</span>
+  </h2>
 
-<!-- Main -->
+  <div class="products-grid">
+    <!-- Card 1 -->
+    <article class="product-card card-pink">
+      <div class="product-thumb">
+        <img src="img/spring-onion.jpg" alt="Spring Onion">
+      </div>
+      <h3>Spring Onion</h3>
+      <div class="divider">•••</div>
+      <p>Our spring onions are straight with tightly wrapped leaves—firm, clean, and export-ready.</p>
+      <a href="products.html" class="card-arrow" aria-label="View all products">→</a>
+    </article>
+
+    <!-- Card 2 -->
+    <article class="product-card card-sand">
+      <div class="product-thumb">
+        <img src="img/onions.jpg" alt="Onions">
+      </div>
+      <h3>Onions</h3>
+      <div class="divider">•••</div>
+      <p>Yellow and red varieties, graded and packed to spec—reliable supply and shelf appeal.</p>
+      <a href="products.html" class="card-arrow" aria-label="View all products">→</a>
+    </article>
+
+    <!-- Card 3 -->
+    <article class="product-card card-green">
+      <div class="product-thumb">
+        <img src="img/sweet-potato.jpg" alt="Sweet Potato">
+      </div>
+      <h3>Sweet Potato</h3>
+      <div class="divider">•••</div>
+      <p>Beauregard and Bellevue types—clean skins, uniform sizing, and excellent sweetness.</p>
+      <a href="products.html" class="card-arrow" aria-label="View all products">→</a>
+    </article>
+  </div>
+
+  <!-- Button under products -->
+  <div class="products-btn">
+    <a href="products.html" class="btn-products">
+      <span class="arrow">←</span> ALL PRODUCTS
+    </a>
+  </div>
+</section>
+
+<!-- Main (you can keep or remove; left here for your content) -->
 <main class="container">
   <h1>Fresh Egyptian Produce for Germany</h1>
   <p>Supplying the highest quality fruits and vegetables, directly from Egypt’s farms to wholesalers in Germany.</p>
 </main>
 
+<!-- Scripts -->
 <script src="js/script.js"></script>
 <script>
   // highlight active nav link
-  const here = location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.menu a').forEach(a=>{
-    if(a.getAttribute('href')===here){
-      a.classList.add('active');
-      a.setAttribute('aria-current','page');
-    }
-  });
+  (function () {
+    var here = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+    document.querySelectorAll('.menu a').forEach(function(a){
+      if ((a.getAttribute('href')||'').toLowerCase() === here) {
+        a.classList.add('active');
+        a.setAttribute('aria-current','page');
+      }
+    });
+  })();
 </script>
 </body>
 </html>
