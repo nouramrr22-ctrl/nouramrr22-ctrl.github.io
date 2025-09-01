@@ -2,19 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Home | Gemüse Egypt</title>
   <meta name="description" content="Gemüse Egypt supplies premium Egyptian fruits and vegetables to German wholesalers—quality, freshness, and reliable logistics.">
+  <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="img/favicon.png">
-  <!-- cache-bust with ?v=restore1 so the new CSS is guaranteed to load -->
-  <link rel="stylesheet" href="css/styles.css?v=restore1">
 </head>
 <body>
 
 <!-- Header -->
-<nav class="nav container" aria-label="Main navigation">
-  <a href="index.html" class="brand" aria-label="Gemüse Egypt — Home">
-    <!-- Keeping the same path you currently use -->
+<nav class="nav container">
+  <a href="index.html" class="brand">
     <img src="logo.jbg.png" alt="Gemüse Egypt Logo">
   </a>
   <ul class="menu">
@@ -28,28 +26,48 @@
 </nav>
 
 <!-- Slideshow -->
-<div class="slideshow-container" aria-label="Hero slideshow">
+<div class="slideshow-container">
+  <!-- Slides are injected by script.js from the FILENAMES array -->
+
+  <!-- Centered overlay -->
   <div class="hero-overlay">
     <div class="hero-text">
       <h2>Gemüse Egypt</h2>
       <p>Egyptian producer and exporter of horticultural crops, committed to international food safety and quality excellence.</p>
     </div>
+
+    <!-- WhatsApp CTA -->
     <a class="whatsapp-cta"
        href="https://wa.me/201234567890?text=Hello%20Gem%C3%BCse%20Egypt%2C%20I%27m%20interested%20in%20your%20produce."
-       target="_blank" rel="noopener">Contact us on WhatsApp</a>
+       target="_blank" rel="noopener">
+      Contact us on WhatsApp
+    </a>
   </div>
 
+  <!-- Arrows -->
   <button class="prev" aria-label="Previous slide">&#10094;</button>
   <button class="next" aria-label="Next slide">&#10095;</button>
 </div>
 
+<!-- Dots -->
 <div class="dots-container" aria-label="Slideshow pagination"></div>
 
+<!-- Main -->
 <main class="container">
   <h1>Fresh Egyptian Produce for Germany</h1>
   <p>Supplying the highest quality fruits and vegetables, directly from Egypt’s farms to wholesalers in Germany.</p>
 </main>
 
-<script src="js/script.js" defer></script>
+<script src="js/script.js"></script>
+<script>
+  // highlight active nav link
+  const here = location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.menu a').forEach(a=>{
+    if(a.getAttribute('href')===here){
+      a.classList.add('active');
+      a.setAttribute('aria-current','page');
+    }
+  });
+</script>
 </body>
 </html>
