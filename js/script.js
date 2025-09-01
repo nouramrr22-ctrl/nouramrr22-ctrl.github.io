@@ -1,12 +1,12 @@
 // Slideshow with autoplay, arrows, dots.
-// FILENAMES match your current /img folder exactly (4 images).
+// FILENAMES match your current /img folder exactly.
 
 document.addEventListener("DOMContentLoaded", () => {
-  // ---- Set your exact file names here ----
+  // ---- Use the real file names in img/ ----
   const FILENAMES = [
     "slide1.jpg.png",
     "slide2.jpg.png",
-    "slide3.jpg.jpg",
+    "slide3.jpg.png",
     "slide4.jpg.png"
   ];
 
@@ -28,6 +28,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const img = document.createElement("img");
     img.src = `img/${name}`;
     img.alt = ALTS[i] || `Slide ${i+1}`;
+
+    // Debug helper: log if image fails
+    img.onerror = () => {
+      console.error(`Image not found: img/${name}`);
+    };
+
     slide.appendChild(img);
     container.insertBefore(slide, container.querySelector(".hero-overlay"));
   });
