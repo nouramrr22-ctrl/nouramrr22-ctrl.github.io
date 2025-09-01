@@ -29,9 +29,9 @@
 <!-- =================== Slideshow =================== -->
 <section class="slideshow-section">
   <div class="slideshow-container" id="hero-slideshow">
-    <!-- Slides injected by js/script.js -->
+    <!-- Slides are injected by js/script.js -->
 
-    <!-- Overlay -->
+    <!-- Overlay (keep this element; JS inserts slides before it) -->
     <div class="hero-overlay" aria-live="polite">
       <div class="hero-text">
         <h2>Gemüse Egypt</h2>
@@ -71,18 +71,18 @@
       </div>
       <h3>Spring Onion</h3>
       <div class="divider">•••</div>
-      <p>Straight stems with tightly wrapped leaves—firm, clean, and export-ready.</p>
+      <p>Our spring onions are straight, with erect leaves tightly wrapped around a central core; firm and clean.</p>
       <a href="products.html" class="card-arrow" aria-label="View all products">→</a>
     </article>
 
     <!-- Card 2 -->
     <article class="product-card card-sand">
       <div class="product-thumb">
-        <img src="img/onions.jpg" alt="Onions" />
+        <img src="img/onions.jpg" alt="Red and Yellow Onions" />
       </div>
       <h3>Onions</h3>
       <div class="divider">•••</div>
-      <p>Yellow and red varieties, graded and packed to spec—reliable supply and shelf appeal.</p>
+      <p>Our onions come in yellow or red varieties. They are available between May and July.</p>
       <a href="products.html" class="card-arrow" aria-label="View all products">→</a>
     </article>
 
@@ -93,7 +93,7 @@
       </div>
       <h3>Sweet Potato</h3>
       <div class="divider">•••</div>
-      <p>Beauregard and Bellevue types—clean skins, uniform sizing, and excellent sweetness.</p>
+      <p>Our sweet potatoes come in two varieties, Beauregard and Bellevue—very sweet and healthy.</p>
       <a href="products.html" class="card-arrow" aria-label="View all products">→</a>
     </article>
   </div>
@@ -115,7 +115,7 @@
 <!-- =================== Scripts =================== -->
 <script src="js/script.js"></script>
 <script>
-  // highlight active nav link
+  // active nav highlight (unchanged from your original behavior)
   (function () {
     var here = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
     document.querySelectorAll('.menu a').forEach(function (a) {
