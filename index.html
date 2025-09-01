@@ -13,7 +13,8 @@
 <!-- =================== Header =================== -->
 <nav class="nav container">
   <a href="index.html" class="brand">
-    <img src="img/logo.jbg.png" alt="Gemüse Egypt Logo" />
+    <!-- Logo file is at repo root -->
+    <img src="logo.jbg.png" alt="Gemüse Egypt Logo" />
   </a>
   <ul class="menu">
     <li><a href="index.html">Home</a></li>
@@ -28,16 +29,16 @@
 <!-- =================== Slideshow =================== -->
 <section class="slideshow-section">
   <div class="slideshow-container" id="hero-slideshow">
-    <!-- Slides are injected by js/script.js based on FILENAMES array -->
+    <!-- Slides injected by js/script.js -->
 
-    <!-- Center overlay -->
+    <!-- Overlay -->
     <div class="hero-overlay" aria-live="polite">
       <div class="hero-text">
         <h2>Gemüse Egypt</h2>
         <p>Egyptian producer and exporter of horticultural crops, committed to international food safety and quality excellence.</p>
       </div>
 
-      <!-- Update the WhatsApp number below -->
+      <!-- WhatsApp CTA -->
       <a class="whatsapp-cta"
          href="https://wa.me/201234567890?text=Hello%20Gem%C3%BCse%20Egypt%2C%20I%27m%20interested%20in%20your%20produce."
          target="_blank" rel="noopener">
@@ -114,13 +115,13 @@
 <!-- =================== Scripts =================== -->
 <script src="js/script.js"></script>
 <script>
-  // Keep your current active-link behavior
+  // highlight active nav link
   (function () {
     var here = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
     document.querySelectorAll('.menu a').forEach(function (a) {
       if ((a.getAttribute('href') || '').toLowerCase() === here) {
         a.classList.add('active');
-        a.setAttribute('aria-current', 'page');
+        a.setAttribute('aria-current','page');
       }
     });
   })();
