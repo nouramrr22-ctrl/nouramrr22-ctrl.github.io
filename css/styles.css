@@ -34,11 +34,24 @@ main { padding:40px 0; text-align:center; }
   pointer-events:none; text-align:center; padding:20px;
 }
 .hero-text{
-  background:rgba(0,0,0,.45); color:#fff; padding:24px 28px;
-  border-radius:12px; max-width:70ch; pointer-events:auto;
+  background:none;                /* removed black background */
+  padding:24px 28px;
+  max-width:70ch;
+  pointer-events:auto;
+  text-align:center;
 }
-.hero-text h2{ font-size:42px; line-height:1.15; margin-bottom:8px; font-weight:800; }
-.hero-text p{ font-size:18px; opacity:.95; }
+.hero-text h2{
+  font-size:42px;
+  line-height:1.15;
+  margin-bottom:8px;
+  font-weight:800;
+  color:#000;                     /* brand name in black */
+}
+.hero-text p{
+  font-size:18px;
+  opacity:.95;
+  color:#fff;                     /* sentence in white */
+}
 
 /* WhatsApp button */
 .whatsapp-cta{
@@ -86,7 +99,6 @@ main { padding:40px 0; text-align:center; }
 @media (max-width:480px){
   .slide img{ height:240px; }
   .brand img{ height:160px; }
-  .hero-text{ background:rgba(0,0,0,.55); }
   .hero-text h2{ font-size:22px; }
   .whatsapp-cta{ padding:10px 14px; font-size:14px; right:12px; bottom:12px; }
 }
