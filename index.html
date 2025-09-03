@@ -13,7 +13,6 @@
 <!-- =================== Header =================== -->
 <nav class="nav container">
   <a href="index.html" class="brand">
-    <!-- Logo file is at repo root -->
     <img src="logo.jbg.png" alt="Gemüse Egypt Logo" />
   </a>
   <ul class="menu">
@@ -30,28 +29,19 @@
 <section class="slideshow-section">
   <div class="slideshow-container" id="hero-slideshow">
     <!-- Slides are injected by js/script.js -->
-
-    <!-- Overlay kept; JS inserts slides before it -->
     <div class="hero-overlay" aria-live="polite">
       <div class="hero-text">
         <h2>Gemüse Egypt</h2>
         <p>Egyptian producer and exporter of horticultural crops, committed to international food safety and quality excellence.</p>
       </div>
-
-      <!-- WhatsApp CTA -->
       <a class="whatsapp-cta"
          href="https://wa.me/201234567890?text=Hello%20Gem%C3%BCse%20Egypt%2C%20I%27m%20interested%20in%20your%20produce."
-         target="_blank" rel="noopener">
-        Contact us on WhatsApp
-      </a>
+         target="_blank" rel="noopener">Contact us on WhatsApp</a>
     </div>
 
-    <!-- Arrows -->
     <button class="prev" aria-label="Previous slide" aria-controls="hero-slideshow">&#10094;</button>
     <button class="next" aria-label="Next slide" aria-controls="hero-slideshow">&#10095;</button>
   </div>
-
-  <!-- Dots -->
   <div class="dots-container" aria-label="Slideshow pagination"></div>
 </section>
 
@@ -63,16 +53,10 @@
     <span class="chev right">◂</span>
   </h2>
 
-  <!-- Product photos directly under the red heading -->
-  <div class="products-photos">
-    <img src="img/spring-onion.jpg" alt="Spring Onion">
-    <img src="img/onions.jpg" alt="Onions">
-    <img src="img/sweet-potato.jpg" alt="Sweet Potato">
-  </div>
-
-  <!-- 3 product cards (text only as requested) -->
+  <!-- Cards with images INSIDE each card -->
   <div class="products-grid">
     <article class="product-card">
+      <img src="img/spring-onion.jpg" alt="Spring Onion" class="card-img">
       <h3>Spring Onion</h3>
       <div class="divider">•••</div>
       <p>Our spring onions are straight, with erect leaves tightly wrapped around a central core; firm and clean.</p>
@@ -80,6 +64,7 @@
     </article>
 
     <article class="product-card">
+      <img src="img/onions.jpg" alt="Onions" class="card-img">
       <h3>Onions</h3>
       <div class="divider">•••</div>
       <p>Our onions come in yellow or red varieties. They are available between May and July.</p>
@@ -87,6 +72,7 @@
     </article>
 
     <article class="product-card">
+      <img src="img/sweet-potato.jpg" alt="Sweet Potato" class="card-img">
       <h3>Sweet Potato</h3>
       <div class="divider">•••</div>
       <p>Our sweet potatoes come in two varieties, Beauregard and Bellevue—very sweet and healthy.</p>
@@ -110,7 +96,6 @@
 <!-- =================== Scripts =================== -->
 <script src="js/script.js"></script>
 <script>
-  // active nav highlight
   (function () {
     var here = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
     document.querySelectorAll('.menu a').forEach(function (a) {
