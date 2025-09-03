@@ -31,7 +31,7 @@
   <div class="slideshow-container" id="hero-slideshow">
     <!-- Slides are injected by js/script.js -->
 
-    <!-- Overlay (keep this element; JS inserts slides before it) -->
+    <!-- Overlay kept; JS inserts slides before it -->
     <div class="hero-overlay" aria-live="polite">
       <div class="hero-text">
         <h2>Gemüse Egypt</h2>
@@ -55,7 +55,7 @@
   <div class="dots-container" aria-label="Slideshow pagination"></div>
 </section>
 
-<!-- =================== Products Preview =================== -->
+<!-- =================== Products =================== -->
 <section id="products" class="products-section container">
   <h2 class="products-heading">
     <span class="chev left">▸</span>
@@ -63,34 +63,30 @@
     <span class="chev right">◂</span>
   </h2>
 
+  <!-- Product photos directly under the red heading -->
+  <div class="products-photos">
+    <img src="img/spring-onion.jpg" alt="Spring Onion">
+    <img src="img/onions.jpg" alt="Onions">
+    <img src="img/sweet-potato.jpg" alt="Sweet Potato">
+  </div>
+
+  <!-- 3 product cards (text only as requested) -->
   <div class="products-grid">
-    <!-- Card 1 -->
-    <article class="product-card card-pink">
-      <div class="product-thumb">
-        <img src="img/spring-onion.jpg" alt="Spring Onion" />
-      </div>
+    <article class="product-card">
       <h3>Spring Onion</h3>
       <div class="divider">•••</div>
       <p>Our spring onions are straight, with erect leaves tightly wrapped around a central core; firm and clean.</p>
       <a href="products.html" class="card-arrow" aria-label="View all products">→</a>
     </article>
 
-    <!-- Card 2 -->
-    <article class="product-card card-sand">
-      <div class="product-thumb">
-        <img src="img/onions.jpg" alt="Red and Yellow Onions" />
-      </div>
+    <article class="product-card">
       <h3>Onions</h3>
       <div class="divider">•••</div>
       <p>Our onions come in yellow or red varieties. They are available between May and July.</p>
       <a href="products.html" class="card-arrow" aria-label="View all products">→</a>
     </article>
 
-    <!-- Card 3 -->
-    <article class="product-card card-green">
-      <div class="product-thumb">
-        <img src="img/sweet-potato.jpg" alt="Sweet Potato" />
-      </div>
+    <article class="product-card">
       <h3>Sweet Potato</h3>
       <div class="divider">•••</div>
       <p>Our sweet potatoes come in two varieties, Beauregard and Bellevue—very sweet and healthy.</p>
@@ -98,7 +94,6 @@
     </article>
   </div>
 
-  <!-- Button under products -->
   <div class="products-btn">
     <a href="products.html" class="btn-products">
       <span class="arrow">←</span> ALL PRODUCTS
@@ -115,7 +110,7 @@
 <!-- =================== Scripts =================== -->
 <script src="js/script.js"></script>
 <script>
-  // active nav highlight (unchanged from your original behavior)
+  // active nav highlight
   (function () {
     var here = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
     document.querySelectorAll('.menu a').forEach(function (a) {
