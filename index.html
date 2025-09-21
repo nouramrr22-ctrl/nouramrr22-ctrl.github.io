@@ -10,116 +10,117 @@
 </head>
 <body>
 
-<!-- =================== Header =================== -->
-<nav class="nav container">
-  <a href="index.html" class="brand">
-    <!-- Logo file is at repo root -->
-    <img src="logo.jbg.png" alt="Gemüse Egypt Logo" />
-  </a>
-  <ul class="menu">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About us</a></li>
-    <li><a href="products.html">Products</a></li>
-    <li><a href="quality.html">Quality Standards</a></li>
-    <li><a href="gallery.html">Gallery</a></li>
-    <li><a href="contact.html">Contact Us</a></li>
-  </ul>
-</nav>
+  <!-- =================== Header =================== -->
+  <nav class="nav container">
+    <a href="index.html" class="brand" aria-label="Gemüse Egypt Home">
+      <!-- Logo file referenced exactly as in your repo -->
+      <img src="logo.jbg.png" alt="Gemüse Egypt Logo" />
+    </a>
+    <ul class="menu" role="menubar">
+      <li role="none"><a role="menuitem" href="index.html">Home</a></li>
+      <li role="none"><a role="menuitem" href="about.html">About us</a></li>
+      <li role="none"><a role="menuitem" href="products.html">Products</a></li>
+      <li role="none"><a role="menuitem" href="quality.html">Quality Standards</a></li>
+      <li role="none"><a role="menuitem" href="gallery.html">Gallery</a></li>
+      <li role="none"><a role="menuitem" href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
 
-<!-- =================== Slideshow =================== -->
-<section class="slideshow-section">
-  <div class="slideshow-container" id="hero-slideshow">
-    <!-- Slides are injected by js/script.js -->
+  <!-- =================== Slideshow =================== -->
+  <section class="slideshow-section">
+    <div class="slideshow-container" id="hero-slideshow" aria-label="Product highlights">
+      <!-- Slides are injected by js/script.js -->
 
-    <!-- Overlay kept; JS inserts slides before it -->
-    <div class="hero-overlay" aria-live="polite">
-      <div class="hero-text">
-        <h2>Gemüse Egypt</h2>
-        <p>Egyptian producer and exporter of horticultural crops, committed to international food safety and quality excellence.</p>
+      <!-- Overlay (remains above slides) -->
+      <div class="hero-overlay" aria-live="polite">
+        <div class="hero-text">
+          <h2>Gemüse Egypt</h2>
+          <p>Egyptian producer and exporter of horticultural crops, committed to international food safety and quality excellence.</p>
+        </div>
+
+        <!-- WhatsApp CTA -->
+        <a class="whatsapp-cta"
+           href="https://wa.me/201234567890?text=Hello%20Gem%C3%BCse%20Egypt%2C%20I%27m%20interested%20in%20your%20produce."
+           target="_blank" rel="noopener">
+          Contact us on WhatsApp
+        </a>
       </div>
 
-      <!-- WhatsApp CTA -->
-      <a class="whatsapp-cta"
-         href="https://wa.me/201234567890?text=Hello%20Gem%C3%BCse%20Egypt%2C%20I%27m%20interested%20in%20your%20produce."
-         target="_blank" rel="noopener">
-        Contact us on WhatsApp
-      </a>
+      <!-- Arrows -->
+      <button class="prev" aria-label="Previous slide" aria-controls="hero-slideshow">&#10094;</button>
+      <button class="next" aria-label="Next slide" aria-controls="hero-slideshow">&#10095;</button>
     </div>
 
-    <!-- Arrows -->
-    <button class="prev" aria-label="Previous slide" aria-controls="hero-slideshow">&#10094;</button>
-    <button class="next" aria-label="Next slide" aria-controls="hero-slideshow">&#10095;</button>
-  </div>
+    <!-- Dots -->
+    <div class="dots-container" aria-label="Slideshow pagination"></div>
+  </section>
 
-  <!-- Dots -->
-  <div class="dots-container" aria-label="Slideshow pagination"></div>
-</section>
+  <!-- =================== Products =================== -->
+  <section id="products" class="products-section container">
+    <h2 class="products-heading">
+      <span class="chev left">▸</span>
+      OUR PRODUCTS
+      <span class="chev right">◂</span>
+    </h2>
 
-<!-- =================== Products =================== -->
-<section id="products" class="products-section container">
-  <h2 class="products-heading">
-    <span class="chev left">▸</span>
-    OUR PRODUCTS
-    <span class="chev right">◂</span>
-  </h2>
+    <!-- Photo row directly under heading -->
+    <div class="products-photos">
+      <img src="img/spring-onion.jpg" alt="Spring Onion">
+      <img src="img/onions.jpg" alt="Onions">
+      <img src="img/sweet-potato.jpg" alt="Sweet Potato">
+    </div>
 
-  <!-- Product photos directly under the red heading -->
-  <div class="products-photos">
-    <img src="img/spring-onion.jpg" alt="Spring Onion">
-    <img src="img/onions.jpg" alt="Onions">
-    <img src="img/sweet-potato.jpg" alt="Sweet Potato">
-  </div>
+    <!-- 3 product cards (text only) -->
+    <div class="products-grid">
+      <article class="product-card">
+        <h3>Spring Onion</h3>
+        <div class="divider">•••</div>
+        <p>Our spring onions are straight, with erect leaves tightly wrapped around a central core; firm and clean.</p>
+        <a href="products.html" class="card-arrow" aria-label="View all products">→</a>
+      </article>
 
-  <!-- 3 product cards (text only as requested) -->
-  <div class="products-grid">
-    <article class="product-card">
-      <h3>Spring Onion</h3>
-      <div class="divider">•••</div>
-      <p>Our spring onions are straight, with erect leaves tightly wrapped around a central core; firm and clean.</p>
-      <a href="products.html" class="card-arrow" aria-label="View all products">→</a>
-    </article>
+      <article class="product-card">
+        <h3>Onions</h3>
+        <div class="divider">•••</div>
+        <p>Our onions come in yellow or red varieties. They are available between May and July.</p>
+        <a href="products.html" class="card-arrow" aria-label="View all products">→</a>
+      </article>
 
-    <article class="product-card">
-      <h3>Onions</h3>
-      <div class="divider">•••</div>
-      <p>Our onions come in yellow or red varieties. They are available between May and July.</p>
-      <a href="products.html" class="card-arrow" aria-label="View all products">→</a>
-    </article>
+      <article class="product-card">
+        <h3>Sweet Potato</h3>
+        <div class="divider">•••</div>
+        <p>Our sweet potatoes come in two varieties, Beauregard and Bellevue—very sweet and healthy.</p>
+        <a href="products.html" class="card-arrow" aria-label="View all products">→</a>
+      </article>
+    </div>
 
-    <article class="product-card">
-      <h3>Sweet Potato</h3>
-      <div class="divider">•••</div>
-      <p>Our sweet potatoes come in two varieties, Beauregard and Bellevue—very sweet and healthy.</p>
-      <a href="products.html" class="card-arrow" aria-label="View all products">→</a>
-    </article>
-  </div>
+    <!-- Centered red button (below photos/cards) -->
+    <div class="products-btn">
+      <a href="products.html" class="btn-products" aria-label="View all products">
+        <span class="arrow">←</span> ALL PRODUCTS
+      </a>
+    </div>
+  </section>
 
-  <div class="products-btn">
-    <a href="products.html" class="btn-products">
-      <span class="arrow">←</span> ALL PRODUCTS
-    </a>
-  </div>
-</section>
+  <!-- =================== Main Copy =================== -->
+  <main class="container">
+    <h1>Fresh Egyptian Produce for Germany</h1>
+    <p>Supplying high-quality fruits and vegetables—direct from Egypt’s farms to wholesalers in Germany.</p>
+  </main>
 
-<!-- =================== Main Copy =================== -->
-<main class="container">
-  <h1>Fresh Egyptian Produce for Germany</h1>
-  <p>Supplying high-quality fruits and vegetables—direct from Egypt’s farms to wholesalers in Germany.</p>
-</main>
-
-<!-- =================== Scripts =================== -->
-<script src="js/script.js"></script>
-<script>
-  // active nav highlight
-  (function () {
-    var here = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
-    document.querySelectorAll('.menu a').forEach(function (a) {
-      if ((a.getAttribute('href') || '').toLowerCase() === here) {
-        a.classList.add('active');
-        a.setAttribute('aria-current','page');
-      }
-    });
-  })();
-</script>
+  <!-- =================== Scripts =================== -->
+  <script src="js/script.js"></script>
+  <script>
+    // active nav highlight
+    (function () {
+      var here = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+      document.querySelectorAll('.menu a').forEach(function (a) {
+        if ((a.getAttribute('href') || '').toLowerCase() === here) {
+          a.classList.add('active');
+          a.setAttribute('aria-current','page');
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
