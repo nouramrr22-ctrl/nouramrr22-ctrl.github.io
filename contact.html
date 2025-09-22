@@ -4,45 +4,61 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact Us | Gemüse Egypt</title>
-  <meta name="description" content="Contact Gemüse Egypt: Phone, WhatsApp, Email, Website.">
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;500;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=11" />
-  <link rel="icon" href="img/favicon.png" />
+  <meta name="description" content="Get in touch with Gemüse Egypt.">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;500;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=12">
+  <link rel="icon" href="img/favicon.png">
 </head>
 <body>
   <nav class="nav container">
-    <a href="index.html" class="brand"><img src="logo.jbg.png" alt="Gemüse Egypt Logo"></a>
-    <ul class="menu">
-      <li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li>
-      <li><a href="products.html">Products</a></li><li><a href="quality.html">Quality Standards</a></li>
-      <li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact Us</a></li>
+    <a href="index.html" class="brand" aria-label="Gemüse Egypt Home">
+      <img src="logo.jbg.png" alt="Gemüse Egypt Logo">
+    </a>
+    <ul class="menu" role="menubar">
+      <li role="none"><a role="menuitem" href="index.html">Home</a></li>
+      <li role="none"><a role="menuitem" href="about.html">About us</a></li>
+      <li role="none"><a role="menuitem" href="products.html">Products</a></li>
+      <li role="none"><a role="menuitem" href="quality.html">Quality Standards</a></li>
+      <li role="none"><a role="menuitem" href="gallery.html">Gallery</a></li>
+      <li role="none"><a role="menuitem" href="contact.html">Contact Us</a></li>
     </ul>
   </nav>
 
-  <header class="page-hero">
-    <h1>Contact Us</h1>
-    <p>We’re ready to supply your needs. Reach us anytime.</p>
+  <header class="page-hero" style="background:#111;color:#fff;border-radius:14px;max-width:1400px;margin:32px auto 0;padding:48px 15px;">
+    <h1 style="color:#fff;margin-bottom:8px;">Get In Touch</h1>
+    <p style="color:#e5e7eb">If you have any questions or inquiries, please send us a message.</p>
   </header>
 
-  <section class="container page-section contact-grid">
-    <div class="contact-card">
-      <h2 class="section-title red">Details</h2>
-      <ul class="contact-list">
-        <li>📞 Phone: <a href="tel:+201156893412">+20 115 689 3412</a></li>
-        <li>💬 WhatsApp: <a href="https://wa.me/201156893412" target="_blank">+20 115 689 3412</a></li>
-        <li>📧 Email: <a href="mailto:info@gemuseegypt.org">info@gemuseegypt.org</a></li>
-        <li>🌐 Website: <a href="https://www.gemuseegypt.org" target="_blank">www.gemuseegypt.org</a></li>
-      </ul>
-    </div>
+  <section class="page-section container">
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h2 class="section-title">Contact Details</h2>
+        <ul class="contact-list">
+          <li>📞 Phone: <a href="tel:+201156893412">+20 115 689 3412</a></li>
+          <li>💬 WhatsApp: <a href="https://wa.me/201156893412" target="_blank">+20 115 689 3412</a></li>
+          <li>📧 Email: <a href="mailto:info@gemuseegypt.org">info@gemuseegypt.org</a></li>
+          <li>🌐 Website: <a href="https://www.gemuseegypt.org" target="_blank">www.gemuseegypt.org</a></li>
+        </ul>
+      </div>
 
-    <div class="contact-card">
-      <h2 class="section-title red">Quick Message</h2>
-      <form class="contact-form" action="mailto:info@gemuseegypt.org" method="post" enctype="text/plain">
-        <label>Name<input type="text" name="name" required></label>
-        <label>Email<input type="email" name="email" required></label>
-        <label>Message<textarea name="message" rows="5" required></textarea></label>
-        <button class="btn-products" type="submit">Send</button>
-      </form>
+      <div class="contact-card">
+        <h2 class="section-title">Send a Message</h2>
+        <form class="contact-form" action="#" method="post">
+          <label>
+            Name
+            <input type="text" name="name" placeholder="Your name" required>
+          </label>
+          <label>
+            E-mail
+            <input type="email" name="email" placeholder="your@email.com" required>
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="6" placeholder="How can we help?" required></textarea>
+          </label>
+          <button type="submit" class="btn-products">Send</button>
+        </form>
+      </div>
     </div>
   </section>
 
@@ -75,9 +91,12 @@
     <div class="footer-bottom"><p>© 2025 Gemüse Egypt | All rights reserved</p></div>
   </footer>
 
+  <script src="js/script.js"></script>
   <script>
-    (function(){var here=(location.pathname.split('/').pop()||'index.html').toLowerCase();
-    document.querySelectorAll('.menu a').forEach(function(a){if((a.getAttribute('href')||'').toLowerCase()===here){a.classList.add('active');a.setAttribute('aria-current','page');}});})();
+    (function(){var here=(location.pathname.split('/').pop()||'contact.html').toLowerCase();
+    document.querySelectorAll('.menu a').forEach(function(a){
+      if((a.getAttribute('href')||'').toLowerCase()===here){a.classList.add('active');a.setAttribute('aria-current','page');}
+    });})();
   </script>
 </body>
 </html>
