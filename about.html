@@ -1,37 +1,80 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>About us | Gemüse Egypt</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us | Gemüse Egypt</title>
+  <meta name="description" content="About Gemüse Egypt: Egyptian producer and exporter of high-quality horticultural crops.">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;500;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=11" />
+  <link rel="icon" href="img/favicon.png" />
 </head>
 <body>
+  <nav class="nav container">
+    <a href="index.html" class="brand"><img src="logo.jbg.png" alt="Gemüse Egypt Logo"></a>
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li>
+      <li><a href="products.html">Products</a></li><li><a href="quality.html">Quality Standards</a></li>
+      <li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
 
-<nav class="nav container">
-  <a href="index.html" class="brand">
-    <img src="logo.jbg.png" alt="Gemüse Egypt Logo">
-  </a>
-  <ul class="menu">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About us</a></li>
-    <li><a href="products.html">Products</a></li>
-    <li><a href="quality.html">Quality Standards</a></li>
-    <li><a href="gallery.html">Gallery</a></li>
-    <li><a href="contact.html">Contact Us</a></li>
-  </ul>
-</nav>
+  <header class="page-hero">
+    <h1>About Gemüse Egypt</h1>
+    <p>Trusted Egyptian producer and exporter of fresh horticultural crops.</p>
+  </header>
 
-<main class="container">
-  <h1>About us</h1>
-  <p>We connect Egypt’s finest farms to wholesalers in Germany. Our mission is to ensure quality, transparency, and reliability at every step of the supply chain.</p>
-</main>
+  <section class="container page-section">
+    <h2 class="section-title red">Who we are</h2>
+    <p>
+      Gemüse Egypt specializes in growing and exporting premium horticultural crops. Our farms are located in Wadi Alnatrun and
+      operate under an integrated food safety and quality management system compliant with international standards (including Global GAP).
+      We partner with reputable logistics providers to ensure freshness and reliability to our customers in Germany and beyond.
+    </p>
+  </section>
 
-<script>
-  const here = location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.menu a').forEach(a=>{
-    if(a.getAttribute('href')===here) a.classList.add('active');
-  });
-</script>
+  <section class="container page-section">
+    <h2 class="section-title red">Our Values</h2>
+    <ul class="bullets">
+      <li>Food safety and quality as non-negotiables</li>
+      <li>Transparent partnerships with our clients</li>
+      <li>Sustainable, responsible farming</li>
+      <li>On-time delivery and consistent supply</li>
+    </ul>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner container">
+      <div class="footer-col">
+        <h3>Gemüse Egypt</h3>
+        <p>We are an Egyptian company specialized in the growing and exporting of horticulture crops in accordance with international food safety and quality standards.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Our Products</h3>
+        <ul class="footer-links">
+          <li><a href="products.html#spring-onions">› Spring Onions</a></li>
+          <li><a href="products.html#red-onions">› Red Onions</a></li>
+          <li><a href="products.html#lemon">› Lemon</a></li>
+          <li><a href="products.html#sweet-potatoes">› Sweet Potatoes</a></li>
+          <li><a href="products.html#oranges">› Oranges</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Contact Us</h3>
+        <ul class="footer-contact">
+          <li>📞 Phone: <a href="tel:+201156893412">+20 115 689 3412</a></li>
+          <li>💬 WhatsApp: <a href="https://wa.me/201156893412" target="_blank">+20 115 689 3412</a></li>
+          <li>📧 Email: <a href="mailto:info@gemuseegypt.org">info@gemuseegypt.org</a></li>
+          <li>🌐 Website: <a href="https://www.gemuseegypt.org" target="_blank">www.gemuseegypt.org</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 Gemüse Egypt | All rights reserved</p></div>
+  </footer>
+
+  <script>
+    (function(){var here=(location.pathname.split('/').pop()||'index.html').toLowerCase();
+    document.querySelectorAll('.menu a').forEach(function(a){if((a.getAttribute('href')||'').toLowerCase()===here){a.classList.add('active');a.setAttribute('aria-current','page');}});})();
+  </script>
 </body>
 </html>
