@@ -6,10 +6,11 @@
   <title>Products | Gemüse Egypt</title>
   <meta name="description" content="Spring onions, red onions, lemon, sweet potatoes, oranges—Egyptian produce for German wholesalers.">
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;500;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=12">
+  <link rel="stylesheet" href="css/styles.css?v=16">
   <link rel="icon" href="img/favicon.png">
 </head>
 <body>
+  <!-- =================== Header =================== -->
   <nav class="nav container">
     <a href="index.html" class="brand" aria-label="Gemüse Egypt Home">
       <img src="logo.jbg.png" alt="Gemüse Egypt Logo">
@@ -24,11 +25,15 @@
     </ul>
   </nav>
 
-  <header class="page-hero">
-    <h1>Products</h1>
-    <p>Core lines for export to Germany.</p>
+  <!-- =================== Hero image banner =================== -->
+  <!-- Replace img/products-hero.jpg with your oranges/grapes photo -->
+  <header class="page-hero hero-image" style="background-image:url('img/products-hero.jpg');">
+    <div class="hero-overlay-text">
+      <h1>Products</h1>
+    </div>
   </header>
 
+  <!-- =================== Product Sections =================== -->
   <section id="spring-onions" class="page-section container">
     <h2 class="section-title red">Spring Onions</h2>
     <div class="prod-row">
@@ -86,6 +91,7 @@
     </div>
   </section>
 
+  <!-- =================== Footer =================== -->
   <footer class="site-footer">
     <div class="footer-inner container">
       <div class="footer-col">
@@ -115,12 +121,17 @@
     <div class="footer-bottom"><p>© 2025 Gemüse Egypt | All rights reserved</p></div>
   </footer>
 
+  <!-- =================== Scripts =================== -->
   <script src="js/script.js"></script>
   <script>
-    (function(){var here=(location.pathname.split('/').pop()||'products.html').toLowerCase();
-    document.querySelectorAll('.menu a').forEach(function(a){
-      if((a.getAttribute('href')||'').toLowerCase()===here){a.classList.add('active');a.setAttribute('aria-current','page');}
-    });})();
+    (function(){
+      var here=(location.pathname.split('/').pop()||'products.html').toLowerCase();
+      document.querySelectorAll('.menu a').forEach(function(a){
+        if((a.getAttribute('href')||'').toLowerCase()===here){
+          a.classList.add('active'); a.setAttribute('aria-current','page');
+        }
+      });
+    })();
   </script>
 </body>
 </html>
