@@ -4,32 +4,40 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Gallery | Gemüse Egypt</title>
-  <meta name="description" content="Gallery of Gemüse Egypt products and operations.">
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;500;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=11" />
-  <link rel="icon" href="img/favicon.png" />
+  <meta name="description" content="Product and farm images from Gemüse Egypt.">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;500;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=12">
+  <link rel="icon" href="img/favicon.png">
 </head>
 <body>
   <nav class="nav container">
-    <a href="index.html" class="brand"><img src="logo.jbg.png" alt="Gemüse Egypt Logo"></a>
-    <ul class="menu">
-      <li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li>
-      <li><a href="products.html">Products</a></li><li><a href="quality.html">Quality Standards</a></li>
-      <li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact Us</a></li>
+    <a href="index.html" class="brand" aria-label="Gemüse Egypt Home">
+      <img src="logo.jbg.png" alt="Gemüse Egypt Logo">
+    </a>
+    <ul class="menu" role="menubar">
+      <li role="none"><a role="menuitem" href="index.html">Home</a></li>
+      <li role="none"><a role="menuitem" href="about.html">About us</a></li>
+      <li role="none"><a role="menuitem" href="products.html">Products</a></li>
+      <li role="none"><a role="menuitem" href="quality.html">Quality Standards</a></li>
+      <li role="none"><a role="menuitem" href="gallery.html">Gallery</a></li>
+      <li role="none"><a role="menuitem" href="contact.html">Contact Us</a></li>
     </ul>
   </nav>
 
   <header class="page-hero">
     <h1>Gallery</h1>
-    <p>A look at our crops, packing, and shipments.</p>
+    <p>A selection of our produce and fields.</p>
   </header>
 
-  <section class="container page-section grid-gallery">
-    <!-- Replace with your images -->
-    <img src="img/gallery-1.jpg" alt="Field">
-    <img src="img/gallery-2.jpg" alt="Harvest">
-    <img src="img/gallery-3.jpg" alt="Packing">
-    <img src="img/gallery-4.jpg" alt="Shipment">
+  <section class="page-section container">
+    <div class="grid-gallery">
+      <img src="img/spring-onion.jpg" alt="Spring Onions">
+      <img src="img/onions.jpg" alt="Red Onions">
+      <img src="img/sweet-potato.jpg" alt="Sweet Potatoes">
+      <img src="img/oranges.jpg" alt="Oranges">
+      <img src="img/lemon.jpg" alt="Lemon">
+      <img src="img/about-basket.jpg" alt="Produce Basket">
+    </div>
   </section>
 
   <footer class="site-footer">
@@ -61,9 +69,12 @@
     <div class="footer-bottom"><p>© 2025 Gemüse Egypt | All rights reserved</p></div>
   </footer>
 
+  <script src="js/script.js"></script>
   <script>
-    (function(){var here=(location.pathname.split('/').pop()||'index.html').toLowerCase();
-    document.querySelectorAll('.menu a').forEach(function(a){if((a.getAttribute('href')||'').toLowerCase()===here){a.classList.add('active');a.setAttribute('aria-current','page');}});})();
+    (function(){var here=(location.pathname.split('/').pop()||'gallery.html').toLowerCase();
+    document.querySelectorAll('.menu a').forEach(function(a){
+      if((a.getAttribute('href')||'').toLowerCase()===here){a.classList.add('active');a.setAttribute('aria-current','page');}
+    });})();
   </script>
 </body>
 </html>
