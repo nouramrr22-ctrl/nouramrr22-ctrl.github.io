@@ -1,37 +1,71 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Quality Standards | Gemüse Egypt</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <meta name="description" content="Our quality standards: Global GAP compliance, robust post-harvest handling, and consistent export quality.">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;500;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=11" />
+  <link rel="icon" href="img/favicon.png" />
 </head>
 <body>
+  <nav class="nav container">
+    <a href="index.html" class="brand"><img src="logo.jbg.png" alt="Gemüse Egypt Logo"></a>
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li>
+      <li><a href="products.html">Products</a></li><li><a href="quality.html">Quality Standards</a></li>
+      <li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
 
-<nav class="nav container">
-  <a href="index.html" class="brand">
-    <img src="logo.jbg.png" alt="Gemüse Egypt Logo">
-  </a>
-  <ul class="menu">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About us</a></li>
-    <li><a href="products.html">Products</a></li>
-    <li><a href="quality.html">Quality Standards</a></li>
-    <li><a href="gallery.html">Gallery</a></li>
-    <li><a href="contact.html">Contact Us</a></li>
-  </ul>
-</nav>
+  <header class="page-hero">
+    <h1>Quality Standards</h1>
+    <p>Food safety, traceability, and reliable post-harvest handling.</p>
+  </header>
 
-<main class="container">
-  <h1>Quality Standards</h1>
-  <p>We follow GlobalG.A.P. and EU requirements, with strict traceability and inspection processes to guarantee food safety and freshness.</p>
-</main>
+  <section class="container page-section">
+    <h2 class="section-title red">Certifications</h2>
+    <p>Operations aligned with international standards including Global GAP and EU market requirements. Documentation, traceability, and hygiene practices audited on a regular schedule.</p>
+  </section>
 
-<script>
-  const here = location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.menu a').forEach(a=>{
-    if(a.getAttribute('href')===here) a.classList.add('active');
-  });
-</script>
+  <section class="container page-section">
+    <h2 class="section-title red">Post-harvest & Cold-Chain</h2>
+    <p>Pre-cooling, sorting, grading, and packing done to specification. Controlled temperature logistics ensure product integrity to destination.</p>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner container">
+      <div class="footer-col">
+        <h3>Gemüse Egypt</h3>
+        <p>We are an Egyptian company specialized in the growing and exporting of horticulture crops in accordance with international food safety and quality standards.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Our Products</h3>
+        <ul class="footer-links">
+          <li><a href="products.html#spring-onions">› Spring Onions</a></li>
+          <li><a href="products.html#red-onions">› Red Onions</a></li>
+          <li><a href="products.html#lemon">› Lemon</a></li>
+          <li><a href="products.html#sweet-potatoes">› Sweet Potatoes</a></li>
+          <li><a href="products.html#oranges">› Oranges</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Contact Us</h3>
+        <ul class="footer-contact">
+          <li>📞 Phone: <a href="tel:+201156893412">+20 115 689 3412</a></li>
+          <li>💬 WhatsApp: <a href="https://wa.me/201156893412" target="_blank">+20 115 689 3412</a></li>
+          <li>📧 Email: <a href="mailto:info@gemuseegypt.org">info@gemuseegypt.org</a></li>
+          <li>🌐 Website: <a href="https://www.gemuseegypt.org" target="_blank">www.gemuseegypt.org</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 Gemüse Egypt | All rights reserved</p></div>
+  </footer>
+
+  <script>
+    (function(){var here=(location.pathname.split('/').pop()||'index.html').toLowerCase();
+    document.querySelectorAll('.menu a').forEach(function(a){if((a.getAttribute('href')||'').toLowerCase()===here){a.classList.add('active');a.setAttribute('aria-current','page');}});})();
+  </script>
 </body>
 </html>
