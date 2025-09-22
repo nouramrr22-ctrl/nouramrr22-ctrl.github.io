@@ -6,10 +6,12 @@
   <title>About Us | Gemüse Egypt</title>
   <meta name="description" content="About Gemüse Egypt—Egyptian producer and exporter of high-quality horticultural crops.">
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;500;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=12">
+  <link rel="stylesheet" href="css/styles.css?v=13">
   <link rel="icon" href="img/favicon.png">
 </head>
 <body>
+
+  <!-- =================== Header =================== -->
   <nav class="nav container">
     <a href="index.html" class="brand" aria-label="Gemüse Egypt Home">
       <img src="logo.jbg.png" alt="Gemüse Egypt Logo">
@@ -24,29 +26,39 @@
     </ul>
   </nav>
 
+  <!-- =================== Page Hero =================== -->
   <header class="page-hero">
     <h1>About Us</h1>
     <p>Egyptian producer and exporter of horticultural crops.</p>
   </header>
 
-  <section class="page-section container">
-    <h2 class="section-title red">Who we are</h2>
-    <p>
-      We are an Egyptian company specialized in the growing and exporting of horticulture crops in accordance
-      with international food safety and quality standards. Our farms are located in Wadi Alnatrun and managed
-      through an integrated food safety and quality management system. We have acquired Global GAP certification.
-    </p>
+  <!-- =================== Who we are (new block) =================== -->
+  <section class="page-section container about-who">
+    <div class="about-who-grid">
+      <div class="about-who-text">
+        <h2 class="about-who-title">Who we are</h2>
+        <p>
+          We are an Egyptian company specialized in the growing and exporting of horticulture crops in accordance to
+          international food safety and quality standards. Our farms are located in Wadi Alnatrun and managed with the most
+          efficient elements through an integrated food safety and quality management system that complies with international
+          standards of the food industry. We have acquired accreditation such as Global GAP Certification. We are serving the
+          global market professionally and we have clients around the world.
+        </p>
+
+        <div class="about-who-actions">
+          <a href="contact.html" class="btn-pill btn-red" aria-label="Contact Us">Contact Us</a>
+          <a href="https://wa.me/201156893412" target="_blank" rel="noopener" class="btn-pill btn-green" aria-label="WhatsApp">WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="about-who-media">
+        <!-- Replace with your actual image path/name -->
+        <img src="img/about-fruits.jpg" alt="Fresh fruits assortment" />
+      </div>
+    </div>
   </section>
 
-  <section class="page-section container">
-    <h2 class="section-title">Our Approach</h2>
-    <ul class="bullets">
-      <li>Consistent quality and reliable delivery to German wholesalers.</li>
-      <li>Careful post-harvest handling for freshness and shelf life.</li>
-      <li>Transparent communication and responsive service.</li>
-    </ul>
-  </section>
-
+  <!-- =================== Footer =================== -->
   <footer class="site-footer">
     <div class="footer-inner container">
       <div class="footer-col">
@@ -76,12 +88,14 @@
     <div class="footer-bottom"><p>© 2025 Gemüse Egypt | All rights reserved</p></div>
   </footer>
 
+  <!-- =================== Scripts =================== -->
   <script src="js/script.js"></script>
   <script>
     (function(){var here=(location.pathname.split('/').pop()||'about.html').toLowerCase();
-    document.querySelectorAll('.menu a').forEach(function(a){
-      if((a.getAttribute('href')||'').toLowerCase()===here){a.classList.add('active');a.setAttribute('aria-current','page');}
-    });})();
+      document.querySelectorAll('.menu a').forEach(function(a){
+        if((a.getAttribute('href')||'').toLowerCase()===here){a.classList.add('active');a.setAttribute('aria-current','page');}
+      });
+    })();
   </script>
 </body>
 </html>
