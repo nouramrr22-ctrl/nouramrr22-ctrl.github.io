@@ -4,19 +4,25 @@ html,body{margin:0;padding:0}
 
 :root{
   --brand-red:#e60000;
-  --text:#111;
-  --muted:#444;
+  --text:#111;            /* headings / strong text */
+  --muted:#4b5563;        /* body text (screenshot-like grey) */
   --card:#ffffff;
   --soft:#f7f7f7;
 }
 
 body{
-  font-family:'Merriweather', serif;
-  color:var(--text);
+  font-family:'Montserrat', sans-serif;  /* body font */
+  font-weight:400;
+  color:var(--muted);                     /* body text color */
+  line-height:1.8;
   background:linear-gradient(to bottom,#f9f9f9 0%, #ffffff 60%);
   background-attachment:fixed;
 }
 
+/* Headings keep color (brand rules below still apply) */
+h1,h2,h3{color:var(--text);font-weight:700;line-height:1.3;margin:0 0 .35em}
+
+/* Keep UI elements on Montserrat too */
 h1,h2,h3,.products-heading,.menu a,.btn-products,.btn-read{
   font-family:'Montserrat', sans-serif;
 }
@@ -74,7 +80,7 @@ ul,li{list-style:none;margin:0;padding:0}
 .product-card{position:relative;background:var(--card);border-radius:16px;padding:26px 22px 60px;text-align:center;box-shadow:0 8px 22px rgba(0,0,0,.06)}
 .product-card h3{font-size:22px;font-weight:700;margin:4px 0 6px}
 .divider{margin:8px auto 12px;letter-spacing:6px;color:#c1c1c1}
-.product-card p{font-size:16px;line-height:1.7;color:#333}
+.product-card p{font-size:16px;line-height:1.7;color:var(--muted)}
 .card-arrow{position:absolute;right:18px;bottom:16px;font-size:22px;color:#111;background:#fff;border-radius:12px;padding:4px 10px;border:1px solid #e5e5e5}
 
 .products-btn{text-align:center;margin-top:30px}
@@ -87,7 +93,7 @@ ul,li{list-style:none;margin:0;padding:0}
 .about{display:flex;flex-wrap:wrap;gap:50px;align-items:center}
 .about-text{flex:1 1 520px}
 .about-text h2{font-size:38px;font-weight:800;margin-bottom:18px;color:var(--brand-red)}
-.about-text p{font-size:18px;line-height:1.8;color:#222}
+.about-text p{font-size:18px;line-height:1.8;color:var(--muted)}
 .btn-read{display:inline-flex;align-items:center;gap:10px;background:var(--brand-red);color:#fff;font-weight:700;padding:14px 26px;border-radius:40px;transition:background .25s ease,transform .15s ease}
 .btn-read:hover{background:#cc0000;transform:translateY(-2px)}
 .btn-read-icon{font-size:18px}
@@ -100,7 +106,7 @@ ul,li{list-style:none;margin:0;padding:0}
 .vm-card{background:#fff;border:1px solid #ddd;border-radius:14px;padding:30px 24px;text-align:center;box-shadow:0 6px 16px rgba(0,0,0,.05);transition:transform .2s ease,box-shadow .2s ease}
 .vm-card:hover{transform:translateY(-4px);box-shadow:0 10px 20px rgba(0,0,0,.1)}
 .vm-card h3{font-size:24px;font-weight:700;margin-bottom:16px;color:var(--brand-red)}
-.vm-card p{font-size:16px;line-height:1.7;color:#333}
+.vm-card p{font-size:16px;line-height:1.7;color:var(--muted)}
 
 /* =================== Page Hero & Sections (Other pages) =================== */
 .page-hero{padding:64px 15px 20px;text-align:center}
@@ -118,7 +124,7 @@ ul,li{list-style:none;margin:0;padding:0}
 .contact-card{background:#fff;border:1px solid #e8e8e8;border-radius:12px;padding:20px;box-shadow:0 6px 16px rgba(0,0,0,.05)}
 .contact-list li{margin:8px 0}
 .contact-form label{display:block;margin-bottom:12px;font-weight:600;font-family:'Montserrat', sans-serif}
-.contact-form input,.contact-form textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-family:'Merriweather', serif}
+.contact-form input,.contact-form textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-family:'Montserrat', sans-serif}
 .contact-form button{margin-top:8px}
 
 /* =================== Main (Home SEO line) =================== */
@@ -130,7 +136,7 @@ main p{font-size:18px;color:var(--muted)}
 .site-footer{background:#f0f0f0;color:#111;padding:60px 0 20px;position:relative}
 .footer-inner{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:40px}
 .footer-col h3{font-family:'Montserrat', sans-serif;font-weight:700;font-size:20px;margin-bottom:16px;color:#111}
-.footer-col p,.footer-links,.footer-contact{font-family:'Merriweather', serif;font-size:15px;line-height:1.7;color:#333}
+.footer-col p,.footer-links,.footer-contact{font-family:'Montserrat', sans-serif;font-size:15px;line-height:1.7;color:var(--muted)}
 .footer-links li,.footer-contact li{margin-bottom:10px}
 .footer-links a,.footer-contact a{color:#111;text-decoration:none;transition:color .2s ease}
 .footer-links a:hover,.footer-contact a:hover{color:var(--brand-red)}
