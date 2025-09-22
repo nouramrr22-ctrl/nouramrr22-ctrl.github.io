@@ -1,42 +1,83 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact Us | Gemüse Egypt</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <meta name="description" content="Contact Gemüse Egypt: Phone, WhatsApp, Email, Website.">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;500;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=11" />
+  <link rel="icon" href="img/favicon.png" />
 </head>
 <body>
+  <nav class="nav container">
+    <a href="index.html" class="brand"><img src="logo.jbg.png" alt="Gemüse Egypt Logo"></a>
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li>
+      <li><a href="products.html">Products</a></li><li><a href="quality.html">Quality Standards</a></li>
+      <li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
 
-<nav class="nav container">
-  <a href="index.html" class="brand">
-    <img src="logo.jbg.png" alt="Gemüse Egypt Logo">
-  </a>
-  <ul class="menu">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About us</a></li>
-    <li><a href="products.html">Products</a></li>
-    <li><a href="quality.html">Quality Standards</a></li>
-    <li><a href="gallery.html">Gallery</a></li>
-    <li><a href="contact.html">Contact Us</a></li>
-  </ul>
-</nav>
+  <header class="page-hero">
+    <h1>Contact Us</h1>
+    <p>We’re ready to supply your needs. Reach us anytime.</p>
+  </header>
 
-<main class="container">
-  <h1>Contact Us</h1>
-  <p>Reach us for business inquiries:</p>
-  <ul style="margin-top:16px; text-align:left; display:inline-block">
-    <li><strong>Email:</strong> info@gemuse-egypt.com</li>
-    <li><strong>Phone:</strong> +20 XXX XXX XXXX</li>
-    <li><strong>Location:</strong> Cairo, Egypt</li>
-  </ul>
-</main>
+  <section class="container page-section contact-grid">
+    <div class="contact-card">
+      <h2 class="section-title red">Details</h2>
+      <ul class="contact-list">
+        <li>📞 Phone: <a href="tel:+201156893412">+20 115 689 3412</a></li>
+        <li>💬 WhatsApp: <a href="https://wa.me/201156893412" target="_blank">+20 115 689 3412</a></li>
+        <li>📧 Email: <a href="mailto:info@gemuseegypt.org">info@gemuseegypt.org</a></li>
+        <li>🌐 Website: <a href="https://www.gemuseegypt.org" target="_blank">www.gemuseegypt.org</a></li>
+      </ul>
+    </div>
 
-<script>
-  const here = location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.menu a').forEach(a=>{
-    if(a.getAttribute('href')===here) a.classList.add('active');
-  });
-</script>
+    <div class="contact-card">
+      <h2 class="section-title red">Quick Message</h2>
+      <form class="contact-form" action="mailto:info@gemuseegypt.org" method="post" enctype="text/plain">
+        <label>Name<input type="text" name="name" required></label>
+        <label>Email<input type="email" name="email" required></label>
+        <label>Message<textarea name="message" rows="5" required></textarea></label>
+        <button class="btn-products" type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner container">
+      <div class="footer-col">
+        <h3>Gemüse Egypt</h3>
+        <p>We are an Egyptian company specialized in the growing and exporting of horticulture crops in accordance with international food safety and quality standards.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Our Products</h3>
+        <ul class="footer-links">
+          <li><a href="products.html#spring-onions">› Spring Onions</a></li>
+          <li><a href="products.html#red-onions">› Red Onions</a></li>
+          <li><a href="products.html#lemon">› Lemon</a></li>
+          <li><a href="products.html#sweet-potatoes">› Sweet Potatoes</a></li>
+          <li><a href="products.html#oranges">› Oranges</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Contact Us</h3>
+        <ul class="footer-contact">
+          <li>📞 Phone: <a href="tel:+201156893412">+20 115 689 3412</a></li>
+          <li>💬 WhatsApp: <a href="https://wa.me/201156893412" target="_blank">+20 115 689 3412</a></li>
+          <li>📧 Email: <a href="mailto:info@gemuseegypt.org">info@gemuseegypt.org</a></li>
+          <li>🌐 Website: <a href="https://www.gemuseegypt.org" target="_blank">www.gemuseegypt.org</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 Gemüse Egypt | All rights reserved</p></div>
+  </footer>
+
+  <script>
+    (function(){var here=(location.pathname.split('/').pop()||'index.html').toLowerCase();
+    document.querySelectorAll('.menu a').forEach(function(a){if((a.getAttribute('href')||'').toLowerCase()===here){a.classList.add('active');a.setAttribute('aria-current','page');}});})();
+  </script>
 </body>
 </html>
