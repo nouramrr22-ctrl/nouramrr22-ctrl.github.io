@@ -22,13 +22,7 @@ body{
 h1,h2,h3,.products-heading,.menu a,.btn-products,.btn-read{
   font-family:'Montserrat', sans-serif;
 }
-
-h1,h2,h3{
-  color:var(--text);
-  font-weight:700;
-  line-height:1.3;
-  margin:0 0 .35em;
-}
+h1,h2,h3{color:var(--text);font-weight:700;line-height:1.3;margin:0 0 .35em}
 
 a{text-decoration:none;color:inherit}
 ul,li{list-style:none;margin:0;padding:0}
@@ -44,7 +38,7 @@ ul,li{list-style:none;margin:0;padding:0}
 .menu a{color:#333;font-weight:600;font-size:16px;padding:8px 12px;border-radius:6px;transition:.2s}
 .menu a:hover,.menu a.active{color:#fff;background:var(--brand-red)}
 
-/* ========== Page Hero & Generic Sections ========== */
+/* ========== Page Hero (default) & Generic Sections ========== */
 .page-hero{padding:64px 15px 20px;text-align:center}
 .page-hero h1{font-size:36px;font-weight:800;margin:0 0 8px;color:var(--brand-red)}
 .page-hero p{font-size:18px;color:var(--muted)}
@@ -52,6 +46,30 @@ ul,li{list-style:none;margin:0;padding:0}
 .section-title{font-size:28px;font-weight:800;margin:0 0 16px}
 .section-title.red{color:var(--brand-red)}
 .bullets li{margin:8px 0;font-size:16px}
+
+/* ========== HERO IMAGE (new) ========== */
+.hero-image{
+  position:relative;
+  height:360px;
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  border-radius:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.hero-overlay-text{
+  background:rgba(0,0,0,.45);
+  padding:20px 40px;
+  border-radius:8px;
+}
+.hero-overlay-text h1{
+  font-size:48px;
+  font-weight:800;
+  color:#fff;
+  margin:0;
+}
 
 /* ========== Slideshow (Home) ========== */
 .slideshow-section{background:#000}
@@ -93,7 +111,7 @@ ul,li{list-style:none;margin:0;padding:0}
 .product-card p{font-size:16px;line-height:1.7;color:var(--muted)}
 .card-arrow{position:absolute;right:18px;bottom:16px;font-size:22px;color:#111;background:#fff;border-radius:12px;padding:4px 10px;border:1px solid #e5e5e5}
 
-/* ========== About (Home snippet) ========== */
+/* ========== About / VM blocks (already used sitewide) ========== */
 .about-section{background:var(--soft);padding:72px 0}
 .about{display:flex;flex-wrap:wrap;gap:50px;align-items:center}
 .about-text{flex:1 1 520px}
@@ -105,13 +123,29 @@ ul,li{list-style:none;margin:0;padding:0}
 .about-media{flex:1 1 520px;text-align:center}
 .about-media img{max-width:100%;border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,.1)}
 
-/* ========== Vision & Mission (Home) ========== */
 .vm-section{background:var(--soft);padding:60px 0}
 .vm{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px}
 .vm-card{background:#fff;border:1px solid #ddd;border-radius:14px;padding:30px 24px;text-align:center;box-shadow:0 6px 16px rgba(0,0,0,.05);transition:transform .2s ease,box-shadow .2s ease}
 .vm-card:hover{transform:translateY(-4px);box-shadow:0 10px 20px rgba(0,0,0,.1)}
 .vm-card h3{font-size:24px;font-weight:700;margin-bottom:16px;color:var(--brand-red)}
 .vm-card p{font-size:16px;line-height:1.7;color:var(--muted)}
+
+/* ========== Product/Gallery/Contact helpers ========== */
+.prod-row{display:grid;grid-template-columns:minmax(240px,360px) 1fr;gap:20px;align-items:center}
+.prod-row img{width:100%;height:220px;object-fit:cover;border-radius:10px;box-shadow:0 6px 16px rgba(0,0,0,.08)}
+.grid-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.grid-gallery img{width:100%;height:240px;object-fit:cover;border-radius:8px;box-shadow:0 6px 16px rgba(0,0,0,.08)}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.contact-card{background:#fff;border:1px solid #e8e8e8;border-radius:12px;padding:20px;box-shadow:0 6px 16px rgba(0,0,0,.05)}
+.contact-list li{margin:8px 0}
+.contact-form label{display:block;margin-bottom:12px;font-weight:600;font-family:'Montserrat', sans-serif}
+.contact-form input,.contact-form textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-family:'Montserrat', sans-serif}
+.contact-form button{margin-top:8px}
+
+/* ========== Main (Home SEO line) ========== */
+main{padding:48px 0;text-align:center}
+main h1{font-size:32px;font-weight:700;margin-bottom:8px}
+main p{font-size:18px;color:var(--muted)}
 
 /* ========== Footer (Shared) ========== */
 .site-footer{
@@ -128,22 +162,11 @@ ul,li{list-style:none;margin:0;padding:0}
 .footer-links a:hover,.footer-contact a:hover{color:#ffffff;opacity:.9}
 .footer-bottom{margin-top:30px;text-align:center;border-top:1px solid rgba(255,255,255,.12);padding-top:16px;font-size:14px;color:#cfd3d9}
 
-/* ========== About: Who we are ========== */
-.about-who-grid{display:flex;flex-wrap:wrap;gap:40px;align-items:center}
-.about-who-text{flex:1 1 500px}
-.about-who-title{font-size:32px;font-weight:700;margin-bottom:16px;color:var(--brand-red)}
-.about-who-text p{font-size:17px;line-height:1.7;color:var(--muted)}
-.about-who-media{flex:1 1 400px;text-align:center}
-.about-who-media img{max-width:100%;border-radius:16px;box-shadow:0 6px 16px rgba(0,0,0,.15)}
-.about-who-actions{margin-top:20px;display:flex;gap:16px}
-.btn-pill{display:inline-block;padding:12px 26px;border-radius:999px;font-weight:600;font-family:'Montserrat', sans-serif;font-size:15px;text-align:center;transition:background .25s ease, transform .15s ease;color:#fff}
-.btn-pill:hover{transform:translateY(-2px)}
-.btn-red{background:var(--brand-red)}
-.btn-red:hover{background:#cc0000}
-.btn-green{background:#25D366}
-.btn-green:hover{background:#1ebe5d}
-
-/* ========== About: Vision & Mission ========== */
-.about-vm-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;margin-top:50px}
-.about-vm .vm-card{background:#fff;border:1px solid #ddd;border-radius:14px;padding:30px 24px;text-align:center;box-shadow:0 6px 16px rgba(0,0,0,.05);transition:transform .2s ease,box-shadow .2s ease}
-.about-vm .vm-card:hover{transform:translateY(-4px);box-shadow:0 10px 20px rgba(0,0,0,.
+/* ========== Responsive tweaks ========== */
+@media (max-width:980px){
+  .prod-row{grid-template-columns:1fr}
+}
+@media (max-width:480px){
+  .brand img{height:160px}
+  .slide img{height:340px}
+}
