@@ -5,21 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Home | Gemüse Egypt</title>
   <meta name="description" content="Gemüse Egypt supplies premium Egyptian fruits and vegetables to German wholesalers—quality, freshness, and reliable logistics.">
-  <!-- Professional fonts -->
+  <meta name="robots" content="index,follow" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.gemuseegypt.org/" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Gemüse Egypt — Fresh Egyptian Produce for Germany">
+  <meta property="og:description" content="Supplying high-quality fruits and vegetables—direct from Egypt’s farms to wholesalers in Germany.">
+  <meta property="og:url" content="https://www.gemuseegypt.org/">
+  <meta property="og:image" content="https://www.gemuseegypt.org/img/og-hero.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts: performance-friendly -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;500;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
-  <!-- Styles -->
-  <link rel="stylesheet" href="css/styles.css?v=11">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css?v=12">
   <link rel="icon" href="img/favicon.png">
 </head>
 <body>
 
+  <!-- Skip to content for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <!-- =================== Header =================== -->
-  <nav class="nav container">
+  <nav class="nav container" aria-label="Primary">
     <a href="index.html" class="brand" aria-label="Gemüse Egypt Home">
-      <img src="logo.jbg.png" alt="Gemüse Egypt Logo">
+      <!-- Update src to your actual logo filename -->
+      <img src="img/logo.png" alt="Gemüse Egypt logo" decoding="async" fetchpriority="high">
     </a>
-    <ul class="menu" role="menubar">
-      <li role="none"><a role="menuitem" href="index.html">Home</a></li>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">Menu</button>
+    <ul id="primary-menu" class="menu" role="menubar">
+      <li role="none"><a role="menuitem" href="index.html" aria-current="page">Home</a></li>
       <li role="none"><a role="menuitem" href="about.html">About us</a></li>
       <li role="none"><a role="menuitem" href="products.html">Products</a></li>
       <li role="none"><a role="menuitem" href="quality.html">Quality Standards</a></li>
@@ -29,8 +50,8 @@
   </nav>
 
   <!-- =================== Slideshow =================== -->
-  <section class="slideshow-section">
-    <div class="slideshow-container" id="hero-slideshow" aria-label="Product highlights">
+  <section class="slideshow-section" aria-label="Product highlights">
+    <div class="slideshow-container" id="hero-slideshow">
       <!-- Slides injected by js/script.js -->
       <div class="hero-overlay" aria-live="polite">
         <div class="hero-text">
@@ -41,40 +62,40 @@
            href="https://wa.me/201156893412?text=Hello%20Gem%C3%BCse%20Egypt%2C%20I%27m%20interested%20in%20your%20produce."
            target="_blank" rel="noopener">Contact us on WhatsApp</a>
       </div>
-      <button class="prev" aria-label="Previous slide" aria-controls="hero-slideshow">&#10094;</button>
-      <button class="next" aria-label="Next slide" aria-controls="hero-slideshow">&#10095;</button>
+      <button class="prev" type="button" aria-label="Previous slide" aria-controls="hero-slideshow">&#10094;</button>
+      <button class="next" type="button" aria-label="Next slide" aria-controls="hero-slideshow">&#10095;</button>
     </div>
     <div class="dots-container" aria-label="Slideshow pagination"></div>
   </section>
 
   <!-- =================== Products =================== -->
-  <section id="products" class="products-section container">
-    <h2 class="products-heading"><span class="chev left">▸</span>OUR PRODUCTS<span class="chev right">◂</span></h2>
+  <section id="products" class="products-section container" aria-labelledby="products-title">
+    <h2 id="products-title" class="products-heading"><span class="chev left">▸</span>OUR PRODUCTS<span class="chev right">◂</span></h2>
 
     <div class="products-photos">
-      <img src="img/spring-onion.jpg" alt="Spring Onion">
-      <img src="img/onions.jpg" alt="Onions">
-      <img src="img/sweet-potato.jpg" alt="Sweet Potato">
+      <img src="img/spring-onion.jpg" alt="Spring onions" loading="lazy" decoding="async">
+      <img src="img/onions.jpg" alt="Onions" loading="lazy" decoding="async">
+      <img src="img/sweet-potato.jpg" alt="Sweet potatoes" loading="lazy" decoding="async">
     </div>
 
     <div class="products-grid">
       <article class="product-card">
         <h3>Spring Onion</h3>
-        <div class="divider">•••</div>
+        <div class="divider" aria-hidden="true">•••</div>
         <p>Our spring onions are straight, with erect leaves tightly wrapped around a central core; firm and clean.</p>
         <a href="products.html#spring-onions" class="card-arrow" aria-label="View Spring Onions">→</a>
       </article>
 
       <article class="product-card">
         <h3>Red Onions</h3>
-        <div class="divider">•••</div>
+        <div class="divider" aria-hidden="true">•••</div>
         <p>Fresh, crisp red onions ideal for export. Available between May and July.</p>
         <a href="products.html#red-onions" class="card-arrow" aria-label="View Red Onions">→</a>
       </article>
 
       <article class="product-card">
         <h3>Sweet Potatoes</h3>
-        <div class="divider">•••</div>
+        <div class="divider" aria-hidden="true">•••</div>
         <p>Beauregard and Bellevue varieties—naturally sweet and consistent quality.</p>
         <a href="products.html#sweet-potatoes" class="card-arrow" aria-label="View Sweet Potatoes">→</a>
       </article>
@@ -93,18 +114,18 @@
         <p>
           We are an Egyptian company specialized in the growing and exporting of horticulture crops in accordance
           with international food safety and quality standards. Our farms are located in Wadi Alnatrun and managed
-          through an integrated food safety and quality management system. We have acquired Global GAP certification.
+          through an integrated food safety and quality management system. We have acquired Global G.A.P. certification.
         </p>
         <a href="about.html" class="btn-read"><span>Read more</span><span class="btn-read-icon" aria-hidden="true">➜</span></a>
       </div>
       <div class="about-media">
-        <img src="img/about-basket.jpg" alt="Fresh fruit basket">
+        <img src="img/about-basket.jpg" alt="Fresh fruit basket" loading="lazy" decoding="async">
       </div>
     </div>
   </section>
 
   <!-- =================== Vision & Mission =================== -->
-  <section class="vm-section">
+  <section class="vm-section" aria-label="Vision and Mission">
     <div class="vm container">
       <div class="vm-card">
         <h3>Vision</h3>
@@ -118,13 +139,13 @@
   </section>
 
   <!-- =================== Main Copy (SEO supporting) =================== -->
-  <main class="container">
+  <main id="main-content" class="container">
     <h1>Fresh Egyptian Produce for Germany</h1>
     <p>Supplying high-quality fruits and vegetables—direct from Egypt’s farms to wholesalers in Germany.</p>
   </main>
 
-  <!-- =================== Footer (shared) =================== -->
-  <footer class="site-footer">
+  <!-- =================== Footer =================== -->
+  <footer class="site-footer" aria-label="Footer">
     <div class="footer-inner container">
       <div class="footer-col">
         <h3>Gemüse Egypt</h3>
@@ -144,18 +165,53 @@
         <h3>Contact Us</h3>
         <ul class="footer-contact">
           <li>📞 Phone: <a href="tel:+201156893412">+20 115 689 3412</a></li>
-          <li>💬 WhatsApp: <a href="https://wa.me/201156893412" target="_blank">+20 115 689 3412</a></li>
+          <li>💬 WhatsApp: <a href="https://wa.me/201156893412" target="_blank" rel="noopener">+20 115 689 3412</a></li>
           <li>📧 Email: <a href="mailto:info@gemuseegypt.org">info@gemuseegypt.org</a></li>
-          <li>🌐 Website: <a href="https://www.gemuseegypt.org" target="_blank">www.gemuseegypt.org</a></li>
+          <li>🌐 Website: <a href="https://www.gemuseegypt.org" target="_blank" rel="noopener">www.gemuseegypt.org</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom"><p>© 2025 Gemüse Egypt | All rights reserved</p></div>
   </footer>
 
+  <!-- =================== Structured Data =================== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Gemüse Egypt",
+    "url": "https://www.gemuseegypt.org/",
+    "logo": "https://www.gemuseegypt.org/img/logo.png",
+    "sameAs": [
+      "https://wa.me/201156893412"
+    ],
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "telephone": "+20-115-689-3412",
+      "contactType": "sales",
+      "areaServed": "DE",
+      "availableLanguage": ["en","de","ar"]
+    }]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Gemüse Egypt",
+    "url": "https://www.gemuseegypt.org/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.gemuseegypt.org/search?q={query}",
+      "query-input": "required name=query"
+    }
+  }
+  </script>
+
   <!-- =================== Scripts =================== -->
-  <script src="js/script.js"></script>
+  <script src="js/script.js" defer></script>
   <script>
+    // Highlight current menu item (noscript-safe enhancement)
     (function () {
       var here = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
       document.querySelectorAll('.menu a').forEach(function (a) {
@@ -163,6 +219,17 @@
           a.classList.add('active'); a.setAttribute('aria-current','page');
         }
       });
+
+      // Mobile menu toggle
+      var btn = document.querySelector('.menu-toggle');
+      var menu = document.getElementById('primary-menu');
+      if (btn && menu) {
+        btn.addEventListener('click', function(){
+          var expanded = this.getAttribute('aria-expanded') === 'true';
+          this.setAttribute('aria-expanded', String(!expanded));
+          menu.classList.toggle('open');
+        });
+      }
     })();
   </script>
 </body>
