@@ -4,8 +4,8 @@ html,body{margin:0;padding:0}
 
 :root{
   --brand-red:#e60000;
-  --text:#111;            /* headings / strong text */
-  --muted:#4b5563;        /* body text */
+  --text:#111;
+  --muted:#4b5563;
   --card:#ffffff;
   --soft:#f7f7f7;
 }
@@ -113,13 +113,37 @@ ul,li{list-style:none;margin:0;padding:0}
 .vm-card h3{font-size:24px;font-weight:700;margin-bottom:16px;color:var(--brand-red)}
 .vm-card p{font-size:16px;line-height:1.7;color:var(--muted)}
 
-/* ========== Product/Gallery/Contact Helpers ========== */
-.prod-row{display:grid;grid-template-columns:minmax(240px,360px) 1fr;gap:20px;align-items:center}
-.prod-row img{width:100%;height:220px;object-fit:cover;border-radius:10px;box-shadow:0 6px 16px rgba(0,0,0,.08)}
-.grid-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-.grid-gallery img{width:100%;height:240px;object-fit:cover;border-radius:8px;box-shadow:0 6px 16px rgba(0,0,0,.08)}
-.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
-.contact-card{background:#fff;border:1px solid #e8e8e8;border-radius:12px;padding:20px;box-shadow:0 6px 16px rgba(0,0,0,.05)}
-.contact-list li{margin:8px 0}
-.contact-form label{display:block;margin-bottom:12px;font-weight:600;font-family:'Montserrat', sans-serif}
-.conta
+/* ========== Footer (Shared) ========== */
+.site-footer{
+  background:#1f2937;
+  color:#e5e7eb;
+  padding:60px 0 20px;
+  position:relative;
+}
+.footer-inner{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:40px}
+.footer-col h3{font-family:'Montserrat', sans-serif;font-weight:700;font-size:20px;margin-bottom:16px;color:#ffffff}
+.footer-col p,.footer-links,.footer-contact{font-family:'Montserrat', sans-serif;font-size:15px;line-height:1.7;color:#e5e7eb}
+.footer-links li,.footer-contact li{margin-bottom:10px}
+.footer-links a,.footer-contact a{color:#e5e7eb;text-decoration:none;transition:color .2s ease,opacity .2s ease}
+.footer-links a:hover,.footer-contact a:hover{color:#ffffff;opacity:.9}
+.footer-bottom{margin-top:30px;text-align:center;border-top:1px solid rgba(255,255,255,.12);padding-top:16px;font-size:14px;color:#cfd3d9}
+
+/* ========== About: Who we are ========== */
+.about-who-grid{display:flex;flex-wrap:wrap;gap:40px;align-items:center}
+.about-who-text{flex:1 1 500px}
+.about-who-title{font-size:32px;font-weight:700;margin-bottom:16px;color:var(--brand-red)}
+.about-who-text p{font-size:17px;line-height:1.7;color:var(--muted)}
+.about-who-media{flex:1 1 400px;text-align:center}
+.about-who-media img{max-width:100%;border-radius:16px;box-shadow:0 6px 16px rgba(0,0,0,.15)}
+.about-who-actions{margin-top:20px;display:flex;gap:16px}
+.btn-pill{display:inline-block;padding:12px 26px;border-radius:999px;font-weight:600;font-family:'Montserrat', sans-serif;font-size:15px;text-align:center;transition:background .25s ease, transform .15s ease;color:#fff}
+.btn-pill:hover{transform:translateY(-2px)}
+.btn-red{background:var(--brand-red)}
+.btn-red:hover{background:#cc0000}
+.btn-green{background:#25D366}
+.btn-green:hover{background:#1ebe5d}
+
+/* ========== About: Vision & Mission ========== */
+.about-vm-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;margin-top:50px}
+.about-vm .vm-card{background:#fff;border:1px solid #ddd;border-radius:14px;padding:30px 24px;text-align:center;box-shadow:0 6px 16px rgba(0,0,0,.05);transition:transform .2s ease,box-shadow .2s ease}
+.about-vm .vm-card:hover{transform:translateY(-4px);box-shadow:0 10px 20px rgba(0,0,0,.
