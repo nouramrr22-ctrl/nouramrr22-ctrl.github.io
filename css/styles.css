@@ -65,4 +65,142 @@ ul,li{list-style:none;margin:0;padding:0}
 .fade{animation:fade 1s ease-in-out}
 @keyframes fade{from{opacity:.4}to{opacity:1}}
 
-.hero-overlay{position:absolute
+.hero-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px}
+.hero-text{color:#fff;max-width:70ch}
+.hero-text h2{font-size:42px;font-weight:800;color:#000;margin:0 0 8px}
+.hero-text p{font-size:18px;color:#fff}
+.whatsapp-cta{position:absolute;right:18px;bottom:18px;background:#25D366;color:#fff;font-weight:700;padding:12px 16px;border-radius:999px}
+.prev,.next{cursor:pointer;position:absolute;top:50%;transform:translateY(-50%);padding:12px;color:#fff;background:rgba(0,0,0,.4);font-weight:700;font-size:24px;border:0;border-radius:6px;user-select:none;transition:background .25s ease}
+.prev{left:10px}.next{right:10px}
+.prev:hover,.next:hover{background:rgba(0,0,0,.8)}
+.dots-container{text-align:center;padding:12px;background:#fff;border-radius:0 0 14px 14px}
+.dot{cursor:pointer;height:12px;width:12px;margin:0 4px;background:#bbb;border-radius:50%;display:inline-block;transition:background-color .3s ease,transform .15s ease}
+.active-dot,.dot:hover{background:var(--brand-red);transform:scale(1.05)}
+
+/* =================== Products (Home) =================== */
+.products-section{padding:64px 0 80px}
+.products-heading{text-align:center;font-size:36px;font-weight:800;color:var(--brand-red);letter-spacing:.3px;margin-bottom:20px}
+.products-heading .chev{font-size:26px;vertical-align:middle;color:#6fc179}
+.products-heading .left{margin-right:10px}.products-heading .right{margin-left:10px}
+
+.products-photos{display:flex;justify-content:center;flex-wrap:wrap;gap:28px;margin:12px 0 36px}
+.products-photos img{width:300px;height:200px;object-fit:cover;border-radius:12px;box-shadow:0 6px 16px rgba(0,0,0,.15);background:#fff}
+
+.products-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+@media (max-width:980px){.products-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:640px){.products-grid{grid-template-columns:1fr}}
+.product-card{position:relative;background:var(--card);border-radius:16px;padding:26px 22px 60px;text-align:center;box-shadow:0 8px 22px rgba(0,0,0,.06)}
+.product-card h3{font-size:22px;font-weight:700;margin:4px 0 6px}
+.divider{margin:8px auto 12px;letter-spacing:6px;color:#c1c1c1}
+.product-card p{font-size:16px;line-height:1.7;color:var(--muted)}
+.card-arrow{position:absolute;right:18px;bottom:16px;font-size:22px;color:#111;background:#fff;border-radius:12px;padding:4px 10px;border:1px solid #e5e5e5}
+
+/* =================== About (Home) =================== */
+.about-section{background:var(--soft);padding:72px 0}
+.about{display:flex;flex-wrap:wrap;gap:50px;align-items:center}
+.about-text{flex:1 1 520px}
+.about-text h2{font-size:38px;font-weight:800;margin-bottom:18px;color:var(--brand-red)}
+.about-text p{font-size:18px;line-height:1.8;color:var(--muted)}
+.btn-read{display:inline-flex;align-items:center;gap:10px;background:var(--brand-red);color:#fff;font-weight:700;padding:14px 26px;border-radius:40px;transition:background .25s ease,transform .15s ease}
+.btn-read:hover{background:#cc0000;transform:translateY(-2px)}
+.btn-read-icon{font-size:18px}
+.about-media{flex:1 1 520px;text-align:center}
+.about-media img{max-width:100%;border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,.1)}
+
+/* =================== Vision & Mission (Home) =================== */
+.vm-section{background:var(--soft);padding:60px 0}
+.vm{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px}
+.vm-card{background:#fff;border:1px solid #ddd;border-radius:14px;padding:30px 24px;text-align:center;box-shadow:0 6px 16px rgba(0,0,0,.05);transition:transform .2s ease,box-shadow .2s ease}
+.vm-card:hover{transform:translateY(-4px);box-shadow:0 10px 20px rgba(0,0,0,.1)}
+.vm-card h3{font-size:24px;font-weight:700;margin-bottom:16px;color:var(--brand-red)}
+.vm-card p{font-size:16px;line-height:1.7;color:var(--muted)}
+
+/* =================== Product/Gallery/Contact Helpers =================== */
+.prod-row{display:grid;grid-template-columns:minmax(240px,360px) 1fr;gap:20px;align-items:center}
+.prod-row img{width:100%;height:220px;object-fit:cover;border-radius:10px;box-shadow:0 6px 16px rgba(0,0,0,.08)}
+.grid-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.grid-gallery img{width:100%;height:240px;object-fit:cover;border-radius:8px;box-shadow:0 6px 16px rgba(0,0,0,.08)}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.contact-card{background:#fff;border:1px solid #e8e8e8;border-radius:12px;padding:20px;box-shadow:0 6px 16px rgba(0,0,0,.05)}
+.contact-list li{margin:8px 0}
+.contact-form label{display:block;margin-bottom:12px;font-weight:600;font-family:'Montserrat', sans-serif}
+.contact-form input,.contact-form textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-family:'Montserrat', sans-serif}
+.contact-form button{margin-top:8px}
+
+/* =================== Main (Home SEO line) =================== */
+main{padding:48px 0;text-align:center}
+main h1{font-size:32px;font-weight:700;margin-bottom:8px}
+main p{font-size:18px;color:var(--muted)}
+
+/* =================== Footer (Shared) =================== */
+.site-footer{
+  background:#1f2937;          /* dark grey */
+  color:#e5e7eb;
+  padding:60px 0 20px;
+  position:relative;
+}
+.footer-inner{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:40px}
+.footer-col h3{font-family:'Montserrat', sans-serif;font-weight:700;font-size:20px;margin-bottom:16px;color:#ffffff}
+.footer-col p,.footer-links,.footer-contact{font-family:'Montserrat', sans-serif;font-size:15px;line-height:1.7;color:#e5e7eb}
+.footer-links li,.footer-contact li{margin-bottom:10px}
+.footer-links a,.footer-contact a{color:#e5e7eb;text-decoration:none;transition:color .2s ease,opacity .2s ease}
+.footer-links a:hover,.footer-contact a:hover{color:#ffffff;opacity:.9}
+.footer-bottom{margin-top:30px;text-align:center;border-top:1px solid rgba(255,255,255,.12);padding-top:16px;font-size:14px;color:#cfd3d9}
+
+/* =================== About: Who we are (NEW) =================== */
+.about-who-grid{
+  display:flex;
+  flex-wrap:wrap;
+  gap:40px;
+  align-items:center;
+}
+.about-who-text{flex:1 1 500px}
+.about-who-title{
+  font-size:32px;
+  font-weight:700;
+  margin-bottom:16px;
+  color:var(--brand-red);           /* heading in red */
+  font-family:'Montserrat', sans-serif;
+}
+.about-who-text p{
+  font-size:17px;
+  line-height:1.7;
+  color:var(--muted);               /* agreed body text color */
+  font-family:'Montserrat', sans-serif;
+}
+.about-who-media{flex:1 1 400px;text-align:center}
+.about-who-media img{
+  max-width:100%;
+  border-radius:16px;
+  box-shadow:0 6px 16px rgba(0,0,0,.15);
+}
+.about-who-actions{
+  margin-top:20px;
+  display:flex;
+  gap:16px;
+}
+.btn-pill{
+  display:inline-block;
+  padding:12px 26px;
+  border-radius:999px;
+  font-weight:600;
+  font-family:'Montserrat', sans-serif;
+  font-size:15px;
+  text-align:center;
+  transition:background .25s ease, transform .15s ease;
+  color:#fff;
+}
+.btn-pill:hover{ transform:translateY(-2px) }
+.btn-red{ background:var(--brand-red) }
+.btn-red:hover{ background:#cc0000 }
+.btn-green{ background:#25D366 }
+.btn-green:hover{ background:#1ebe5d }
+
+/* =================== Responsive tweaks =================== */
+@media (max-width:980px){
+  .prod-row{grid-template-columns:1fr}
+}
+@media (max-width:480px){
+  .brand img{height:160px}
+  .slide img{height:340px}
+}
