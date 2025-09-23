@@ -10,6 +10,7 @@
   <link rel="icon" href="img/favicon.png">
 </head>
 <body>
+  <!-- =================== Header =================== -->
   <nav class="nav container">
     <a href="index.html" class="brand" aria-label="Gemüse Egypt Home">
       <img src="logo.jbg.png" alt="Gemüse Egypt Logo">
@@ -24,11 +25,15 @@
     </ul>
   </nav>
 
-  <header class="page-hero">
-    <h1>Quality Standards</h1>
-    <p>Food safety, grading, and packing aligned with buyer requirements.</p>
+  <!-- =================== Hero image banner =================== -->
+  <header class="page-hero hero-image" style="background-image:url('img/quality-hero.jpg');">
+    <div class="hero-overlay-text">
+      <h1>Quality Standards</h1>
+      <p>Food safety, grading, and packing aligned with buyer requirements.</p>
+    </div>
   </header>
 
+  <!-- =================== Content =================== -->
   <section class="page-section container">
     <h2 class="section-title red">Commitment</h2>
     <p>We operate with an integrated food safety and quality management system designed to consistently meet export specifications.</p>
@@ -40,6 +45,7 @@
     </ul>
   </section>
 
+  <!-- =================== Footer =================== -->
   <footer class="site-footer">
     <div class="footer-inner container">
       <div class="footer-col">
@@ -69,12 +75,18 @@
     <div class="footer-bottom"><p>© 2025 Gemüse Egypt | All rights reserved</p></div>
   </footer>
 
+  <!-- =================== Scripts =================== -->
   <script src="js/script.js"></script>
   <script>
-    (function(){var here=(location.pathname.split('/').pop()||'quality.html').toLowerCase();
-    document.querySelectorAll('.menu a').forEach(function(a){
-      if((a.getAttribute('href')||'').toLowerCase()===here){a.classList.add('active');a.setAttribute('aria-current','page');}
-    });})();
+    (function(){
+      var here = (location.pathname.split('/').pop() || 'quality.html').toLowerCase();
+      document.querySelectorAll('.menu a').forEach(function(a){
+        if((a.getAttribute('href')||'').toLowerCase() === here){
+          a.classList.add('active');
+          a.setAttribute('aria-current','page');
+        }
+      });
+    })();
   </script>
 </body>
 </html>
