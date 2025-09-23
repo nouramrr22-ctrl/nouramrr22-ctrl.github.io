@@ -1,20 +1,18 @@
-/* ========== Base & Typography ========== */
+/* =================== Base & Typography =================== */
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
 
 :root{
   --brand-red:#e60000;
   --text:#111;
-  --muted:#4b5563;
+  --muted:#444;
   --card:#ffffff;
   --soft:#f7f7f7;
 }
 
 body{
-  font-family:'Montserrat', sans-serif;
-  font-weight:400;
-  color:var(--muted);
-  line-height:1.8;
+  font-family:'Merriweather', serif;
+  color:var(--text);
   background:linear-gradient(to bottom,#f9f9f9 0%, #ffffff 60%);
   background-attachment:fixed;
 }
@@ -22,13 +20,12 @@ body{
 h1,h2,h3,.products-heading,.menu a,.btn-products,.btn-read{
   font-family:'Montserrat', sans-serif;
 }
-h1,h2,h3{color:var(--text);font-weight:700;line-height:1.3;margin:0 0 .35em}
 
 a{text-decoration:none;color:inherit}
 ul,li{list-style:none;margin:0;padding:0}
 .container{max-width:1400px;margin:0 auto;padding:0 15px}
 
-/* ========== Header ========== */
+/* =================== Header =================== */
 .nav{
   display:flex;justify-content:space-between;align-items:center;
   padding:16px 0;border-bottom:1px solid #ececec;background:rgba(255,255,255,.92)
@@ -38,85 +35,7 @@ ul,li{list-style:none;margin:0;padding:0}
 .menu a{color:#333;font-weight:600;font-size:16px;padding:8px 12px;border-radius:6px;transition:.2s}
 .menu a:hover,.menu a.active{color:#fff;background:var(--brand-red)}
 
-/* ========== Page Hero (default) & Generic Sections ========== */
-.page-hero{padding:64px 15px 20px;text-align:center}
-.page-hero h1{font-size:36px;font-weight:800;margin:0 0 8px;color:var(--brand-red)}
-.page-hero p{font-size:18px;color:var(--muted)}
-.page-section{padding:36px 15px}
-.section-title{font-size:28px;font-weight:800;margin:0 0 16px}
-.section-title.red{color:var(--brand-red)}
-.bullets li{margin:8px 0;font-size:16px}
-
-/* ========== HERO IMAGE (Products) ========== */
-.hero-image{
-  position:relative;
-  height:360px;
-  background-size:cover;
-  background-position:center;
-  background-repeat:no-repeat;
-  border-radius:0;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-.hero-overlay-text{
-  background:rgba(0,0,0,.45);
-  padding:20px 40px;
-  border-radius:8px;
-}
-.hero-overlay-text h1{
-  font-size:48px;
-  font-weight:800;
-  color:#fff;
-  margin:0;
-}
-
-/* ========== Product Cards (uniform, like screenshot) ========== */
-.product-cards{padding-top:28px}
-.product-card-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);   /* 3 per row like the sample */
-  gap:32px;
-}
-@media (max-width:1100px){.product-card-grid{grid-template-columns:repeat(3,1fr)}}
-@media (max-width:900px){.product-card-grid{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:520px){.product-card-grid{grid-template-columns:1fr}}
-
-.p-card{
-  position:relative;
-  display:block;
-  border:1px solid #e5e7eb;
-  border-radius:10px;
-  overflow:hidden;
-  background:#fff;
-  box-shadow:0 4px 12px rgba(0,0,0,.06);
-  transition:transform .15s ease, box-shadow .15s ease, filter .15s ease;
-}
-
-/* Force all thumbs to the same size (perfect square) */
-.p-card img{
-  width:100%;
-  aspect-ratio:1/1;         /* keeps thumbnails square */
-  object-fit:cover;
-  display:block;
-}
-
-/* Title strip (below image) similar to reference spacing */
-.p-card-title{
-  display:block;
-  padding:14px 16px 18px;
-  font-weight:800;
-  font-size:22px;
-  color:#1b5e20;            /* dark green title like reference */
-}
-
-.p-card:hover{
-  transform:translateY(-3px);
-  box-shadow:0 10px 22px rgba(0,0,0,.12);
-  filter:brightness(1.02);
-}
-
-/* ========== Slideshow (Home) ========== */
+/* =================== Slideshow (Home) =================== */
 .slideshow-section{background:#000}
 .slideshow-container{
   max-width:1400px;position:relative;margin:0 auto;overflow:hidden;background:#000;
@@ -140,29 +59,86 @@ ul,li{list-style:none;margin:0;padding:0}
 .dot{cursor:pointer;height:12px;width:12px;margin:0 4px;background:#bbb;border-radius:50%;display:inline-block;transition:background-color .3s ease,transform .15s ease}
 .active-dot,.dot:hover{background:var(--brand-red);transform:scale(1.05)}
 
-/* ========== Product detail rows ========== */
+/* =================== Products (Home) =================== */
+.products-section{padding:64px 0 80px}
+.products-heading{text-align:center;font-size:36px;font-weight:800;color:var(--brand-red);letter-spacing:.3px;margin-bottom:20px}
+.products-heading .chev{font-size:26px;vertical-align:middle;color:#6fc179}
+.products-heading .left{margin-right:10px}.products-heading .right{margin-left:10px}
+
+.products-photos{display:flex;justify-content:center;flex-wrap:wrap;gap:28px;margin:12px 0 36px}
+.products-photos img{width:300px;height:200px;object-fit:cover;border-radius:12px;box-shadow:0 6px 16px rgba(0,0,0,.15);background:#fff}
+
+.products-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+@media (max-width:980px){.products-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:640px){.products-grid{grid-template-columns:1fr}}
+.product-card{position:relative;background:var(--card);border-radius:16px;padding:26px 22px 60px;text-align:center;box-shadow:0 8px 22px rgba(0,0,0,.06)}
+.product-card h3{font-size:22px;font-weight:700;margin:4px 0 6px}
+.divider{margin:8px auto 12px;letter-spacing:6px;color:#c1c1c1}
+.product-card p{font-size:16px;line-height:1.7;color:#333}
+.card-arrow{position:absolute;right:18px;bottom:16px;font-size:22px;color:#111;background:#fff;border-radius:12px;padding:4px 10px;border:1px solid #e5e5e5}
+
+.products-btn{text-align:center;margin-top:30px}
+.btn-products{display:inline-block;background:var(--brand-red);color:#fff;font-weight:700;padding:12px 28px;border-radius:10px;font-size:16px;letter-spacing:.2px;box-shadow:0 6px 14px rgba(0,0,0,.2);transition:background .25s ease,transform .15s ease,box-shadow .15s ease}
+.btn-products:hover{background:#cc0000;transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.25)}
+.btn-products .arrow{margin-right:8px}
+
+/* =================== About (Home) =================== */
+.about-section{background:var(--soft);padding:72px 0}
+.about{display:flex;flex-wrap:wrap;gap:50px;align-items:center}
+.about-text{flex:1 1 520px}
+.about-text h2{font-size:38px;font-weight:800;margin-bottom:18px;color:var(--brand-red)}
+.about-text p{font-size:18px;line-height:1.8;color:#222}
+.btn-read{display:inline-flex;align-items:center;gap:10px;background:var(--brand-red);color:#fff;font-weight:700;padding:14px 26px;border-radius:40px;transition:background .25s ease,transform .15s ease}
+.btn-read:hover{background:#cc0000;transform:translateY(-2px)}
+.btn-read-icon{font-size:18px}
+.about-media{flex:1 1 520px;text-align:center}
+.about-media img{max-width:100%;border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,.1)}
+
+/* =================== Vision & Mission (Home) =================== */
+.vm-section{background:var(--soft);padding:60px 0}
+.vm{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px}
+.vm-card{background:#fff;border:1px solid #ddd;border-radius:14px;padding:30px 24px;text-align:center;box-shadow:0 6px 16px rgba(0,0,0,.05);transition:transform .2s ease,box-shadow .2s ease}
+.vm-card:hover{transform:translateY(-4px);box-shadow:0 10px 20px rgba(0,0,0,.1)}
+.vm-card h3{font-size:24px;font-weight:700;margin-bottom:16px;color:var(--brand-red)}
+.vm-card p{font-size:16px;line-height:1.7;color:#333}
+
+/* =================== Page Hero & Sections (Other pages) =================== */
+.page-hero{padding:64px 15px 20px;text-align:center}
+.page-hero h1{font-size:36px;font-weight:800;margin:0 0 8px;color:var(--brand-red)}
+.page-hero p{font-size:18px;color:var(--muted)}
+.page-section{padding:36px 15px}
+.section-title{font-size:28px;font-weight:800;margin:0 0 16px}
+.section-title.red{color:var(--brand-red)}
+.bullets li{margin:8px 0;font-size:16px}
 .prod-row{display:grid;grid-template-columns:minmax(240px,360px) 1fr;gap:20px;align-items:center}
 .prod-row img{width:100%;height:220px;object-fit:cover;border-radius:10px;box-shadow:0 6px 16px rgba(0,0,0,.08)}
+.grid-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.grid-gallery img{width:100%;height:240px;object-fit:cover;border-radius:8px;box-shadow:0 6px 16px rgba(0,0,0,.08)}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.contact-card{background:#fff;border:1px solid #e8e8e8;border-radius:12px;padding:20px;box-shadow:0 6px 16px rgba(0,0,0,.05)}
+.contact-list li{margin:8px 0}
+.contact-form label{display:block;margin-bottom:12px;font-weight:600;font-family:'Montserrat', sans-serif}
+.contact-form input,.contact-form textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-family:'Merriweather', serif}
+.contact-form button{margin-top:8px}
 
-/* ========== Footer (Shared) ========== */
-.site-footer{
-  background:#1f2937;
-  color:#e5e7eb;
-  padding:60px 0 20px;
-  position:relative;
-}
+/* =================== Main (Home SEO line) =================== */
+main{padding:48px 0;text-align:center}
+main h1{font-size:32px;font-weight:700;margin-bottom:8px}
+main p{font-size:18px;color:var(--muted)}
+
+/* =================== Footer (Shared) =================== */
+.site-footer{background:#f0f0f0;color:#111;padding:60px 0 20px;position:relative}
 .footer-inner{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:40px}
-.footer-col h3{font-family:'Montserrat', sans-serif;font-weight:700;font-size:20px;margin-bottom:16px;color:#ffffff}
-.footer-col p,.footer-links,.footer-contact{font-family:'Montserrat', sans-serif;font-size:15px;line-height:1.7;color:#e5e7eb}
+.footer-col h3{font-family:'Montserrat', sans-serif;font-weight:700;font-size:20px;margin-bottom:16px;color:#111}
+.footer-col p,.footer-links,.footer-contact{font-family:'Merriweather', serif;font-size:15px;line-height:1.7;color:#333}
 .footer-links li,.footer-contact li{margin-bottom:10px}
-.footer-links a,.footer-contact a{color:#e5e7eb;text-decoration:none;transition:color .2s ease,opacity .2s ease}
-.footer-links a:hover,.footer-contact a:hover{color:#ffffff;opacity:.9}
-.footer-bottom{margin-top:30px;text-align:center;border-top:1px solid rgba(255,255,255,.12);padding-top:16px;font-size:14px;color:#cfd3d9}
+.footer-links a,.footer-contact a{color:#111;text-decoration:none;transition:color .2s ease}
+.footer-links a:hover,.footer-contact a:hover{color:var(--brand-red)}
+.footer-bottom{margin-top:30px;text-align:center;border-top:1px solid #ccc;padding-top:16px;font-size:14px;color:#555}
 
-/* ========== Responsive tweaks ========== */
-@media (max-width:980px){
-  .prod-row{grid-template-columns:1fr}
-}
+/* =================== Responsive tweaks =================== */
 @media (max-width:480px){
   .brand img{height:160px}
+  .slide img{height:340px}
+  .prod-row{grid-template-columns:1fr}
 }
