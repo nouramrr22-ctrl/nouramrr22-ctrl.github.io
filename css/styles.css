@@ -193,5 +193,5 @@ main p{font-size:18px;color:var(--muted)}
 
 /* ========== Quality page hero fix ========== */
 .hero-image.hero--top {
-  background-position: top center;
+  background-position: center bottom;
 }
