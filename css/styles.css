@@ -47,7 +47,7 @@ ul,li{list-style:none;margin:0;padding:0}
 .section-title.red{color:var(--brand-red)}
 .bullets li{margin:8px 0;font-size:16px}
 
-/* ========== HERO IMAGE ========== */
+/* ========== HERO IMAGE (new) ========== */
 .hero-image{
   position:relative;
   height:360px;
@@ -95,43 +95,23 @@ ul,li{list-style:none;margin:0;padding:0}
 .dot{cursor:pointer;height:12px;width:12px;margin:0 4px;background:#bbb;border-radius:50%;display:inline-block;transition:background-color .3s ease,transform .15s ease}
 .active-dot,.dot:hover{background:var(--brand-red);transform:scale(1.05)}
 
-/* ========== Products Page Cards ========== */
-.product-card-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
-  margin:40px 0;
-}
-.p-card{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  text-align:center;
-  background:#fff;
-  border:1px solid #eee;
-  border-radius:12px;
-  padding:16px;
-  box-shadow:0 4px 12px rgba(0,0,0,.06);
-  transition:transform .2s ease, box-shadow .2s ease;
-}
-.p-card img{
-  width:100%;
-  height:160px;
-  object-fit:cover;
-  border-radius:8px;
-  margin-bottom:12px;
-}
-.p-card-title{
-  font-size:16px;
-  font-weight:700;
-  color:var(--brand-red);
-}
-.p-card:hover{
-  transform:translateY(-4px);
-  box-shadow:0 6px 16px rgba(0,0,0,.12);
-}
+/* ========== Products (Home) ========== */
+.products-section{padding:64px 0 80px}
+.products-heading{text-align:center;font-size:36px;font-weight:800;color:var(--brand-red);letter-spacing:.3px;margin-bottom:20px}
+.products-heading .chev{font-size:26px;vertical-align:middle;color:#6fc179}
+.products-heading .left{margin-right:10px}.products-heading .right{margin-left:10px}
+.products-photos{display:flex;justify-content:center;flex-wrap:wrap;gap:28px;margin:12px 0 36px}
+.products-photos img{width:300px;height:200px;object-fit:cover;border-radius:12px;box-shadow:0 6px 16px rgba(0,0,0,.15);background:#fff}
+.products-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+@media (max-width:980px){.products-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:640px){.products-grid{grid-template-columns:1fr}}
+.product-card{position:relative;background:var(--card);border-radius:16px;padding:26px 22px 60px;text-align:center;box-shadow:0 8px 22px rgba(0,0,0,.06)}
+.product-card h3{font-size:22px;font-weight:700;margin:4px 0 6px}
+.divider{margin:8px auto 12px;letter-spacing:6px;color:#c1c1c1}
+.product-card p{font-size:16px;line-height:1.7;color:var(--muted)}
+.card-arrow{position:absolute;right:18px;bottom:16px;font-size:22px;color:#111;background:#fff;border-radius:12px;padding:4px 10px;border:1px solid #e5e5e5}
 
-/* ========== About / VM blocks ========== */
+/* ========== About / VM blocks (already used sitewide) ========== */
 .about-section{background:var(--soft);padding:72px 0}
 .about{display:flex;flex-wrap:wrap;gap:50px;align-items:center}
 .about-text{flex:1 1 520px}
