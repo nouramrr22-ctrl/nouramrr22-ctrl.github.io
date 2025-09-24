@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="css/styles.css?v=12">
   <link rel="icon" href="img/favicon.png">
 </head>
-<body class="index-page"> <!-- added class here -->
+<body class="index-page"> <!-- Added class for home-page-specific styles -->
 
   <!-- =================== Header =================== -->
   <nav class="nav container">
@@ -172,6 +172,7 @@
 
   <!-- =================== Safe Inline Styles for Home Page =================== -->
   <style>
+    /* Center ALL PRODUCTS button */
     body.index-page .products-btn {
       text-align: center;
       margin-top: 20px;
@@ -189,6 +190,18 @@
     body.index-page .btn-red-center:hover {
       background: #cc0000;
       transform: translateY(-2px);
+    }
+
+    /* Slideshow fix: no black gaps */
+    body.index-page .slideshow-container {
+      width: 100%;
+      height: 500px;
+      overflow: hidden;
+    }
+    body.index-page .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   </style>
 </body>
