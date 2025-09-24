@@ -76,6 +76,9 @@
           <li><a href="products.html#lemon">› Lemon</a></li>
           <li><a href="products.html#sweet-potatoes">› Sweet Potatoes</a></li>
           <li><a href="products.html#oranges">› Oranges</a></li>
+          <li><a href="products.html#grapes">› Grapes</a></li>
+          <li><a href="products.html#garlic">› Garlic</a></li>
+          <li><a href="products.html#strawberry">› Strawberry</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -93,10 +96,15 @@
 
   <script src="js/script.js"></script>
   <script>
-    (function(){var here=(location.pathname.split('/').pop()||'contact.html').toLowerCase();
-    document.querySelectorAll('.menu a').forEach(function(a){
-      if((a.getAttribute('href')||'').toLowerCase()===here){a.classList.add('active');a.setAttribute('aria-current','page');}
-    });})();
+    (function(){
+      var here=(location.pathname.split('/').pop()||'contact.html').toLowerCase();
+      document.querySelectorAll('.menu a').forEach(function(a){
+        if((a.getAttribute('href')||'').toLowerCase()===here){
+          a.classList.add('active');
+          a.setAttribute('aria-current','page');
+        }
+      });
+    })();
   </script>
 </body>
 </html>
