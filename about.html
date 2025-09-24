@@ -3,15 +3,19 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About Us | Gemüse Egypt</title>
-  <meta name="description" content="About Gemüse Egypt—Egyptian producer and exporter of high-quality horticultural crops.">
+  <title>Home | Gemüse Egypt</title>
+  <meta name="description" content="Gemüse Egypt supplies premium Egyptian fruits and vegetables to German wholesalers—quality, freshness, and reliable logistics.">
+
+  <!-- Professional fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;500;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=15">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css?v=12">
   <link rel="icon" href="img/favicon.png">
 </head>
-<body class="about-page">
+<body class="index-page">
 
-  <!-- Header -->
+  <!-- =================== Header =================== -->
   <nav class="nav container">
     <a href="index.html" class="brand" aria-label="Gemüse Egypt Home">
       <img src="logo.jbg.png" alt="Gemüse Egypt Logo">
@@ -26,63 +30,98 @@
     </ul>
   </nav>
 
-  <!-- Top photo hero -->
-  <header class="page-hero hero-image hero--top" style="background-image:url('img/about-fruits.jpg');">
-    <div class="hero-overlay-text">
-      <h1>About Us</h1>
-      <p>Egyptian producer and exporter of horticultural crops.</p>
+  <!-- =================== Slideshow =================== -->
+  <section class="slideshow-section">
+    <div class="slideshow-container" id="hero-slideshow" aria-label="Product highlights">
+      <!-- Slides injected by js/script.js -->
+      <div class="hero-overlay" aria-live="polite">
+        <div class="hero-text">
+          <h2>Gemüse Egypt</h2>
+          <p>Egyptian producer and exporter of horticultural crops, committed to international food safety and quality excellence.</p>
+        </div>
+        <a class="whatsapp-cta"
+           href="https://wa.me/201156893412?text=Hello%20Gem%C3%BCse%20Egypt%2C%20I%27m%20interested%20in%20your%20produce."
+           target="_blank" rel="noopener">Contact us on WhatsApp</a>
+      </div>
+      <button class="prev" aria-label="Previous slide" aria-controls="hero-slideshow">&#10094;</button>
+      <button class="next" aria-label="Next slide" aria-controls="hero-slideshow">&#10095;</button>
     </div>
-  </header>
+    <div class="dots-container" aria-label="Slideshow pagination"></div>
+  </section>
 
-  <!-- Who we are -->
-  <section class="page-section container about-who">
-    <div class="about-who-grid">
-      <div class="about-who-text">
-        <h2 class="about-who-title">Who we are</h2>
+  <!-- =================== Products =================== -->
+  <section id="products" class="products-section container">
+    <h2 class="products-heading"><span class="chev left">▸</span>OUR PRODUCTS<span class="chev right">◂</span></h2>
+
+    <div class="products-photos">
+      <img src="img/spring-onion.jpg" alt="Spring Onion">
+      <img src="img/onions.jpg" alt="Onions">
+      <img src="img/sweet-potato.jpg" alt="Sweet Potato">
+    </div>
+
+    <div class="products-grid">
+      <article class="product-card">
+        <h3>Spring Onion</h3>
+        <div class="divider">•••</div>
+        <p>Our spring onions are straight, with erect leaves tightly wrapped around a central core; firm and clean.</p>
+        <a href="products.html#spring-onions" class="card-arrow" aria-label="View Spring Onions">→</a>
+      </article>
+
+      <article class="product-card">
+        <h3>Red Onions</h3>
+        <div class="divider">•••</div>
+        <p>Fresh, crisp red onions ideal for export. Available between May and July.</p>
+        <a href="products.html#red-onions" class="card-arrow" aria-label="View Red Onions">→</a>
+      </article>
+
+      <article class="product-card">
+        <h3>Sweet Potatoes</h3>
+        <div class="divider">•••</div>
+        <p>Beauregard and Bellevue varieties—naturally sweet and consistent quality.</p>
+        <a href="products.html#sweet-potatoes" class="card-arrow" aria-label="View Sweet Potatoes">→</a>
+      </article>
+    </div>
+
+    <div class="products-btn">
+      <a href="products.html" class="btn-products btn-red-center" aria-label="View all products">
+        <span class="arrow">←</span> ALL PRODUCTS
+      </a>
+    </div>
+  </section>
+
+  <!-- =================== About =================== -->
+  <section class="about-section">
+    <div class="about container">
+      <div class="about-text">
+        <h2>Who we are?</h2>
         <p>
-          We are an Egyptian company specialized in the growing and exporting of horticulture crops in accordance to
-          international food safety and quality standards. Our farms are located in Wadi Alnatrun and managed with the most
-          efficient elements through an integrated food safety and quality management system that complies with international
-          standards of the food industry. We have acquired accreditation such as Global GAP Certification. We are serving the
-          global market professionally and we have clients around the world.
+          We are an Egyptian company specialized in the growing and exporting of horticulture crops in accordance
+          with international food safety and quality standards. Our farms are located in Wadi Alnatrun and managed
+          through an integrated food safety and quality management system. We have acquired Global GAP certification.
         </p>
+        <a href="about.html" class="btn-read"><span>Read more</span><span class="btn-read-icon" aria-hidden="true">➜</span></a>
+      </div>
+      <div class="about-media">
+        <img src="img/about-basket.jpg" alt="Fresh fruit basket">
       </div>
     </div>
   </section>
 
-  <!-- Vision & Mission -->
-  <section class="page-section container about-vm">
-    <div class="about-vm-grid">
+  <!-- =================== Vision & Mission =================== -->
+  <section class="vm-section">
+    <div class="vm container">
       <div class="vm-card">
         <h3>Vision</h3>
-        <p>
-          Our Vision is to be recognized by the global market as a successful company in our field through our proven
-          ability to consistently satisfy our customer requirements and expectations.
-        </p>
+        <p>To be recognized globally for consistently satisfying customer requirements and expectations.</p>
       </div>
       <div class="vm-card">
         <h3>Mission</h3>
-        <p>
-          Our Mission is continuous improvement through ensuring quality and safety of our products. In pursuing this
-          mission, we deliver value to our customers by delivering our products with outstanding quality and great service.
-        </p>
+        <p>Continuous improvement by ensuring the quality and safety of our products, delivering outstanding value and service.</p>
       </div>
     </div>
   </section>
 
-  <!-- Certifications -->
-  <section class="page-section container about-certifications">
-    <h2 class="about-cert-title">Proudly Certified By</h2>
-    <ul class="cert-list">
-      <li>ISO 9001</li>
-      <li>GLOBAL GAP</li>
-      <li>SMETA</li>
-      <li>GRASP GLOBAL GAP</li>
-      <li>ACERTA</li>
-    </ul>
-  </section>
-
-  <!-- Footer -->
+  <!-- =================== Footer (shared) =================== -->
   <footer class="site-footer">
     <div class="footer-inner container">
       <div class="footer-col">
@@ -97,6 +136,9 @@
           <li><a href="products.html#lemon">› Lemon</a></li>
           <li><a href="products.html#sweet-potatoes">› Sweet Potatoes</a></li>
           <li><a href="products.html#oranges">› Oranges</a></li>
+          <li><a href="products.html#grapes">› Grapes</a></li>
+          <li><a href="products.html#strawberries">› Strawberries</a></li>
+          <li><a href="products.html#garlic">› Garlic</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -112,24 +154,63 @@
     <div class="footer-bottom"><p>© 2025 Gemüse Egypt | All rights reserved</p></div>
   </footer>
 
-  <!-- Scripts -->
+  <!-- =================== Scripts =================== -->
   <script src="js/script.js"></script>
   <script>
-    (function(){
-      var here=(location.pathname.split('/').pop()||'about.html').toLowerCase();
-      document.querySelectorAll('.menu a').forEach(function(a){
-        if((a.getAttribute('href')||'').toLowerCase()===here){
+    (function () {
+      var here = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+      document.querySelectorAll('.menu a').forEach(function (a) {
+        if ((a.getAttribute('href') || '').toLowerCase() === here) {
           a.classList.add('active'); a.setAttribute('aria-current','page');
         }
       });
     })();
   </script>
 
-  <!-- Page-specific CSS override -->
+  <!-- =================== Safe Inline Styles for Home Page =================== -->
   <style>
-    body.about-page .hero-overlay-text { background: none !important; }
-    body.about-page .hero-overlay-text h1 { color: black !important; }
-    body.about-page .hero-overlay-text p { color: white !important; }
+    body.index-page .products-btn {
+      text-align: center;
+      margin-top: 20px;
+    }
+    body.index-page .btn-red-center {
+      display: inline-block;
+      background: #e60000;
+      color: #fff;
+      font-weight: 700;
+      padding: 14px 28px;
+      border-radius: 40px;
+      text-decoration: none;
+      transition: background .25s ease, transform .15s ease;
+    }
+    body.index-page .btn-red-center:hover {
+      background: #cc0000;
+      transform: translateY(-2px);
+    }
+
+    /* ✅ Product card arrows in red */
+    body.index-page .product-card .card-arrow {
+      color: #e60000;
+      border: 2px solid #e60000;
+      border-radius: 50%;
+      padding: 6px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s, color 0.3s;
+    }
+    body.index-page .product-card .card-arrow:hover {
+      background: #e60000;
+      color: #fff;
+    }
+
+    /* ✅ Slideshow images: remove black gaps with minimal scaling */
+    body.index-page .slideshow-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.02); /* only 2% zoom */
+    }
   </style>
 </body>
 </html>
