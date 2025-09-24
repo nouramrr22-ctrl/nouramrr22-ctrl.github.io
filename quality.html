@@ -9,8 +9,9 @@
   <link rel="stylesheet" href="css/styles.css?v=12">
   <link rel="icon" href="img/favicon.png">
 </head>
-<body>
-  <!-- =================== Header =================== -->
+<body class="quality-page">
+
+  <!-- Header -->
   <nav class="nav container">
     <a href="index.html" class="brand" aria-label="Gemüse Egypt Home">
       <img src="logo.jbg.png" alt="Gemüse Egypt Logo">
@@ -25,7 +26,7 @@
     </ul>
   </nav>
 
-  <!-- =================== Hero image banner =================== -->
+  <!-- Hero image banner -->
   <header class="page-hero hero-image hero--top" style="background-image:url('img/quality-hero.jpg');">
     <div class="hero-overlay-text">
       <h1>Quality Standards</h1>
@@ -33,7 +34,7 @@
     </div>
   </header>
 
-  <!-- =================== New Intro Text =================== -->
+  <!-- Intro text -->
   <section class="page-section container">
     <p>
       Gemüse Egypt Co. is always eager to stay updated with all the modern innovations in quality control systems in order to maintain the standard of the quality of the fresh fruits and vegetables that is our company's fundamental competency. 
@@ -45,7 +46,7 @@
     </p>
   </section>
 
-  <!-- =================== Commitment =================== -->
+  <!-- Commitment -->
   <section class="page-section container">
     <h2 class="section-title red">Commitment</h2>
     <p>We operate with an integrated food safety and quality management system designed to consistently meet export specifications.</p>
@@ -57,7 +58,7 @@
     </ul>
   </section>
 
-  <!-- =================== Footer =================== -->
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="footer-inner container">
       <div class="footer-col">
@@ -87,7 +88,7 @@
     <div class="footer-bottom"><p>© 2025 Gemüse Egypt | All rights reserved</p></div>
   </footer>
 
-  <!-- =================== Scripts =================== -->
+  <!-- Scripts -->
   <script src="js/script.js"></script>
   <script>
     (function(){
@@ -100,5 +101,12 @@
       });
     })();
   </script>
+
+  <!-- Page-specific CSS override -->
+  <style>
+    body.quality-page .hero-overlay-text {
+      background: none !important;
+    }
+  </style>
 </body>
 </html>
