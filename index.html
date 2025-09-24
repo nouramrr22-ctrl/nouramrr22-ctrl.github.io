@@ -200,6 +200,14 @@
       background: #e60000;
       color: #fff;
     }
+
+    /* ✅ Slideshow images: remove black gaps with minimal scaling */
+    body.index-page .slideshow-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.02); /* only 2% zoom */
+    }
   </style>
 </body>
 </html>
