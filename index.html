@@ -13,12 +13,11 @@
   <link rel="stylesheet" href="css/styles.css?v=12">
   <link rel="icon" href="img/favicon.png">
 </head>
-<body>
+<body class="index-page"> <!-- added class here -->
 
   <!-- =================== Header =================== -->
   <nav class="nav container">
     <a href="index.html" class="brand" aria-label="Gemüse Egypt Home">
-      <!-- Fixed: logo is in root, not in /img -->
       <img src="logo.jbg.png" alt="Gemüse Egypt Logo">
     </a>
     <ul class="menu" role="menubar">
@@ -84,7 +83,9 @@
     </div>
 
     <div class="products-btn">
-      <a href="products.html" class="btn-products" aria-label="View all products"><span class="arrow">←</span> ALL PRODUCTS</a>
+      <a href="products.html" class="btn-products btn-red-center" aria-label="View all products">
+        <span class="arrow">←</span> ALL PRODUCTS
+      </a>
     </div>
   </section>
 
@@ -168,5 +169,27 @@
       });
     })();
   </script>
+
+  <!-- =================== Safe Inline Styles for Home Page =================== -->
+  <style>
+    body.index-page .products-btn {
+      text-align: center;
+      margin-top: 20px;
+    }
+    body.index-page .btn-red-center {
+      display: inline-block;
+      background: #e60000;
+      color: #fff;
+      font-weight: 700;
+      padding: 14px 28px;
+      border-radius: 40px;
+      text-decoration: none;
+      transition: background .25s ease, transform .15s ease;
+    }
+    body.index-page .btn-red-center:hover {
+      background: #cc0000;
+      transform: translateY(-2px);
+    }
+  </style>
 </body>
 </html>
