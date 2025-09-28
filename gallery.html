@@ -2,18 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  <!-- ✅ Ensure proper mobile scaling -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Gallery | Gemüse Egypt</title>
   <meta name="description" content="Product and farm images from Gemüse Egypt.">
+
+  <!-- ✅ Preconnect for faster font loading -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <!-- Professional fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;500;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css?v=12">
   <link rel="icon" href="img/favicon.png">
+
+  <!-- ✅ Optional: theme color for mobile browser UI -->
+  <meta name="theme-color" content="#e60000">
 </head>
-<body>
+<body class="gallery-page">
   <!-- =================== Navigation =================== -->
-  <nav class="nav container">
+  <nav class="nav container" aria-label="Primary">
     <a href="index.html" class="brand" aria-label="Gemüse Egypt Home">
-      <img src="logo.jbg.png" alt="Gemüse Egypt Logo">
+      <!-- ✅ Optimize logo for faster, stable rendering -->
+      <img src="logo.jbg.png" alt="Gemüse Egypt Logo" decoding="async" width="220" height="80">
     </a>
     <ul class="menu" role="menubar">
       <li role="none"><a role="menuitem" href="index.html">Home</a></li>
@@ -35,61 +49,61 @@
   <section class="page-section container">
     <div class="grid-gallery">
       <!-- existing photos -->
-      <img loading="lazy" src="img/spring-onion.jpg" alt="Spring Onions">
-      <img loading="lazy" src="img/onions.jpg" alt="Red Onions">
-      <img loading="lazy" src="img/sweet-potato.jpg" alt="Sweet Potatoes">
-      <img loading="lazy" src="img/oranges.jpg" alt="Oranges">
-      <img loading="lazy" src="img/lemon.jpg" alt="Lemon">
-      <img loading="lazy" src="img/about-basket.jpg" alt="Produce Basket">
+      <img loading="lazy" decoding="async" src="img/spring-onion.jpg" alt="Spring Onions">
+      <img loading="lazy" decoding="async" src="img/onions.jpg" alt="Red Onions">
+      <img loading="lazy" decoding="async" src="img/sweet-potato.jpg" alt="Sweet Potatoes">
+      <img loading="lazy" decoding="async" src="img/oranges.jpg" alt="Oranges">
+      <img loading="lazy" decoding="async" src="img/lemon.jpg" alt="Lemon">
+      <img loading="lazy" decoding="async" src="img/about-basket.jpg" alt="Produce Basket">
 
       <!-- onion series (added) -->
-      <img loading="lazy" src="img/gemuse-onions-01.jpg" alt="Onions Series 01">
-      <img loading="lazy" src="img/gemuse-onions-02.jpg" alt="Onions Series 02">
+      <img loading="lazy" decoding="async" src="img/gemuse-onions-01.jpg" alt="Onions Series 01">
+      <img loading="lazy" decoding="async" src="img/gemuse-onions-02.jpg" alt="Onions Series 02">
       <!-- 03 not present -->
-      <img loading="lazy" src="img/gemuse-onions-04.jpg" alt="Onions Series 04">
-      <img loading="lazy" src="img/gemuse-onions-05.jpg" alt="Onions Series 05">
-      <img loading="lazy" src="img/gemuse-onions-06.jpg" alt="Onions Series 06">
-      <img loading="lazy" src="img/gemuse-onions-07.jpg" alt="Onions Series 07">
-      <img loading="lazy" src="img/gemuse-onions-08.jpg" alt="Onions Series 08">
-      <img loading="lazy" src="img/gemuse-onions-09.jpg" alt="Onions Series 09">
-      <img loading="lazy" src="img/gemuse-onions-10.jpg" alt="Onions Series 10">
-      <img loading="lazy" src="img/gemuse-onions-11.jpg" alt="Onions Series 11">
-      <img loading="lazy" src="img/gemuse-onions-12.jpg" alt="Onions Series 12">
-      <img loading="lazy" src="img/gemuse-onions-13.jpg" alt="Onions Series 13">
-      <img loading="lazy" src="img/gemuse-onions-14.jpg" alt="Onions Series 14">
-      <img loading="lazy" src="img/gemuse-onions-15.jpg" alt="Onions Series 15">
-      <img loading="lazy" src="img/gemuse-onions-16.jpg" alt="Onions Series 16">
-      <img loading="lazy" src="img/gemuse-onions-17.jpg" alt="Onions Series 17">
-      <img loading="lazy" src="img/gemuse-onions-18.jpg" alt="Onions Series 18">
-      <img loading="lazy" src="img/gemuse-onions-19.jpg" alt="Onions Series 19">
-      <img loading="lazy" src="img/gemuse-onions-20.jpg" alt="Onions Series 20">
-      <img loading="lazy" src="img/gemuse-onions-21.jpg" alt="Onions Series 21">
-      <img loading="lazy" src="img/gemuse-onions-22.jpg" alt="Onions Series 22">
-      <img loading="lazy" src="img/gemuse-onions-23.jpg" alt="Onions Series 23">
-      <img loading="lazy" src="img/gemuse-onions-24.jpg" alt="Onions Series 24">
+      <img loading="lazy" decoding="async" src="img/gemuse-onions-04.jpg" alt="Onions Series 04">
+      <img loading="lazy" decoding="async" src="img/gemuse-onions-05.jpg" alt="Onions Series 05">
+      <img loading="lazy" decoding="async" src="img/gemuse-onions-06.jpg" alt="Onions Series 06">
+      <img loading="lazy" decoding="async" src="img/gemuse-onions-07.jpg" alt="Onions Series 07">
+      <img loading="lazy" decoding="async" src="img/gemuse-onions-08.jpg" alt="Onions Series 08">
+      <img loading="lazy" decoding="async" src="img/gemuse-onions-09.jpg" alt="Onions Series 09">
+      <img loading="lazy" decoding="async" src="img/gemuse-onions-10.jpg" alt="Onions Series 10">
+      <img loading="lazy" decoding="async" src="img/gemuse-onions-11.jpg" alt="Onions Series 11">
+      <img loading="lazy" decoding="async" src="img/gemuse-onions-12.jpg" alt="Onions Series 12">
+      <img loading="lazy" decoding="async" src="img/gemuse-onions-13.jpg" alt="Onions Series 13">
+      <img loading="lazy" decoding="async" src="img/gemuse-onions-14.jpg" alt="Onions Series 14">
+      <img loading="lazy" decoding="async" src="img/gemuse-onions-15.jpg" alt="Onions Series 15">
+      <img loading="lazy" decoding="async" src="img/gemuse-onions-16.jpg" alt="Onions Series 16">
+      <img loading="lazy" decoding="async" src="img/gemuse-onions-17.jpg" alt="Onions Series 17">
+      <img loading="lazy" decoding="async" src="img/gemuse-onions-18.jpg" alt="Onions Series 18">
+      <img loading="lazy" decoding="async" src="img/gemuse-onions-19.jpg" alt="Onions Series 19">
+      <img loading="lazy" decoding="async" src="img/gemuse-onions-20.jpg" alt="Onions Series 20">
+      <img loading="lazy" decoding="async" src="img/gemuse-onions-21.jpg" alt="Onions Series 21">
+      <img loading="lazy" decoding="async" src="img/gemuse-onions-22.jpg" alt="Onions Series 22">
+      <img loading="lazy" decoding="async" src="img/gemuse-onions-23.jpg" alt="Onions Series 23">
+      <img loading="lazy" decoding="async" src="img/gemuse-onions-24.jpg" alt="Onions Series 24">
 
       <!-- Mixed/double extensions below — paths match repo exactly -->
-      <img loading="lazy" src="img/gemuse-onions-25.jpg.JPG" alt="Onions Series 25">
+      <img loading="lazy" decoding="async" src="img/gemuse-onions-25.jpg.JPG" alt="Onions Series 25">
       <!-- 26 not present -->
-      <img loading="lazy" src="img/gemuse-onions-27.jpg.JPG" alt="Onions Series 27">
-      <img loading="lazy" src="img/gemuse-onions-28.jpg.JPG" alt="Onions Series 28">
-      <img loading="lazy" src="img/gemuse-onions-29.jpg.JPG" alt="Onions Series 29">
-      <img loading="lazy" src="img/gemuse-onions-30.jpg.JPG" alt="Onions Series 30">
-      <img loading="lazy" src="img/gemuse-onions-31.jpg.JPG" alt="Onions Series 31">
-      <img loading="lazy" src="img/gemuse-onions-32.jpg.JPG" alt="Onions Series 32">
-      <img loading="lazy" src="img/gemuse-onions-33.jpg.JPG" alt="Onions Series 33">
-      <img loading="lazy" src="img/gemuse-onions-34.jpg.JPG" alt="Onions Series 34">
-      <img loading="lazy" src="img/gemuse-onions-35.jpg.JPG" alt="Onions Series 35">
-      <img loading="lazy" src="img/gemuse-onions-36.jpg.JPG" alt="Onions Series 36">
-      <img loading="lazy" src="img/gemuse-onions-37.jpg.JPG" alt="Onions Series 37">
-      <img loading="lazy" src="img/gemuse-onions-38.jpg.JPG" alt="Onions Series 38">
-      <img loading="lazy" src="img/gemuse-onions-39.jpg.JPG" alt="Onions Series 39">
-      <img loading="lazy" src="img/gemuse-onions-40.jpg.JPG" alt="Onions Series 40">
-      <img loading="lazy" src="img/gemuse-onions-41.jpg.JPG" alt="Onions Series 41">
-      <img loading="lazy" src="img/gemuse-onions-42.jpg.JPG" alt="Onions Series 42">
-      <img loading="lazy" src="img/gemuse-onions-43.jpg.JPG" alt="Onions Series 43">
+      <img loading="lazy" decoding="async" src="img/gemuse-onions-27.jpg.JPG" alt="Onions Series 27">
+      <img loading="lazy" decoding="async" src="img/gemuse-onions-28.jpg.JPG" alt="Onions Series 28">
+      <img loading="lazy" decoding="async" src="img/gemuse-onions-29.jpg.JPG" alt="Onions Series 29">
+      <img loading="lazy" decoding="async" src="img/gemuse-onions-30.jpg.JPG" alt="Onions Series 30">
+      <img loading="lazy" decoding="async" src="img/gemuse-onions-31.jpg.JPG" alt="Onions Series 31">
+      <img loading="lazy" decoding="async" src="img/gemuse-onions-32.jpg.JPG" alt="Onions Series 32">
+      <img loading="lazy" decoding="async" src="img/gemuse-onions-33.jpg.JPG" alt="Onions Series 33">
+      <img loading="lazy" decoding="async" src="img/gemuse-onions-34.jpg.JPG" alt="Onions Series 34">
+      <img loading="lazy" decoding="async" src="img/gemuse-onions-35.jpg.JPG" alt="Onions Series 35">
+      <img loading="lazy" decoding="async" src="img/gemuse-onions-36.jpg.JPG" alt="Onions Series 36">
+      <img loading="lazy" decoding="async" src="img/gemuse-onions-37.jpg.JPG" alt="Onions Series 37">
+      <img loading="lazy" decoding="async" src="img/gemuse-onions-38.jpg.JPG" alt="Onions Series 38">
+      <img loading="lazy" decoding="async" src="img/gemuse-onions-39.jpg.JPG" alt="Onions Series 39">
+      <img loading="lazy" decoding="async" src="img/gemuse-onions-40.jpg.JPG" alt="Onions Series 40">
+      <img loading="lazy" decoding="async" src="img/gemuse-onions-41.jpg.JPG" alt="Onions Series 41">
+      <img loading="lazy" decoding="async" src="img/gemuse-onions-42.jpg.JPG" alt="Onions Series 42">
+      <img loading="lazy" decoding="async" src="img/gemuse-onions-43.jpg.JPG" alt="Onions Series 43">
       <!-- 44–47 not present -->
-      <img loading="lazy" src="img/gemuse-onions-48.jpg.JPG" alt="Onions Series 48">
+      <img loading="lazy" decoding="async" src="img/gemuse-onions-48.jpg.JPG" alt="Onions Series 48">
     </div>
   </section>
 
@@ -114,9 +128,9 @@
         <h3>Contact Us</h3>
         <ul class="footer-contact">
           <li>📞 Phone: <a href="tel:+201156893412">+20 115 689 3412</a></li>
-          <li>💬 WhatsApp: <a href="https://wa.me/201156893412" target="_blank">+20 115 689 3412</a></li>
+          <li>💬 WhatsApp: <a href="https://wa.me/201156893412" target="_blank" rel="noopener">+20 115 689 3412</a></li>
           <li>📧 Email: <a href="mailto:info@gemuseegypt.org">info@gemuseegypt.org</a></li>
-          <li>🌐 Website: <a href="https://www.gemuseegypt.org" target="_blank">www.gemuseegypt.org</a></li>
+          <li>🌐 Website: <a href="https://www.gemuseegypt.org" target="_blank" rel="noopener">www.gemuseegypt.org</a></li>
         </ul>
       </div>
     </div>
@@ -124,7 +138,7 @@
   </footer>
 
   <!-- =================== Scripts =================== -->
-  <script src="js/script.js"></script>
+  <script src="js/script.js" defer></script>
   <script>
     (function(){
       var here = (location.pathname.split('/').pop() || 'gallery.html').toLowerCase();
