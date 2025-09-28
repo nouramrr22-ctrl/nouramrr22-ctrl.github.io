@@ -2,18 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  <!-- ✅ Ensure proper mobile scaling -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Products | Gemüse Egypt</title>
   <meta name="description" content="Spring onions, red onions, sweet potatoes, oranges, strawberries—Egyptian produce for German wholesalers.">
+
+  <!-- ✅ Preconnect for faster font loading -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <!-- Professional fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;500;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css?v=22">
   <link rel="icon" href="img/favicon.png">
+
+  <!-- ✅ Optional: theme color for mobile browser UI -->
+  <meta name="theme-color" content="#e60000">
 </head>
-<body>
+<body class="products-page">
   <!-- =================== Header =================== -->
-  <nav class="nav container">
+  <nav class="nav container" aria-label="Primary">
     <a href="index.html" class="brand" aria-label="Gemüse Egypt Home">
-      <img src="logo.jbg.png" alt="Gemüse Egypt Logo">
+      <img src="logo.jbg.png" alt="Gemüse Egypt Logo" decoding="async" width="220" height="80">
     </a>
     <ul class="menu" role="menubar">
       <li role="none"><a role="menuitem" href="index.html">Home</a></li>
@@ -29,27 +42,27 @@
   <section class="page-section container">
     <div class="product-card-grid">
       <a class="p-card" href="#spring-onions" aria-label="Spring Onions">
-        <img src="img/spring-onion.jpg" alt="Spring Onions">
+        <img src="img/spring-onion.jpg" alt="Spring Onions" loading="lazy" decoding="async" width="300" height="220">
         <span class="p-card-title">Spring Onions</span>
       </a>
 
       <a class="p-card" href="#red-onions" aria-label="Red Onions">
-        <img src="img/onions.jpg" alt="Red Onions">
+        <img src="img/onions.jpg" alt="Red Onions" loading="lazy" decoding="async" width="300" height="220">
         <span class="p-card-title">Red Onions</span>
       </a>
 
       <a class="p-card" href="#sweet-potatoes" aria-label="Sweet Potatoes">
-        <img src="img/sweet-potato.jpg" alt="Sweet Potatoes">
+        <img src="img/sweet-potato.jpg" alt="Sweet Potatoes" loading="lazy" decoding="async" width="300" height="220">
         <span class="p-card-title">Sweet Potatoes</span>
       </a>
 
       <a class="p-card" href="#oranges" aria-label="Oranges">
-        <img src="img/oranges.jpg" alt="Oranges">
+        <img src="img/oranges.jpg" alt="Oranges" loading="lazy" decoding="async" width="300" height="220">
         <span class="p-card-title">Oranges</span>
       </a>
 
       <a class="p-card" href="#strawberries" aria-label="Strawberries">
-        <img src="img/strawberries.jpg" alt="Strawberries">
+        <img src="img/strawberries.jpg" alt="Strawberries" loading="lazy" decoding="async" width="300" height="220">
         <span class="p-card-title">Strawberries</span>
       </a>
     </div>
@@ -61,7 +74,7 @@
   <section id="spring-onions" class="page-section container">
     <h2 class="section-title red">Spring Onions</h2>
     <div class="prod-row">
-      <img src="img/spring-onion.jpg" alt="Spring Onions">
+      <img src="img/spring-onion.jpg" alt="Spring Onions" loading="lazy" decoding="async" width="360" height="220">
       <div>
         <p>our spring onions is Straight, erect leaves tightly wrapped around central core; firm, clean, well rounded bulb; clean roots</p>
         <ul class="bullets">
@@ -83,7 +96,7 @@
   <section id="red-onions" class="page-section container">
     <h2 class="section-title red">Red Onions</h2>
     <div class="prod-row">
-      <img src="img/onions.jpg" alt="Red Onions">
+      <img src="img/onions.jpg" alt="Red Onions" loading="lazy" decoding="async" width="360" height="220">
       <div>
         <p>Our onions come in yellow or red varieties. They are available between May and July and have thin, light coloured skin.</p>
         <ul class="bullets">
@@ -106,7 +119,7 @@
   <section id="sweet-potatoes" class="page-section container">
     <h2 class="section-title red">Sweet Potatoes</h2>
     <div class="prod-row">
-      <img src="img/sweet-potato.jpg" alt="Sweet Potatoes">
+      <img src="img/sweet-potato.jpg" alt="Sweet Potatoes" loading="lazy" decoding="async" width="360" height="220">
       <div>
         <p>our sweet potatoes come in 2 varieties, Beauregard and Bellevue. Very sweet and healthy. Contains important vitamins und fiber.</p>
         <ul class="bullets">
@@ -127,7 +140,7 @@
   <section id="oranges" class="page-section container">
     <h2 class="section-title red">Oranges</h2>
     <div class="prod-row">
-      <img src="img/oranges.jpg" alt="Oranges">
+      <img src="img/oranges.jpg" alt="Oranges" loading="lazy" decoding="async" width="360" height="220">
       <div>
         <ul class="bullets">
           <li><strong>Varieties</strong>: Navel, Sweet, Baladi, and Valencia.</li>
@@ -150,7 +163,7 @@
   <section id="strawberries" class="page-section container">
     <h2 class="section-title red">Strawberries</h2>
     <div class="prod-row">
-      <img src="img/strawberries.jpg" alt="Strawberries">
+      <img src="img/strawberries.jpg" alt="Strawberries" loading="lazy" decoding="async" width="360" height="220">
       <div>
         <ul class="bullets">
           <li><strong>Varieties</strong>: Festival, Fortuna</li>
@@ -183,9 +196,9 @@
         <h3>Contact Us</h3>
         <ul class="footer-contact">
           <li>📞 Phone: <a href="tel:+201156893412">+20 115 689 3412</a></li>
-          <li>💬 WhatsApp: <a href="https://wa.me/201156893412" target="_blank">+20 115 689 3412</a></li>
+          <li>💬 WhatsApp: <a href="https://wa.me/201156893412" target="_blank" rel="noopener">+20 115 689 3412</a></li>
           <li>📧 Email: <a href="mailto:info@gemuseegypt.org">info@gemuseegypt.org</a></li>
-          <li>🌐 Website: <a href="https://www.gemuseegypt.org" target="_blank">www.gemuseegypt.org</a></li>
+          <li>🌐 Website: <a href="https://www.gemuseegypt.org" target="_blank" rel="noopener">www.gemuseegypt.org</a></li>
         </ul>
       </div>
     </div>
@@ -193,7 +206,7 @@
   </footer>
 
   <!-- =================== Scripts =================== -->
-  <script src="js/script.js"></script>
+  <script src="js/script.js" defer></script>
   <script>
     (function(){
       var here=(location.pathname.split('/').pop()||'products.html').toLowerCase();
