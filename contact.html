@@ -2,17 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  <!-- ✅ Ensure proper mobile scaling -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Contact Us | Gemüse Egypt</title>
   <meta name="description" content="Get in touch with Gemüse Egypt.">
+
+  <!-- ✅ Preconnect for faster font loading -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <!-- Professional fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;500;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css?v=12">
   <link rel="icon" href="img/favicon.png">
+
+  <!-- ✅ Optional: theme color for mobile browser UI -->
+  <meta name="theme-color" content="#e60000">
 </head>
-<body>
-  <nav class="nav container">
+<body class="contact-page">
+  <!-- =================== Header =================== -->
+  <nav class="nav container" aria-label="Primary">
     <a href="index.html" class="brand" aria-label="Gemüse Egypt Home">
-      <img src="logo.jbg.png" alt="Gemüse Egypt Logo">
+      <img src="logo.jbg.png" alt="Gemüse Egypt Logo" decoding="async" width="220" height="80">
     </a>
     <ul class="menu" role="menubar">
       <li role="none"><a role="menuitem" href="index.html">Home</a></li>
@@ -24,20 +38,22 @@
     </ul>
   </nav>
 
+  <!-- =================== Hero =================== -->
   <header class="page-hero" style="background:#111;color:#fff;border-radius:14px;max-width:1400px;margin:32px auto 0;padding:48px 15px;">
     <h1 style="color:#fff;margin-bottom:8px;">Get In Touch</h1>
     <p style="color:#e5e7eb">If you have any questions or inquiries, please send us a message.</p>
   </header>
 
+  <!-- =================== Contact Section =================== -->
   <section class="page-section container">
     <div class="contact-grid">
       <div class="contact-card">
         <h2 class="section-title">Contact Details</h2>
         <ul class="contact-list">
           <li>📞 Phone: <a href="tel:+201156893412">+20 115 689 3412</a></li>
-          <li>💬 WhatsApp: <a href="https://wa.me/201156893412" target="_blank">+20 115 689 3412</a></li>
+          <li>💬 WhatsApp: <a href="https://wa.me/201156893412" target="_blank" rel="noopener">+20 115 689 3412</a></li>
           <li>📧 Email: <a href="mailto:info@gemuseegypt.org">info@gemuseegypt.org</a></li>
-          <li>🌐 Website: <a href="https://www.gemuseegypt.org" target="_blank">www.gemuseegypt.org</a></li>
+          <li>🌐 Website: <a href="https://www.gemuseegypt.org" target="_blank" rel="noopener">www.gemuseegypt.org</a></li>
         </ul>
       </div>
 
@@ -62,6 +78,7 @@
     </div>
   </section>
 
+  <!-- =================== Footer =================== -->
   <footer class="site-footer">
     <div class="footer-inner container">
       <div class="footer-col">
@@ -82,16 +99,17 @@
         <h3>Contact Us</h3>
         <ul class="footer-contact">
           <li>📞 Phone: <a href="tel:+201156893412">+20 115 689 3412</a></li>
-          <li>💬 WhatsApp: <a href="https://wa.me/201156893412" target="_blank">+20 115 689 3412</a></li>
+          <li>💬 WhatsApp: <a href="https://wa.me/201156893412" target="_blank" rel="noopener">+20 115 689 3412</a></li>
           <li>📧 Email: <a href="mailto:info@gemuseegypt.org">info@gemuseegypt.org</a></li>
-          <li>🌐 Website: <a href="https://www.gemuseegypt.org" target="_blank">www.gemuseegypt.org</a></li>
+          <li>🌐 Website: <a href="https://www.gemuseegypt.org" target="_blank" rel="noopener">www.gemuseegypt.org</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom"><p>© 2025 Gemüse Egypt | All rights reserved</p></div>
   </footer>
 
-  <script src="js/script.js"></script>
+  <!-- =================== Scripts =================== -->
+  <script src="js/script.js" defer></script>
   <script>
     (function(){
       var here=(location.pathname.split('/').pop()||'contact.html').toLowerCase();
