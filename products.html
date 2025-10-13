@@ -58,7 +58,7 @@
         <img src="img/green-beans.jpg" alt="Green Beans" loading="lazy" decoding="async" width="300" height="220">
         <span class="p-card-title">Green Beans</span>
       </a>
-      <!-- New Product Card -->
+      <!-- NEW PRODUCT -->
       <a class="p-card" href="#vegetable-mix" aria-label="Vegetable Mix (Peas, Green Beans, and Carrots)">
         <img src="img/vegetable-mix.jpg" alt="Vegetable Mix (Peas, Green Beans, and Carrots)" loading="lazy" decoding="async" width="300" height="220">
         <span class="p-card-title">Vegetable Mix (Peas, Green Beans, and Carrots)</span>
@@ -159,4 +159,106 @@
         <ul class="bullets">
           <li><strong>Varieties</strong>: Festival, Fortuna</li>
           <li><strong>Grade</strong>: Class A</li>
-          <li><
+          <li><strong>Packing</strong>: Plastic punnets 250g, 500g, Frozen packs</li>
+          <li><strong>Availability</strong>: All year round</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="peas" class="page-section container">
+    <h2 class="section-title red">Peas</h2>
+    <div class="prod-row">
+      <img src="img/peas.jpg" alt="Peas" loading="lazy" decoding="async" width="360" height="220">
+      <div>
+        <p>Our peas are freshly harvested, tender, and naturally sweet. Suitable for both fresh and frozen export.</p>
+        <ul class="bullets">
+          <li><strong>Varieties</strong>: Green Peas</li>
+          <li><strong>Grade</strong>: Class A</li>
+          <li><strong>Packing</strong>: 10 kg cartons or frozen bulk bags</li>
+          <li><strong>Availability</strong>: December – April</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="green-beans" class="page-section container">
+    <h2 class="section-title red">Green Beans</h2>
+    <div class="prod-row">
+      <img src="img/green-beans.jpg" alt="Green Beans" loading="lazy" decoding="async" width="360" height="220">
+      <div>
+        <p>Our green beans are crisp, fresh, and rich in nutrients. Grown under strict quality control for export standards.</p>
+        <ul class="bullets">
+          <li><strong>Varieties</strong>: Bobby Beans, Fine Beans</li>
+          <li><strong>Grade</strong>: Class A</li>
+          <li><strong>Packing</strong>: 5 kg or 10 kg cartons</li>
+          <li><strong>Availability</strong>: November – April</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW PRODUCT SECTION -->
+  <section id="vegetable-mix" class="page-section container">
+    <h2 class="section-title red">Vegetable Mix (Peas, Green Beans, and Carrots)</h2>
+    <div class="prod-row">
+      <img src="img/vegetable-mix.jpg" alt="Vegetable Mix (Peas, Green Beans, and Carrots)" loading="lazy" decoding="async" width="360" height="220">
+      <div>
+        <p>Our Vegetable Mix combines premium quality peas, green beans, and carrots, freshly harvested and carefully processed to preserve natural color, taste, and nutrients. Perfect for both frozen and fresh export.</p>
+        <ul class="bullets">
+          <li><strong>Components</strong>: Peas, Green Beans, Carrots</li>
+          <li><strong>Grade</strong>: Class A</li>
+          <li><strong>Packing</strong>: 10 kg cartons or frozen bulk bags</li>
+          <li><strong>Availability</strong>: December – April</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner container">
+      <div class="footer-col">
+        <h3>Gemüse Egypt</h3>
+        <p>We are an Egyptian company specialized in the growing and exporting of horticulture crops in accordance with international food safety and quality standards.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Our Products</h3>
+        <ul class="footer-links">
+          <li><a href="#spring-onions">› Spring Onions</a></li>
+          <li><a href="#red-onions">› Red Onions</a></li>
+          <li><a href="#sweet-potatoes">› Sweet Potatoes</a></li>
+          <li><a href="#oranges">› Oranges</a></li>
+          <li><a href="#strawberries">› Strawberries</a></li>
+          <li><a href="#peas">› Peas</a></li>
+          <li><a href="#green-beans">› Green Beans</a></li>
+          <li><a href="#vegetable-mix">› Vegetable Mix (Peas, Green Beans, and Carrots)</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Contact Us</h3>
+        <ul class="footer-contact">
+          <li>📞 Phone: <a href="tel:+201156893412">+20 115 689 3412</a></li>
+          <li>💬 WhatsApp: <a href="https://wa.me/201156893412" target="_blank" rel="noopener">+20 115 689 3412</a></li>
+          <li>📧 Email: <a href="mailto:info@gemuseegypt.org">info@gemuseegypt.org</a></li>
+          <li>🌐 Website: <a href="https://www.gemuseegypt.org" target="_blank" rel="noopener">www.gemuseegypt.org</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 Gemüse Egypt | All rights reserved</p></div>
+  </footer>
+
+  <script src="js/script.js" defer></script>
+
+  <script>
+    (function(){
+      var here=(location.pathname.split('/').pop()||'products.html').toLowerCase();
+      document.querySelectorAll('.menu a').forEach(function(a){
+        if((a.getAttribute('href')||'').toLowerCase()===here){
+          a.classList.add('active'); a.setAttribute('aria-current','page');
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>
