@@ -286,3 +286,39 @@ main p{font-size:18px;color:var(--muted)}
   .footer-inner { gap: 24px; }
 }
 /* === End Mobile Rescue Overrides === */
+
+/* === Dropdown Menu (SAFE — Affects only .dropdown) === */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  padding: 10px 0;
+  border-radius: 6px;
+  min-width: 140px;
+  z-index: 999;
+}
+
+.dropdown-content li a {
+  display: block;
+  padding: 8px 14px;
+  color: #333;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.dropdown-content li a:hover {
+  background: var(--brand-red);
+  color: #fff;
+}
+
+/* Show menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
