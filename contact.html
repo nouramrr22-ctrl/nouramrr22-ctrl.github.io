@@ -55,27 +55,30 @@
         </ul>
       </div>
 
-      <!-- Contact Form (GitHub Pages Safe) -->
+      <!-- Contact Form (Formspree Integration) -->
       <div class="contact-card">
         <h2 class="section-title">Send a Message</h2>
 
-        <form class="contact-form" id="contactForm">
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/mpqwbbkj" method="POST">
           <label>
             Name
-            <input type="text" id="name" placeholder="Your name" required>
+            <input type="text" name="name" placeholder="Your name" required>
           </label>
 
           <label>
             E-mail
-            <input type="email" id="email" placeholder="your@email.com" required>
+            <input type="email" name="email" placeholder="your@email.com" required>
           </label>
 
           <label>
             Message
-            <textarea id="message" rows="6" placeholder="How can we help?" required></textarea>
+            <textarea name="message" rows="6" placeholder="How can we help?" required></textarea>
           </label>
 
           <button type="submit" class="btn-products">Send</button>
+
+          <!-- Success message -->
+          <div id="form-status" style="margin-top:10px;color:green;display:none;">Message sent successfully!</div>
         </form>
       </div>
 
@@ -129,22 +132,31 @@
       });
     })();
 
-    // Contact form – GitHub Pages safe mailto handler
-    document.getElementById("contactForm").addEventListener("submit", function (e) {
+    // Formspree submission with success message
+    const form = document.getElementById("contactForm");
+    const status = document.getElementById("form-status");
+
+    form.addEventListener("submit", async function (e) {
       e.preventDefault();
+      const data = new FormData(form);
+      const action = form.getAttribute("action");
 
-      var name = document.getElementById("name").value;
-      var email = document.getElementById("email").value;
-      var message = document.getElementById("message").value;
+      try {
+        const response = await fetch(action, {
+          method: "POST",
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
 
-      var subject = "Website Contact – Gemüse Egypt";
-      var body =
-        "Name: " + name + "%0D%0A" +
-        "Email: " + email + "%0D%0A%0D%0A" +
-        "Message:%0D%0A" + message;
-
-      window.location.href =
-        "mailto:info@gemuseegypt.org?subject=" + subject + "&body=" + body;
+        if (response.ok) {
+          status.style.display = "block";
+          form.reset();
+        } else {
+          alert("Oops! There was a problem submitting your form.");
+        }
+      } catch (error) {
+        alert("Oops! There was a problem submitting your form.");
+      }
     });
   </script>
 
